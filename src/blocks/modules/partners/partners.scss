@@ -1,0 +1,15 @@
+.partners {
+    padding: 35px 0 100px 0;
+
+    &__title {
+        line-height: 110px;
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 65px;
+        margin-top: 20px;
+    }
+}
