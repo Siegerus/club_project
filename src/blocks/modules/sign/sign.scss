@@ -1,0 +1,51 @@
+.sign {
+    padding: 100px 0;
+
+    &__wrapper {
+        position: relative;
+        align-items: center;
+        min-height: 611px;
+        margin: 0;
+        padding: 0;
+        padding-left: 108px;
+        background: unset;
+        background-color: #120d0a;
+
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 746px;
+        
+    }
+
+    &__title {
+        line-height: 110px;
+    }
+
+    &__subtitle {
+        max-width: 584px;
+    }
+
+    &__btn {
+        max-width: 310px;
+        margin: 0;
+        margin-top: 34px;
+    }
+
+    &__img {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 226px;
+        max-width: 373px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

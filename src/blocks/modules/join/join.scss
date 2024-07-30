@@ -1,0 +1,57 @@
+.join {
+    padding: 80px 0;
+
+    &__title {
+        line-height: 110px;
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        /* min-height: 413px; */
+        width: 100%;
+        padding: 76px 40px 55px 40px;
+        margin-top: 60px;
+        border-radius: 30px;
+        border: 2px solid #2d1910;
+        background: url("../img/bg/join-bg.png") center / contain no-repeat;
+        background-color: #120d0a;
+    }
+
+    &__list {
+        margin-left: 36px;
+        width: 378px;
+        list-style-type: none;
+
+        &_mt10 {
+            margin-top: 15px;
+        }
+
+        li {
+            position: relative;
+            margin-bottom: 40px;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 140%;
+            color: $mainc-w70;
+
+            &::before {
+                content: "";
+                background: url("../img/icons/check-circle.svg");
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: -36px;
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+    &__btn {
+        max-width: 237px;
+        margin-top: 60px;
+        line-height: 24px;
+    }
+}

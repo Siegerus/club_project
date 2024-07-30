@@ -1,8 +1,8 @@
 .button {
-    width: 250px;
+    max-width: 250px;
     margin: 0 auto;
     margin-top: 40px;
-    padding: 28px 40px 30px 40px;
+    padding: 30px 40px 30px 40px;
     background-color: #fff;
     border-radius: 100px;
     font-weight: 600;
@@ -10,4 +10,12 @@
     line-height: 130%;
     letter-spacing: -0.02em;
     color: #080808;
+    text-align: center;
+
+    &_nobg {
+        padding: 28px 40px 30px 40px;
+        border: 1.50px solid #fff;
+        background-color: unset;
+        color:#fff;
+        }
 }
