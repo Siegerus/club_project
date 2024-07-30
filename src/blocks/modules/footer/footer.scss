@@ -1,0 +1,107 @@
+.footer {
+    padding: 87px 0 138px 0;
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 30px 26px 30px;
+        border-radius: 100px;
+        backdrop-filter: blur(24px);
+        background: $mainc-bg;
+    }
+
+    &__btn {
+        max-width: 292px;
+        margin: 0;
+        padding: 20px 50px 22px 50px;
+        font-size: 20px;
+        color: #080808;
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+    }
+
+    &__links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 74px;
+        height: 74px;
+        margin-right: 20px;
+        border-radius: 100px;
+        background-color: #fff;
+
+        img {
+            width: 34px;
+            height: 34px;
+            object-fit: cover;
+        }
+    }
+
+    &__wrapper {
+        margin-top: 35px;
+        display: grid;
+        grid-template-columns: 260px 267px 196px;
+        grid-template-rows: 231px;
+        grid-auto-rows: auto;
+        column-gap: 265px;
+    }
+
+    &__emailwrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 185px;
+        margin-top: 35px;
+    }
+
+    &__email {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 130%;
+        color: $mainc-w70;
+    }
+
+    &__letter {
+
+    }
+
+    &__headline {
+        font-size: 36px;
+        line-height: 85%;
+        text-align: left;
+    }
+
+    &__list {
+        list-style-type: none;
+
+        &_ml- {
+            margin-left: -15px;
+        }
+
+        li {
+            margin-top: 20px;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 130%;
+            color: $mainc-w70;
+        }
+    }
+
+    &__bottom {
+        margin-top: 40px;
+        padding: 14px 195px 0 195px;
+        border-top: 2px solid $mainc-bg-w;
+    }
+
+    &__descr {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 130%;
+        text-align: center;
+        color: $mainc-w70;
+    }
+}
