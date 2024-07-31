@@ -105,3 +105,54 @@
         color: $mainc-w70;
     }
 }
+
+@media (max-width: 1679px) {
+    .container {
+        max-width: 1320px;
+
+        .footer {
+            &__headline {
+                font-size: 34px;
+            }
+
+            &__list {
+                li {
+                    font-size: 18px;
+                }
+            }
+
+            &__descr {
+                font-size: 18px;
+            }
+        }
+    }
+}
+@media (max-width: 1440px) {
+    .container {
+        max-width: 1120px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 968px;
+    }
+}
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 429px) {
+    .container {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+}

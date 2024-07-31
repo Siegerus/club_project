@@ -7,8 +7,8 @@
     }
 
     &__nav {
-        width: 860px;
-
+        width: 55.8%;
+        /* width: 860px; */
         padding: 20px 30px 23px 30px;
         border-radius: 100px;
         background-color: $mainc-bg;
@@ -62,5 +62,85 @@
         border-radius: 100px;
         background-color: $mainc-bg;
         backdrop-filter: blur(24px);
+    }
+}
+
+@media (max-width: 1679px) {
+
+    .container {
+        max-width: 1320px;
+    }
+
+    .header {
+        &__logo {
+            width: 16.8%; 
+            min-width: 260px; 
+        }
+
+        &__enter {
+            width: 16.4%;
+            min-width: 250px;
+            font-size: 22px;
+        }
+
+        &__nav {
+            li {
+                font-size: 18px;
+            }
+        }
+    }
+}
+@media (max-width: 1440px) {
+
+    .container {
+        max-width: 1120px;
+    }
+
+    .header {
+        &__logo {
+            min-width: 230px;
+
+            img {
+                object-fit: contain;
+            }
+        }
+
+        &__enter {
+            min-width: 220px;
+            font-size: 20px;
+        }
+
+        &__nav {
+            li {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .container {
+        max-width: 968px;
+    }
+}
+@media (max-width: 992px) {
+
+    .container {
+        max-width: 720px;
+    }
+}
+@media (max-width: 768px) {
+
+    .container {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 429px) {
+    .container {
+        max-width: 100%;
+        padding: 0 20px;
     }
 }
