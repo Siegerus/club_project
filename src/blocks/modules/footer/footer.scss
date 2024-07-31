@@ -65,10 +65,6 @@
         color: $mainc-w70;
     }
 
-    &__letter {
-
-    }
-
     &__headline {
         font-size: 36px;
         line-height: 85%;
@@ -131,11 +127,47 @@
     .container {
         max-width: 1120px;
     }
+
+    .footer {
+        &__wrapper{
+            column-gap: 170px;
+        }
+
+        &__descr {
+            font-size: 16px;
+        }
+
+        &__top {
+            padding: 16px 30px 22px 30px;
+        }
+
+        &__links {
+            width: 70px;
+            height: 70px;
+        }
+
+        &__logo {
+            min-width: 260px;
+        }
+    }
 }
 
 @media (max-width: 1200px) {
     .container {
         max-width: 968px;
+    }
+
+    .footer {
+        padding-top: 0;
+        padding-bottom: 100px;
+
+        &__wrapper {
+            column-gap: 110px;
+        }
+
+        &__bottom {
+            padding: 14px 80px 0 80px;
+        }
     }
 }
 @media (max-width: 992px) {

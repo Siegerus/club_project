@@ -57,6 +57,8 @@
 
     .sign {
         &__img {
+            width: 24.2%;
+            min-width: 373px;
             right: 85px;
         }
     }
@@ -65,11 +67,39 @@
     .container {
         max-width: 1120px;
     }
+
+    .sign {
+        &__img {
+            right: 55px;
+            min-width: 330px;
+        }
+
+        &__title {
+            font-size: 74px;
+        }
+    }
 }
 
 @media (max-width: 1200px) {
     .container {
         max-width: 968px;
+    }
+
+    .sign {
+        padding-top: 10px;
+
+        &__img {
+            right: 40px;
+            min-width: unset;
+        }
+
+        &__title {
+            font-size: 65px;
+        }
+
+        &__subtitle {
+            font-size: 22px;
+        }
     }
 }
 @media (max-width: 992px) {

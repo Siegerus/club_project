@@ -16,22 +16,35 @@
         padding: 28px 40px 30px 40px;
         border: 1.50px solid #fff;
         background-color: unset;
-        color:#fff;
+        color:#fff;        
         }
+
+    &_footer {
+        padding: 20px 50px 22px 50px;
+        font-size: 20px;
+    }
 }
+
+    
 
 @media (max-width: 1679px) {
     .container {
         max-width: 1320px;
     }
 
-    .button {
-        
-    }
 }
 @media (max-width: 1440px) {
     .container {
         max-width: 1120px;
+    }
+
+    .button {
+        font-size: 20px;
+        padding: 28px 40px;
+
+        &_footer {
+            padding: 20px 50px 22px 50px;
+        }
     }
 }
 

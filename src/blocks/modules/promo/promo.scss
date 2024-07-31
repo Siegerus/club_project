@@ -72,11 +72,31 @@
     .container {
         max-width: 1120px;
     }
+
+    .promo {
+        &__title {
+            font-size: 110px;
+        }
+
+        &__subtitle {
+            font-size: 26px;
+        }
+    }
 }
 
 @media (max-width: 1200px) {
     .container {
         max-width: 968px;
+    }
+
+    .promo {
+        &__title {
+            font-size: 100px;
+        }
+
+        &__subtitle {
+            font-size: 26px;
+        }
     }
 }
 @media (max-width: 992px) {

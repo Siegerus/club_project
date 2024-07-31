@@ -25,20 +25,24 @@
     .title {
         font-size: 84px;
     }
-
-    .subtitle {
-        
-    }
 }
 @media (max-width: 1440px) {
     .container {
         max-width: 1120px;
+    }
+
+    .title {
+        font-size: 80px;
     }
 }
 
 @media (max-width: 1200px) {
     .container {
         max-width: 968px;
+    }
+
+    .title {
+        font-size: 74px;
     }
 }
 @media (max-width: 992px) {

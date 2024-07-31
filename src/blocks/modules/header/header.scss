@@ -13,6 +13,10 @@
         border-radius: 100px;
         background-color: $mainc-bg;
         backdrop-filter: blur(24px);
+
+        &_m-visible {
+            display: none;
+        }
     }
 
     &__list {
@@ -122,6 +126,34 @@
 
     .container {
         max-width: 968px;
+    }
+
+    .header {
+        &__nav {
+            li {
+                font-size: 20px;
+            }
+
+            &_m-hidden {
+                display: none;
+            }
+
+            &_m-visible {
+                display: block;
+            }
+
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        &__logo {
+            min-width: 260px;
+        }
+
+        &__enter {
+            min-width: 250px;
+            font-size: 22px;
+        }
     }
 }
 @media (max-width: 992px) {
