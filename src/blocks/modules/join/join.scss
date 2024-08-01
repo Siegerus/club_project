@@ -20,33 +20,39 @@
     }
 
     &__list {
-        margin-left: 36px;
-        width: 378px;
+        width: 413px;
         list-style-type: none;
 
         &_mt10 {
             margin-top: 15px;
         }
+    }
 
-        li {
-            position: relative;
-            margin-bottom: 40px;
-            font-weight: 500;
-            font-size: 20px;
-            line-height: 140%;
-            color: $mainc-w70;
+    &__liwrap {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 40px;
 
-            &::before {
-                content: "";
-                background: url("../img/icons/check-circle.svg");
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                left: -36px;
-                width: 20px;
-                height: 20px;
-            }
+        &_ai-centr {
+            align-items: center;
         }
+
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px; 
+    }
+
+    &__text {
+        margin-left: 16px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 140%;
+        color: $mainc-w70; 
     }
 
     &__btn {
@@ -84,10 +90,8 @@
             margin-top: 50px;
         }
 
-        &__list {
-            li {
-                font-size: 18px;
-            }
+        &__text {
+            font-size: 18px;
         }
     }
 }
@@ -116,6 +120,14 @@
             &_mt10 {
                 margin-bottom: 221px;
             }
+        }
+
+        &__liwrap {
+            justify-content: center;
+        }
+
+        &__text {
+            text-wrap: nowrap;
         }
 
         &__btn {
