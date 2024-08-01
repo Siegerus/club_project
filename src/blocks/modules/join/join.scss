@@ -53,6 +53,10 @@
         max-width: 237px;
         margin-top: 60px;
         line-height: 24px;
+
+        &_m-visible {
+            display: none;
+        }
     }
 }
 
@@ -92,11 +96,43 @@
     .container {
         max-width: 720px;
     }
+
+    .join {
+        &__title {
+            max-width: 570px;
+            margin: 0 auto;
+        }
+
+        &__wrapper {
+            flex-direction: column;
+            align-items: center;
+            padding: 30px 39px 60px 39px;
+        }
+
+        &__list {
+            width: 100%;
+            text-align: center;
+
+            &_mt10 {
+                margin-bottom: 221px;
+            }
+        }
+
+        &__btn {
+            &_m-visible {
+                display: block;
+            }
+
+            &_m-hidden {
+                display: none;
+            }
+        }
 }
 @media (max-width: 768px) {
     .container {
         max-width: 100%;
         padding: 0 20px;
+        }
     }
 }
 

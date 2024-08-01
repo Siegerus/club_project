@@ -103,6 +103,24 @@
     .container {
         max-width: 720px;
     }
+
+    .promo {
+        &__block {
+            margin-top: 580px;
+        }
+
+        &__title {
+            font-size: 85px;
+        }
+
+        &__subtitle {
+            font-size: 26px;
+        }
+
+        &__btn {
+
+        }
+    }
 }
 @media (max-width: 768px) {
     .container {

@@ -168,6 +168,35 @@
     .container {
         max-width: 720px;
     }
+
+    .benefit {
+        padding-top: 125px;
+
+        &__wrapper {
+        grid-template-columns: repeat(2, 320px);
+        grid-template-rows: repeat(2, (minmax(313px, auto)));
+        column-gap: 20px;
+        justify-content: center;
+        margin-top: 55px;
+        }
+
+        &__item {
+            padding: 10px;
+        }
+
+        &__number {
+            font-size: 20px;
+        }
+
+        &__headline {
+            max-width: 297px;
+            font-size: 32px;
+        }
+
+        &__descr {
+            font-size: 16px;
+        }
+    }
 }
 @media (max-width: 768px) {
     .container {
