@@ -1,7 +1,15 @@
 <header class="header">
     <div class="container">
         <div class="header__wrapper">
-            <div class="header__logo"><a href=""><img src="img/logo.svg" alt="logo"></a></div>
+            <div class="header__logo">
+                <a href="#">
+                    <picture>
+                        <source media="(max-width: 767px)" srcset="img/logo-mobile.svg">
+                         <source media="(min-width: 768px)" srcset="img/logo.svg">
+                        <img src="img/logo.svg" alt="logo">
+                    </picture>
+                </a>
+            </div>
             <nav class="header__nav header__nav_m-hidden">
                 <ul class="header__list">
                     <li>Главная</li>
@@ -13,16 +21,74 @@
                 </ul>
             </nav>
                 <div class="header__enter">Регистрация/Вход</div>
+            <div class="header__hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div> 
         </div>
         <nav class="header__nav header__nav_m-visible">
             <ul class="header__list">
-                <li>Главная</li>
-                <li>Мероприятия</li>
-                <li>Браслеты</li>
-                <li>Правила</li>
-                <li class="header__vip">VIP</li>
-                <li>Контакты</li>
+                <li class=" header__list-item header__list-item_li-m">
+                    <div class="header__accountwrap-m">
+                        <div class="header__icon"><img src="img/icons/account.svg" alt="account"></div>
+                        <div class="header__account">Аккаунт</div>
+                    </div>
+                    <div class="header__arrow-m">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </li>
+                <li class="header__list-item">Главная 
+                    <div class="header__arrow-m">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </li>
+                <li class="header__list-item">Мероприятия 
+                    <div class="header__arrow-m">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </li>
+                <li class="header__list-item">Браслеты 
+                    <div class="header__arrow-m">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </li>
+                <li class="header__list-item">Правила 
+                    <div class="header__arrow-m">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </li>
+                <li class=" header__list-item header__vip">VIP 
+                    <div class="header__arrow-m">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </li>
+                <li class="header__list-item">Контакты 
+                    <div class="header__arrow-m">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </li>
             </ul>
+            <div class="header__phonewrap-m">
+                <div>
+                    <a href="tel:70000000000" class="header__number">+7 (000) 000-00-00</a>
+                    <div class="header__phone"><img src="img/icons/phone.svg" alt="phone"></div>
+                </div>
+                <div>
+                    <div class="header__mail"></div>
+                    <div class="header__letter"><img src="img/icons/gmail.svg" alt="letter"></div>
+                </div>
+            </div>
+            <div class="header__social-m">
+                
+            </div>
         </nav>
     </div>
 </header>

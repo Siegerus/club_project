@@ -92,7 +92,6 @@
     .benefit {
      &__wrapper {
         grid-template-columns: repeat(4, 320px);
-        row-gap: 15px;
      }
 
      &__item {
@@ -116,7 +115,6 @@
     .benefit {
         &__wrapper {
            grid-template-columns: repeat(4, 265px);
-           row-gap: 15px;
         }
    
         &__descr {
@@ -140,8 +138,8 @@
         padding-top: 125px;
 
         &__wrapper {
-           grid-template-columns: repeat(4, 237px);
-           row-gap: 10px;
+           grid-template-columns: repeat(4, 227px);
+           grid-template-rows: (minmax(385px, auto));
            margin-top: 55px;
         }
 
@@ -166,18 +164,24 @@
 }
 @media (max-width: 992px) {
     .container {
-        max-width: 720px;
+        max-width: 648px;
     }
 
     .benefit {
-        padding-top: 125px;
+        padding-top: 145px;
 
         &__wrapper {
-        grid-template-columns: repeat(2, 320px);
-        grid-template-rows: repeat(2, (minmax(313px, auto)));
+        grid-template-columns: repeat(2, 313px);
+        grid-template-rows: repeat(2, (minmax(322px, auto)));
         column-gap: 20px;
+        row-gap: 20px;
         justify-content: center;
-        margin-top: 55px;
+        margin-top: 47px;
+        }
+
+        &__title {
+            text-wrap: nowrap;
+            letter-spacing: -0.03em;
         }
 
         &__item {
@@ -185,20 +189,31 @@
         }
 
         &__number {
+            padding: 10px;
+            padding-bottom: 0;
             font-size: 20px;
+        }
+
+        &__header {
+            margin-top: 0;
         }
 
         &__headline {
             max-width: 297px;
+            margin-top: 20px;
             font-size: 32px;
+            line-height: 110%;
         }
 
         &__descr {
+            min-width: 295px;
             font-size: 16px;
+            line-height: 135%;
+            letter-spacing: -0.02em;
         }
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .container {
         max-width: 100%;
         padding: 0 20px;

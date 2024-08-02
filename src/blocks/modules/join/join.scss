@@ -9,13 +9,12 @@
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
-        /* min-height: 413px; */
         width: 100%;
         padding: 76px 40px 55px 40px;
         margin-top: 60px;
         border-radius: 30px;
         border: 2px solid #2d1910;
-        background: url("../img/bg/join-bg.png") center / contain no-repeat;
+        background: url("../img/bg/join-bg-tablet.png") top 31px center / 589px 393px no-repeat;
         background-color: #120d0a;
     }
 
@@ -98,19 +97,24 @@
 
 @media (max-width: 992px) {
     .container {
-        max-width: 720px;
+        max-width: 648px;
     }
 
     .join {
+        padding: 30px 0 20px 0;
+        
         &__title {
             max-width: 570px;
             margin: 0 auto;
+            line-height: 102%;
         }
 
         &__wrapper {
             flex-direction: column;
             align-items: center;
-            padding: 30px 39px 60px 39px;
+            justify-content: flex-start;
+            padding: 39px 40px 60px 40px;
+            margin-top: 26px;
         }
 
         &__list {
@@ -118,19 +122,25 @@
             text-align: center;
 
             &_mt10 {
-                margin-bottom: 221px;
+                margin-top: 0;
+                margin-bottom: 170px;
             }
         }
 
         &__liwrap {
             justify-content: center;
+            margin-bottom: 20px;
         }
 
         &__text {
+            font-size: 16px;
             text-wrap: nowrap;
+            letter-spacing: -0.02em;
         }
 
         &__btn {
+            margin-top: 18.5px;
+
             &_m-visible {
                 display: block;
             }
@@ -140,7 +150,7 @@
             }
         }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .container {
         max-width: 100%;
         padding: 0 20px;

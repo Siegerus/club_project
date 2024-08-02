@@ -57,8 +57,6 @@
         padding-top: 0;
 
         &__label {
-            max-width: 1180px;
-
             &:nth-child(1) {
                 max-width: 210px;
             }
@@ -71,10 +69,41 @@
 }
 @media (max-width: 992px) {
     .container {
-        max-width: 720px;
+        max-width: 648px;
+    }
+
+    .partners {
+        padding-bottom: 85px;
+
+        &__title {
+            line-height: 103%;
+        }
+
+        &__wrapper {
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        &__label {
+            width: 40%;
+            max-width: 300px;
+            margin: 0 20px 20px 20px;
+
+            &:nth-child(1) {
+                max-width: 210px;
+            }
+
+            &:nth-child(2) {
+                max-width: 180px;
+            }
+
+            &:nth-child(3), &:nth-child(4), &:nth-child(5)  {
+                max-width: 125px;
+            }
+        }
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .container {
         max-width: 100%;
         padding: 0 20px;

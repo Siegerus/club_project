@@ -5,6 +5,7 @@
         position: relative;
         min-height: 873px;
         padding-top: 1px;
+        border-radius: 40px;
         background: url("../img/promo-photo.png") center / cover no-repeat;
     }
     
@@ -101,28 +102,34 @@
 }
 @media (max-width: 992px) {
     .container {
-        max-width: 720px;
+        max-width: 648px;
     }
 
     .promo {
+        &__wrapper {
+            min-height: 740px;
+        }
+
         &__block {
-            margin-top: 580px;
+            margin-top: 493px;
+            margin-left: 11px;
         }
 
         &__title {
-            font-size: 85px;
+            font-size: 70px;
         }
 
         &__subtitle {
-            font-size: 26px;
+            font-size: 24px;
         }
 
         &__btn {
-
+            max-width: 242px;
+            margin-bottom: 20px;
         }
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .container {
         max-width: 100%;
         padding: 0 20px;
