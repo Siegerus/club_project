@@ -90,7 +90,7 @@
     &__bottom {
         margin-top: 40px;
         padding: 14px 195px 0 195px;
-        border-top: 2px solid $mainc-bg-w;
+        border-top: 2px solid $mainc-bg;
     }
 
     &__descr {
@@ -249,7 +249,7 @@
     }
 }
 
-@media (max-width: 429px) {
+@media (max-width: 360px) {
     .container {
         max-width: 100%;
         padding: 0 20px;
