@@ -37,6 +37,10 @@
         letter-spacing: -0.02em;
         text-align: center;
         color: #fff;
+
+        &_m-visible {
+            display: none;
+        }
     }
 
     &__subtitle {
@@ -140,5 +144,54 @@
     .container {
         max-width: 100%;
         padding: 0 20px;
+
+        &_nopdg {
+            padding: 0;
+        }
+    }
+
+    .promo {
+        padding-top: 0;
+        padding-bottom: 30px;
+
+        &__wrapper {
+            min-height: 518px;
+            border-radius: 20px;
+            background: url("../img/promo-photo-mobile.png") center / cover no-repeat;
+        }
+
+        &__block {
+            margin-top: 327px;
+            margin-left: 0;
+        }
+
+        &__title {
+            font-size: 52px;
+            line-height: 90%;
+            letter-spacing: -0.02em;
+
+            &_m-hidden {
+            display: none;
+            }
+
+            &_m-visible 
+                {
+                display: block;
+            }
+        }
+
+        &__subtitle {
+            max-width: 235px;
+            margin: 0 auto;
+            margin-top: 8px;
+            font-size: 16px;
+            line-height: 130%;
+            letter-spacing: -0.02em
+        }
+
+        &__btn {
+            width: 80.8%;
+            margin-top: 20px;
+        }
     }
 }

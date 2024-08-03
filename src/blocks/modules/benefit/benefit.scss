@@ -224,5 +224,44 @@
     .container {
         max-width: 100%;
         padding: 0 20px;
+
+        &_nopdg {
+            padding: 0;
+        }
+    }
+
+    .benefit {
+        padding: 40px 0;
+
+        &__wrapper {
+            grid-template-columns: 313px;
+            grid-template-rows: repeat(4, minmax(293px, auto));
+            margin-top: 18px;
+
+        }
+
+        &__item {
+            padding-bottom: 20px;
+        }
+
+        &__number {
+            padding: 0;
+        }
+
+        &__descr {
+            &_mw-295 {
+                max-width: 295px;
+                min-width: unset;
+            }
+        }
+
+        &__headline {
+            line-height: 105%;
+        }
+
+        &__title {
+            text-wrap: wrap;
+            line-height: 96%;
+        }
     }
 }

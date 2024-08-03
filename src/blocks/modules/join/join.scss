@@ -14,7 +14,7 @@
         margin-top: 60px;
         border-radius: 30px;
         border: 2px solid #2d1910;
-        background: url("../img/bg/join-bg-tablet.png") top 31px center / 589px 393px no-repeat;
+        background: url("../img/bg/join-bg-tablet.png") top 12% center / 92% no-repeat;
         background-color: #120d0a;
     }
 
@@ -162,5 +162,56 @@
     .container {
         max-width: 100%;
         padding: 0 20px;
+
+        &_nopdg {
+            padding: 0;
+        }
     }
+
+    .join {
+        padding: 40px 0 65px 0;
+
+        &__wrapper {
+            min-height: 671px;
+            margin-top: 10px;
+            padding: 20px 20px;
+            border: none;
+            background: url("../img/bg/join-bg-mobile.png") top 34% right 1% / 116%  no-repeat;
+            background-color: #120d0a;
+        }
+        /* 326px 217px */
+        &__list {
+            text-align: left;
+
+            &_mt10 {
+                margin-bottom: 135px;
+            }
+        }
+
+        &__liwrap {
+            margin-bottom: 16px;
+            justify-content: left;
+
+            &:nth-child(2) {
+                max-width: 278px;
+            }
+    
+        }
+
+        &__text {
+            text-wrap: wrap;
+        }
+
+        &__title {
+            padding: 0 22px;
+        }
+
+        &__btn {
+            max-width: 320px;
+            margin-top: 10px;
+            padding: 14px 0 16px 0;
+        }
+    }
+
+
 }

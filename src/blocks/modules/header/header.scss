@@ -228,6 +228,10 @@
     .container {
         max-width: 100%;
         padding: 0 20px;
+
+        &_nopdg {
+            padding: 0;
+        }
     }
 
     .header {
@@ -308,7 +312,7 @@
             position: absolute;
             top: 92px;
             left: -100%;
-            left: 0;
+            /* left: 0; */
             width: 100%;
             height: 100vh;
             margin-top: 0;
