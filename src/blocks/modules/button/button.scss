@@ -91,5 +91,11 @@
         line-height: 130%;
         letter-spacing: -0.02em;
         padding: 18px 0 20px 0;
+
+        &_footer {
+            width: 159px;
+            padding: 10px 12px 12px 12px;
+            font-size: 14px;
+        }
     }
 }
