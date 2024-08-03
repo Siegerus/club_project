@@ -157,4 +157,47 @@
             padding: 0;
         }
     }
+
+    .sign {
+        
+        &__wrapper {
+            min-height: 707px;
+            margin-top: 0;
+            padding: 48px 20px 0 20px;
+            background-image: none;
+            border-radius: 30px;
+            background-color: $mainc-bg2;
+        }
+
+        &__title {
+            font-size: 36px;
+        }
+
+        &__item {
+            width: 100%
+        }
+
+        &__subtitle {
+            margin-top: 16px;
+            font-size: 14px;
+            line-height: 130%;
+        }
+
+
+        &__btn {
+            margin-top: 16px;
+            max-width: 320px;
+            padding: 14px 0 16px 0;
+            font-size: 14px;
+            line-height: 130%;
+            letter-spacing: -0.02em;
+        }
+
+        &__img {
+            bottom: -34px;
+            width: 73%;
+            max-width: 263px;
+            max-height: 494px;
+        }
+    }
 }
