@@ -1,5 +1,5 @@
 .events {
-    padding: 40px 0 80px 0;
+    padding: 40px 0 70px 0;
 
     &__wrapper {
         display: grid;
@@ -44,6 +44,38 @@
 
     &__label {
         position: absolute;
+        /* right: 16.5px; */
+        right: 3.3%;
+        /* bottom: 100px; */
+        bottom: 21.7%;
+        width: 34.3%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__date {
+        position: absolute;
+        left: 24px;
+        top: 50%;
+        transform: translateY(-50%);
+        max-width: 70px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 100%;
+        text-transform: uppercase;
+        color: #fff;
+        
+        &_rotate {
+            top: 33%;
+            left: auto;
+            right: 7%;
+            transform: rotate(270deg) translateY(0);
+            max-width: 45px;
+        }
     }
 
     &__btn {
@@ -51,5 +83,193 @@
         max-width: 100%;
         margin: 0;
         margin-top: 33px;
+    }
+}
+
+@media (max-width: 1679px) {
+    .container {
+        max-width: 1320px;
+    }
+
+    .events {
+        &__wrapper {
+            grid-template-columns: repeat(3, 420px);
+        }
+
+        &__label {
+            bottom: 25.7%;
+        }
+
+        &__date {
+            font-size: 17px;
+
+            &_rotate {
+                right: 3%;
+            }
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+    .container {
+        max-width: 1120px;
+    }
+    .events {
+        &__wrapper {
+            grid-template-columns: repeat(3, 360px);
+            grid-template-rows: minmax(470px, auto);
+        }
+    
+        &__label {
+            bottom: 26%;
+        }
+
+        &__descr {
+            margin-top: 35px;
+            font-size: 34px;
+        }
+
+        &__date {
+            left: 15px;
+            max-width: 50px;
+            font-size: 15px;
+
+            &_rotate {
+                left: auto;
+                right: 3%;
+            }
+        }
+        
+        &__btn {
+            margin-top: 20px;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 968px;
+    }
+
+    .events {
+        &__wrapper {
+            grid-template-columns: repeat(3, 310px);
+            grid-template-rows: minmax(410px, auto);
+        }
+    
+        &__label {
+            bottom: 26%;
+            min-width: 94px;
+        }
+
+        &__descr {
+            min-height: 60px;   
+            font-size: 26px;
+        }
+
+        &__date {
+            left: 15px;
+            max-width: 50px;
+            font-size: 14px;
+
+            &_rotate {
+                left: auto;
+                right: 3%;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 648px;
+    }
+
+    .events {
+        padding: 20px 0 115px 0;
+
+        &__wrapper {
+            grid-template-columns: repeat(2, 319px);
+            grid-template-rows: minmax(346px, auto);
+            grid-auto-rows: minmax(346px, auto);
+            column-gap: 10px;
+            margin-top: 20px;
+        }
+
+        &__title {
+            line-height: 105%;
+        }
+
+        &__item {
+            padding: 10px;
+
+            &:nth-child(3) {
+                display: none;
+            }
+        }
+
+        &__img {
+            max-width: 299px;
+            max-height: 159px;  
+        }
+
+        &__descr {
+            min-height: 66px;  
+            margin-top: 33px; 
+            font-size: 30px;
+        }
+
+        &__label {
+            right: 5.5%;
+            bottom: 30%;
+        }
+
+        &__date {
+            text-align: center;
+            line-height: 125%;
+        }
+
+        &__btn {
+            padding: 14px 0 16px 0;
+            font-size: 14px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    .events {
+        &__wrapper {
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(2, minmax(313px, auto));
+            grid-auto-rows: minmax(313px, auto);
+            row-gap: 10px;
+            margin-top: 10px;
+        }
+
+        &__title {
+            line-height: 115%;
+        }
+
+        &__descr {
+            min-height: unset;
+        }    
+
+        &__btn {
+            width: 100%;
+            padding: 14px 0 16px 0;
+
+        }
     }
 }
