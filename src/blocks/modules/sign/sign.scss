@@ -115,6 +115,7 @@
             padding: 60px 23px 0 23px; 
         }
         &__item {
+            width: 95.6%;
             align-items: center;
         }
 
@@ -146,9 +147,19 @@
         max-width: 100%;
         padding: 0 20px;
     }
+
+    .sign {
+        &__title {
+            font-size: 60px;
+        }
+
+        &__subtitle {
+            font-size: 21px;
+        }
+    }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 576px) {
     .container {
         max-width: 100%;
         padding: 0 20px;

@@ -14,10 +14,11 @@
         margin-top: 60px;
         border-radius: 30px;
         border: 2px solid #2d1910;
-        background: url("../img/bg/join-bg-tablet.png") top 12% center / 92% no-repeat;
+        background: url("../img/bg/join-bg.png") top 12% center / contain no-repeat;
         background-color: #120d0a;
+        
     }
-
+    
     &__list {
         width: 413px;
         list-style-type: none;
@@ -115,6 +116,9 @@
             justify-content: flex-start;
             padding: 39px 40px 60px 40px;
             margin-top: 26px;
+            background: url("../img/bg/join-bg-tablet.png") top 12% center / 589px 393px  no-repeat;
+            background-color: #120d0a;
+            
         }
 
         &__list {
@@ -149,16 +153,38 @@
                 display: none;
             }
         }
+    }
 }
+
 @media (max-width: 767px) {
     .container {
         max-width: 100%;
         padding: 0 20px;
         }
+
+        .join {
+            &__text {
+                text-wrap: wrap;
+            }
+        }
+    } 
+
+@media (max-width: 695px) {
+    .container {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    .join {
+        &__text {
+            &_mw-200 {
+                max-width: 300px;
+            }
+        }
     }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 576px) {
     .container {
         max-width: 100%;
         padding: 0 20px;
@@ -176,7 +202,7 @@
             margin-top: 10px;
             padding: 20px 20px;
             border: none;
-            background: url("../img/bg/join-bg-mobile.png") top 34% right 1% / 116%  no-repeat;
+            background: url("../img/bg/join-bg-mobile.png") top 33% right 13% / 120%  no-repeat;
             background-color: #120d0a;
         }
 
@@ -188,18 +214,18 @@
             }
         }
 
+        &__text {
+            max-width: unset;
+            text-wrap: wrap;
+        }
+
         &__liwrap {
             margin-bottom: 16px;
             justify-content: left;
 
             &:nth-child(2) {
-                max-width: 278px;
+                width: 82.2%;
             }
-    
-        }
-
-        &__text {
-            text-wrap: wrap;
         }
 
         &__title {
@@ -210,8 +236,14 @@
             max-width: 320px;
             margin-top: 10px;
             padding: 14px 0 16px 0;
+            font-size: 14px;
         }
     }
+}
 
-
+@media (max-width: 359px) {
+    .container {
+        max-width: 100%;
+        padding: 0 20px;
+    }
 }

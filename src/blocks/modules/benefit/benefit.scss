@@ -218,9 +218,23 @@
         max-width: 100%;
         padding: 0 20px;
     }
+
+    .benefit {
+        &__wrapper {
+            grid-template-columns: repeat(2, 254px);
+        }
+
+        &__descr {
+            min-width: unset;
+        }
+
+        &__title {
+            text-wrap: wrap;
+        }
+    } 
 }
 
-@media (max-width: 360px) {
+@media (max-width: 576px) {
     .container {
         max-width: 100%;
         padding: 0 20px;
@@ -260,7 +274,6 @@
         }
 
         &__title {
-            text-wrap: wrap;
             line-height: 96%;
         }
     }

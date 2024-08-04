@@ -138,9 +138,15 @@
         max-width: 100%;
         padding: 0 20px;
     }
+
+    .promo {
+        &__wrapper {
+            padding-bottom: 40px;
+        }
+    }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 576px) {
     .container {
         max-width: 100%;
         padding: 0 20px;
@@ -156,6 +162,7 @@
 
         &__wrapper {
             min-height: 518px;
+            padding-bottom: 0;
             border-radius: 20px;
             background: url("../img/promo-photo-mobile.png") center / cover no-repeat;
         }

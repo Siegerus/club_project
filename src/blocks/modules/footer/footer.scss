@@ -153,6 +153,10 @@
         &__logo {
             min-width: 260px;
         }
+
+        &__headline {
+            font-size: 34px;
+        }
     }
 }
 
@@ -171,6 +175,10 @@
 
         &__bottom {
             padding: 14px 80px 0 80px;
+        }
+
+        &__headline {
+            font-size: 32px;
         }
     }
 }
@@ -250,7 +258,7 @@
     }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 576px) {
     .container {
         max-width: 100%;
         padding: 0 20px;
@@ -308,8 +316,6 @@
                 font-size: 14px;
             }
         }
-
-
 
         &__links {
             width: 40px;
