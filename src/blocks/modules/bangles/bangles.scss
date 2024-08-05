@@ -182,7 +182,18 @@
         max-width: 100%;
         padding: 0 20px;
     }
- 
+
+    .bangles {
+        &__wrapper {
+            grid-template-columns: repeat(2, 255px);
+            grid-template-rows: minmax(305px, auto);
+            grid-auto-rows: minmax(305px, auto);
+        }
+
+        &__item {
+            padding: 25px 20px;
+        }
+    }
 }
 
 @media (max-width: 576px) {
@@ -199,6 +210,7 @@
         }
 
         &__wrapper {
+            justify-items: center;
             grid-template-columns: 100%;
             grid-template-rows: minmax(228px, auto);
             grid-auto-rows: minmax(228px, auto);
@@ -207,6 +219,7 @@
         }
 
         &__item {
+            max-width: 320px;
             padding: 20px;
 
             &:nth-child(3) {
