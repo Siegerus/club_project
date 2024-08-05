@@ -54,6 +54,10 @@
         font-size: 70px;
         line-height: 110%;
     }
+
+    .subtitle {
+        font-size: 16px;
+    }
 }
 @media (max-width: 767px) {
     .container {
@@ -64,9 +68,6 @@
 
 @media (max-width: 576px) {
     .container {
-        max-width: 100%;
-        padding: 0 20px;
-
         &_nopdg {
             padding: 0;
         }
@@ -74,5 +75,14 @@
 
     .title {
         font-size: 40px;
+    }
+
+    .subtitle {
+        max-width: 100%;
+        padding: 0 20px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 130%;
+        letter-spacing: -0.02em;
     }
 }

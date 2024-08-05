@@ -345,7 +345,18 @@
             font-size: 14px;
             line-height: 130%;
         }
+    }
+}
 
+@media (max-width: 360px) {
+    .container {
+        max-width: 100%;
+        padding: 0 20px;
+    }
 
+    .footer {
+        &__wrapper {
+            grid-template-columns: auto;
+        }
     }
 }
