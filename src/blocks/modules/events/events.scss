@@ -16,11 +16,8 @@
         background-color: $mainc-bg2;
     }
 
-    &__body {
-        position: relative;
-    }
-
     &__img {
+        position: relative;
         max-width: 472px;
         max-height: 359px;
 
@@ -44,24 +41,18 @@
 
     &__label {
         position: absolute;
-        /* right: 16.5px; */
-        right: 3.3%;
-        /* bottom: 100px; */
-        bottom: 21.7%;
-        width: 34.3%;
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+        right: 3%;
+        bottom: -11%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 12px 0 22px;
+        width: 34.4%;
+        height: 22.5%;
+        background: url("../img/events-label.png") center / contain no-repeat; 
     }
 
     &__date {
-        position: absolute;
-        left: 24px;
-        top: 50%;
-        transform: translateY(-50%);
         max-width: 70px;
         font-weight: 600;
         font-size: 20px;
@@ -70,11 +61,8 @@
         color: #fff;
         
         &_rotate {
-            top: 33%;
-            left: auto;
-            right: 7%;
-            transform: rotate(270deg) translateY(0);
             max-width: 45px;
+            transform: rotate(270deg);
         }
     }
 
@@ -97,15 +85,12 @@
         }
 
         &__label {
-            bottom: 25.7%;
+            bottom: -12.3%;
+            padding-right: 10px;
         }
 
         &__date {
             font-size: 17px;
-
-            &_rotate {
-                right: 3%;
-            }
         }
     }
 }
@@ -121,7 +106,8 @@
         }
     
         &__label {
-            bottom: 26%;
+            bottom: -11%;
+            padding-right: 6px;
         }
 
         &__descr {
@@ -130,14 +116,8 @@
         }
 
         &__date {
-            left: 15px;
             max-width: 50px;
             font-size: 15px;
-
-            &_rotate {
-                left: auto;
-                right: 3%;
-            }
         }
         
         &__btn {
@@ -158,8 +138,10 @@
         }
     
         &__label {
-            bottom: 26%;
+            bottom: -12%;
+            right: 4%;
             min-width: 94px;
+            padding: 0 3px 0 12px;
         }
 
         &__descr {
@@ -220,8 +202,13 @@
         }
 
         &__label {
-            right: 5.5%;
-            bottom: 30%;
+            right: 8%;
+            bottom: -14%;
+            width: 31%;
+            min-width: 92px;
+            min-height: 46px;
+            height: 12.7%;
+            padding: 0 3px 0 10px;
         }
 
         &__date {
@@ -251,7 +238,7 @@
 
     .events {
         padding-bottom: 47px;
-        
+
         &__wrapper {
             grid-template-columns: 320px;
             grid-template-rows: repeat(2, minmax(313px, auto));
@@ -273,6 +260,10 @@
             width: 100%;
             padding: 14px 0 16px 0;
 
+        }
+
+        &__label {
+            padding-left: 8px;
         }
     }
 }
