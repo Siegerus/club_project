@@ -141,6 +141,14 @@
             grid-template-columns: repeat(2, 550px);
             justify-content: center;
         }
+
+        &__headline {
+            font-size: 30px;
+        }
+
+        &__descr ,&__text {
+            font-size: 19px;
+        }
     }
 }
 
@@ -254,7 +262,19 @@
     .vip {
         &__wrapper {
             grid-template-columns: repeat(2, 265px);
-            
+            /* grid-template-rows: repeat(2, (minmax(297px, auto))); */
+        }
+
+        &__item {
+            padding: 10px;
+        }
+
+        &__headline {
+            margin-top: 20px;
+        }
+
+        &__descr {
+            margin-top: 12px;
         }
     }
 }
