@@ -6,6 +6,10 @@
         margin: 20px auto 0 auto;
         text-align: center;
         line-height: 130%;
+
+        &_m-visible {
+            display: none;
+        }
     }
 
     &__wrapper {
@@ -129,11 +133,36 @@
 @media (max-width: 992px) {
     .container {
         max-width: 648px;
+
+        &_mr0 {
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            min-width: 705px;
+            margin: 0 30px;
+        }
     }
 
     .loyalty {
+        padding: 30px 0 120px 0;
+
+        &__title {
+            text-wrap: nowrap;
+            line-height: 80%;
+            min-width: 657px;
+        }
+
+        &__subtitle {
+            max-width: 500px;
+            letter-spacing: -0.02em;
+        }
+
         &__item {
-            padding: 0;
+            padding: 0; 
+        }
+
+        &__body {
+            border-radius: 20px;
         }
 
         &__scrollwrap {
@@ -143,17 +172,18 @@
         &__wrapper {
             grid-template-columns: repeat(3, 313px);
             justify-content: flex-start;
+            margin-top: 55px;
         }
 
         &__headline {
             font-size: 24px;
-            line-height: 130%;
+            line-height: 170%;
             letter-spacing: -0.02em;
         }
 
         &__descr {
             font-size: 16px;
-            line-height: 140%;
+            line-height: 136%;
             letter-spacing: -0.02em;
         } 
     } 
@@ -163,6 +193,28 @@
     .container {
         max-width: 100%;
         padding: 0 20px;
+
+        &_mr0 {
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            min-width: 520px;
+            margin: 0;
+        }
+    }
+
+    .loyalty {
+        padding-bottom: 70px;
+
+        &__title {
+            min-width: unset;
+            text-wrap: wrap;
+            letter-spacing: -0.02em;
+        }
+
+        &__wrapper {
+            grid-template-columns: repeat(3, 313px);
+        }
     }
 }
 
@@ -170,6 +222,60 @@
     .container {
         max-width: 100%;
         padding: 0 20px;
+
+        &_mr0 {
+            position: static;
+            left: unset;
+            transform: unset;
+            min-width: unset;
+            margin: 0 auto;
+        }
+    }
+
+    .loyalty {
+        padding: 10px 0 30px 0;
+
+        &__wrapper {
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(3, (minmax(575px, auto)));
+            grid-auto-rows: minmax(575px, auto);
+            row-gap: 10px;
+            margin-top: 20px;
+        }
+
+        &__title {
+            min-width: unset;
+            text-wrap: wrap;
+            letter-spacing: -0.02em;
+        }
+
+        &__subtitle {
+            max-width: 315px;
+            margin-top: 10px;
+            padding: 0;
+            
+            &_m-visible {
+                display: block;
+            }
+
+            &_m-hidden {
+                display: none;
+            }
+        }
+
+        &__item {
+            padding-bottom: 0;
+        }
+
+        &__headline {
+           margin-top: 10px;
+        }
+
+        &__descr {
+            padding: 0 10px 20px 10px;
+            font-size: 14px;
+            line-height: 130%;
+        }
     }
 }
 
