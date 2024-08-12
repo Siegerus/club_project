@@ -37,6 +37,14 @@
         align-items: flex-start;
         margin-left: 60px;
         max-width: 652px;
+
+        &_m-visible {
+            display: none;
+        }
+    }
+
+    &__armor {
+        display: none;
     }
 
     &__date {
@@ -58,12 +66,15 @@
     }
 
     &__timer {
-
         margin-top: 16px;
         display: flex;
         align-items: center;
         justify-content: space-between;
         width: 280px;
+
+        &_m-visible {
+            display: none;
+        }
     }
 
     &__line {
@@ -312,7 +323,103 @@
     }
 
     .action {
-        
+        padding-top: 10px;
+
+        &__bg {
+            display: none;
+        }
+
+        &__wrapper {
+            flex-direction: column;
+        }
+
+        &__timer {
+            margin: 0 auto;
+            margin-top: 10px;
+
+            &_m-hidden {
+                display: none;
+            }
+
+            &_m-visible {
+                display: flex;
+            }
+        }
+
+        &__item {
+            margin-top: 10px;
+            margin-left: 0;
+
+            &_m-hidden {
+                display: none;
+            }
+
+            &_m-visible {
+                display: flex;
+            }
+        }
+
+        &__title {
+            margin-top: 4px;
+            font-size: 14px;
+            line-height: 130%;
+        }
+
+        &__date {
+            margin-top: 0;
+            font-size: 14px;
+            line-height: 130%;
+        }
+
+        &__tabs-wrap {
+            margin-top: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        &__tabs {
+            font-size: 14px;
+            line-height: 130%;
+
+            &_m-hidden {
+                display: none;
+            }
+        }
+
+        &__content {
+            padding: 10px;
+        }
+
+        &__headline {
+            font-size: 14px;
+            line-height: 130%;
+        }
+
+        &__body {
+            font-size: 14px;
+            line-height: 130%;
+        }
+
+        &__armor {
+            display: block;
+            margin-top: 10px;
+            font-weight: 500;
+            font-size: 14px;
+            color: #fff;
+            text-align: center;
+        }
+
+        &__btn {
+            width: 100%;
+            max-width: 319px;
+            margin-top: 10px;
+            padding: 14px 0 16px 0;
+        }
+
+        &__footer {
+            font-size: 14px;
+            line-height: 130%;
+        }
     }
 }
 

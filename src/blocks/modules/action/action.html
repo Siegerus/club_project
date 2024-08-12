@@ -3,10 +3,10 @@
     <div class="container">
         <div class="action__wrapper">
             <div class="action__img"><img src="img/action-img.png" alt="action"></div>
-            <div class="action__item">
+            <div class="action__item action__item_m-hidden">
                 <div class="action__date">20 июля 2024 года</div>
                 <h2 class="action__title">Swing свадьба Сегрея и Дарьи</h2>
-                <div class="action__timer">
+                <div class="action__timer action__timer_m-hidden">
                     <div class="action__timeBox">
                         <div class="action__number">
                             <div class="action__line"></div>
@@ -38,9 +38,15 @@
            <div class="action__tabs">О событии</div>
            <div class="action__tabs action__tabs_active">Формат мероприятия</div>
            <div class="action__tabs">Тайминг</div>
-           <div class="action__tabs">Браслеты</div>
-           <div class="action__tabs">Дресс-код</div>
+           <div class="action__tabs action__tabs_m-hidden">Браслеты</div>
+           <div class="action__tabs action__tabs_m-hidden">Дресс-код</div>
         </div>
+
+        <div class="action__item action__item_m-visible">
+            <div class="action__date">20 июля 2024 года</div>
+            <h2 class="action__title">Swing свадьба Сегрея и Дарьи</h2>
+        </div>   
+
         <div class="action__content">
             <div class="action__headline">Формат мероприятия</div>
             <div class="action__body">
@@ -50,6 +56,33 @@
                 -Горячий сюрприз для молодоженов и гостей <br>
                 Как всегда много вкусных и сочный блюд. <br>
                 Всеми любимые ведущий и диджей с ещё более горячей программой!
+            </div>
+        </div>
+        <div class="action__armor">Бронирование закроется через</div>
+        <div class="action__timer action__timer_m-visible">
+            <div class="action__timeBox">
+                <div class="action__number">
+                    <div class="action__line"></div>
+                    <div class="action__days">08</div>
+                </div>
+
+                    <div class="action__descr">дней</div>
+            </div>
+            <div class="action__timeBox">
+                <div class="action__number">
+                    <div class="action__line"></div>
+                    <div class="action__hours">17</div>
+                </div>
+
+                    <div class="action__descr">часов</div>
+            </div>
+            <div class="action__timeBox">
+                <div class="action__number">
+                    <div class="action__line"></div>
+                    <div class="action__minutes">38</div>
+                </div>
+
+                <div class="action__descr">минут</div>
             </div>
         </div>
         <div class="action__btn button button_footer">Забронировать</div>
