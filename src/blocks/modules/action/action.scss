@@ -22,7 +22,7 @@
 
     &__img {
         border-radius: 30px;
-        width: 520px;
+        min-width: 520px;
         height: 520px;
 
         img {
@@ -168,5 +168,157 @@
 
     &__btn {
         margin-top: 30px;
+    }
+}
+
+@media (max-width: 1679px) {
+    .container {
+        max-width: 1320px;
+    }
+
+    .action {
+        &__bg {
+            font-size: 160px;
+        }
+
+        &__item {}
+    }
+}
+
+@media (max-width: 1440px) {
+    .container {
+        max-width: 1120px;
+    }
+
+    .action {
+        &__bg {
+            font-size: 160px;
+        }
+
+        &__title {
+            font-size: 78px;
+        }
+
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 968px;
+    }
+
+    .action {
+        &__img {
+            min-width: 420px;
+            height: 420px;
+        }
+
+        &__title {
+            font-size: 70px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 648px;
+    }
+
+    .action {
+        padding: 20px 0 40px 0;
+
+        &__bg {
+            top: 48px;
+            left: 0;
+            font-size: 98px;
+            letter-spacing: -0.02em;
+            filter: blur(10px);
+        }
+
+        &__img {
+            min-width: 320px;
+            height: 320px;
+        }
+
+        &__date {
+            margin-top: 30px;
+            font-size: 16px;
+            line-height: 140%;
+            letter-spacing: -0.02em;
+            text-transform: none;
+            color: $mainc-w70; 
+        }
+
+        &__title {
+            font-size: 24px;
+            line-height: 130%;
+            letter-spacing: -0.02em;
+            text-wrap: nowrap;
+        }
+
+        &__item {
+            margin-left: 14px;
+        }
+
+        &__tabs-wrap {
+            margin-top: 40px;
+        }
+
+        &__tabs {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 140%;
+            letter-spacing: -0.02em;
+        }
+
+        &__content {
+            margin-top: 10px;
+        }
+
+        &__headline {
+            font-size: 24px;
+            line-height: 130%;
+        }
+
+        &__body {
+        font-size: 16px;
+        line-height: 140%;
+        letter-spacing: -0.02em;
+        }
+
+        &__btn {
+            margin-top: 10px;
+        }
+
+        &__footer {
+            font-size: 16px;
+            line-height: 140%;
+            letter-spacing: -0.02em;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    .action {
+        
+    }
+}
+
+@media (max-width: 360px) {
+    .container {
+        max-width: 100%;
+        padding: 0 20px;
     }
 }
