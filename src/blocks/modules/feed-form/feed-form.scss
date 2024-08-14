@@ -1,0 +1,129 @@
+.feed-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 730px;
+    padding: 40px;
+    margin: 0 auto;
+    border-radius: 30px;
+
+    &__input {
+        width: 100%;
+        height: 62px;
+        padding: 20px 0 20px 30px;
+        margin-bottom: 20px;
+        border: 2px solid #915c46;
+        border-radius: 16px;
+        outline: none;
+        background-color: transparent;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 140%;
+        letter-spacing: -0.02em;
+        color: #fff;
+        transition: all 0.4s;
+
+        &:hover {
+            background-color: $mainc-input;
+            
+        }
+
+        &:focus {
+            outline: 6px solid rgba(145, 92, 70, 0.2);
+            transition: all 0s;
+        }
+
+
+        &::placeholder {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 140%;
+            letter-spacing: -0.02em;
+            color: $mainc-w40;
+            transition: all 0.4s;
+        }
+
+        &:focus::placeholder {
+            color: transparent;
+        }
+
+        &_textarea {
+            min-height: 102px;
+            padding-bottom: 60px;
+            resize:none;
+            overflow: hidden;
+        }
+    }
+}
+
+@media (max-width: 1679px) {
+    .container {
+        max-width: 1320px;
+    }
+
+}
+
+@media (max-width: 1440px) {
+    .container {
+        max-width: 1120px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 968px;
+    }
+
+    .feed-form { 
+        max-width: 630px;  
+        padding: 40px;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 648px;
+    }
+
+    .feed-form { 
+        max-width: 100%;
+        margin: 0;
+        padding: 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    .feed-form { 
+        padding: 10px;
+        border-radius: 20px;
+
+        &__input {
+            height: 58px;
+            margin-bottom: 10px;
+
+            &::placeholder {
+                font-size: 14px;
+                line-height: 130%;
+            }
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .container {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+}

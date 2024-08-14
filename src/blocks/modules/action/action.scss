@@ -314,6 +314,21 @@
         max-width: 100%;
         padding: 0 20px;
     }
+
+    .action {
+        &__title {
+            text-wrap: wrap;
+        }
+
+        &__number {
+            width: 65px;
+            height: 65px;
+        }
+
+        &__timer {
+            width: 210px;
+        }
+    }
 }
 
 @media (max-width: 576px) {
@@ -322,11 +337,24 @@
         padding: 0 20px;
     }
 
+    .body {
+        &_eclipse {
+            background: url("../img/bg/action-bg-mobile.png") center / cover no-repeat, linear-gradient(270deg, #080808 0%, #1e120e 72.09%, #2d1910 100%);
+        }
+}
+
     .action {
         padding-top: 10px;
+        overflow: hidden;
 
         &__bg {
-            display: none;
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 98px;
+            line-height: 130%;
+            letter-spacing: -0.02em;
+            text-align: center;
         }
 
         &__wrapper {
@@ -363,12 +391,14 @@
             margin-top: 4px;
             font-size: 14px;
             line-height: 130%;
+            letter-spacing: unset;
         }
 
         &__date {
             margin-top: 0;
             font-size: 14px;
             line-height: 130%;
+            letter-spacing: unset;
         }
 
         &__tabs-wrap {
@@ -380,6 +410,7 @@
         &__tabs {
             font-size: 14px;
             line-height: 130%;
+            letter-spacing: unset;
 
             &_m-hidden {
                 display: none;
@@ -388,16 +419,20 @@
 
         &__content {
             padding: 10px;
+            border-radius: 10px;
         }
 
         &__headline {
             font-size: 14px;
             line-height: 130%;
+            letter-spacing: unset;
         }
 
         &__body {
+            margin-top: 15px;
             font-size: 14px;
             line-height: 130%;
+            letter-spacing: unset;
         }
 
         &__armor {
@@ -417,8 +452,10 @@
         }
 
         &__footer {
+            padding: 0 15px;
             font-size: 14px;
             line-height: 130%;
+            letter-spacing: unset;
         }
     }
 }
