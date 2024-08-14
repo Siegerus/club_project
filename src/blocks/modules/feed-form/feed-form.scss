@@ -6,6 +6,17 @@
     padding: 40px;
     margin: 0 auto;
     border-radius: 30px;
+    backdrop-filter: blur(24px);
+    box-shadow: 0 75px 75px 0 rgba(10, 10, 10, 0.09), 0 170px 102px 0 rgba(10, 10, 10, 0.05), 0 302px 121px 0 rgba(10, 10, 10, 0.01), 0 471px 132px 0 rgba(10, 10, 10, 0), 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background: rgba(255, 255, 255, 0.04);
+
+    &_alit-stretch {
+        align-items: stretch;
+    }
+
+    &_mrg0 {
+        margin: 0;
+    }
 
     &__input {
         width: 100%;
@@ -22,6 +33,19 @@
         letter-spacing: -0.02em;
         color: #fff;
         transition: all 0.4s;
+
+        &_tac {
+            padding-left: 0;
+            
+            &::placeholder {
+                padding-left: 0;
+                text-align: center;
+            }
+        }
+
+        &_mb10 {
+            margin-bottom: 10px;
+        }
 
         &:hover {
             background-color: $mainc-input;
@@ -52,6 +76,19 @@
             padding-bottom: 60px;
             resize:none;
             overflow: hidden;
+        }
+    }
+
+    &__confidential {
+        margin-top: 20px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 125%;
+        text-align: center;
+        color: $mainc-w70;
+
+        &_mt10 {
+            margin-top: 10px;
         }
     }
 }
