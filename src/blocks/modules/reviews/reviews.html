@@ -1,39 +1,50 @@
 <section class="reviews">
+    <h2 class="title reviews__title">Отзывы прошедшего мероприятия</h2>
     <div class="container">
-        <h2 class="title reviews__title">Отзывы прошедшего мероприятия</h2>
+        
         <div class="reviews__wrapper">
             <div class="reviews__item">
                 <div class="reviews__back"></div>
-                <div class="reviews__img"><img src="../img/avatar.png" alt="avatar"></div>
+                <div class="reviews__img reviews__img_m-hidden"><img src="../img/avatar.png" alt="avatar"></div>
                 <div class="reviews__body">
                     <div class="reviews__header">
-                        <div class="reviews__headline">Владимир М.</div>
-                        <div class="reviews__starsWrap"> 
-                            <img src="../img/icons/yellow-star.svg" alt="star" class="reviews__star">
-                            <img src="../img/icons/yellow-star.svg" alt="star" class="reviews__star">
-                            <img src="../img/icons/yellow-star.svg" alt="star" class="reviews__star">
-                            <img src="../img/icons/yellow-star.svg" alt="star" class="reviews__star">
-                            <img src="../img/icons/black-star.svg" alt="star" class="reviews__star">
+                        <div class="reviews__img reviews__img_m-visible"><img src="../img/avatar.png" alt="avatar"></div>
+                        <div class="reviews__headline">Владимир М. <span>Black party</span></div>
+                        <div class="reviews__starsWrap reviews__starsWrap_small"> 
+                            <img src="../img/icons/yellow-star.svg" alt="star" class="reviews__star reviews__star_small">
+                            <img src="../img/icons/yellow-star.svg" alt="star" class="reviews__star reviews__star_small">
+                            <img src="../img/icons/yellow-star.svg" alt="star" class="reviews__star reviews__star_small">
+                            <img src="../img/icons/yellow-star.svg" alt="star" class="reviews__star reviews__star_small">
+                            <img src="../img/icons/black-star.svg" alt="star" class="reviews__star reviews__star_small">
                         </div>
                     </div>
                     <div class="reviews__subhead">Black party</div>
                     <div class="reviews__descr">
-                        Очень понравилось. Свет, декорации, актеры. Всё прошло очень хорошо, замечательные организаторы. Все организационные моменты быстро решили, отличный сервис
+                        Очень понравилось. Свет, декорации, актеры. Всё прошло очень хорошо, замечательные организаторы. 
+                        <span>Все организационные моменты быстро решили, отличный сервис</span> 
+                        <div class="reviews__arrows">
+                            <div class="reviews__arrowLeft">
+                                <img src="../img/icons/reviews_arrow-left.svg" alt="arrow-left">
+                            </div>
+                            <div class="reviews__arrowRight">
+                                <img src="../img/icons/reviews_arrow-right.svg" alt="arrow-right">
+                            </div>
+                        </div>
                     </div>
-                    <div class="reviews__arrows">
+                    <!-- <div class="reviews__arrows">
                         <div class="reviews__arrowLeft">
                             <img src="../img/icons/reviews_arrow-left.svg" alt="arrow-left">
                         </div>
                         <div class="reviews__arrowRight">
                             <img src="../img/icons/reviews_arrow-right.svg" alt="arrow-right">
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <form class="feed-form feed-form_alit-stretch feed-form_mrg0 reviews__form">
                 <input name="event" id="event" type="text" class="feed-form__input feed-form__input_tac feed-form__input_mb10 reviews__input" placeholder="Выберите мероприятие">
                 <input name="user" id="user" type="text" class="feed-form__input feed-form__input_mb10 reviews__input" placeholder="Ваше имя">
-                <textarea id="message" name="message" placeholder="Ваш отзыв" class="feed-form__input feed-form__input_textarea feed-form__input_mb10 reviews__input"></textarea>
+                <textarea id="message" name="message" placeholder="Ваш отзыв" class="feed-form__input feed-form__input_textarea feed-form__input_mb10 reviews__input reviews__input_textarea"></textarea>
                 <div class="reviews__rank">
                     <div class="reviews__rankText">Рейтинг мероприятия</div>
                     <div class="reviews__starsWrap"> 
