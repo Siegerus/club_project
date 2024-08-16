@@ -1,0 +1,71 @@
+.autorization {
+    padding: 29px 0 237px 0;
+
+    &__logo {
+        margin: 0 auto;
+    }
+
+    &__block {
+        align-items: unset;
+    }
+
+    &__tabsWrap {
+        display: flex;
+        width: 347px;
+        margin: 0 auto;
+    }
+
+    &__tabs {
+        margin: 0;
+
+        &_sign, &_enter {
+            position: relative;
+            padding: 19px 48px 21px 48px;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 130%;
+            letter-spacing: -0.02em;
+            color: #fff;  
+            background-color: $mainc-bg;          
+        }
+
+        &_enter {
+            left: -32px;
+            min-width: 166px;
+            padding: 19px 61px 21px 61px;
+            color: #080808;
+            background-color: #fff;
+        }
+
+        &_sign {
+            min-width: 213px;
+        }
+    }
+
+    &__title {
+        margin-top: 40px;
+        margin-bottom: 18px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 130%;
+        text-align: center;
+        color: #fff;
+    }
+
+    .input-wrap {
+        position: relative;
+    }
+
+    .input {
+        display: block;
+        border: 2px solid #915c46;
+        background-color: grey;
+    }
+
+    .test {
+        top: 0;
+        left: 0;  
+        position: absolute;
+        color:#fff;
+    }
+}
