@@ -1,5 +1,7 @@
 .autorization {
-    padding: 29px 0 237px 0;
+    position: relative;
+    padding: 29px 0 0 0;
+    min-height: 1080px;
 
     &__logo {
         margin: 0 auto;
@@ -11,7 +13,9 @@
 
     &__tabsWrap {
         display: flex;
-        width: 347px;
+        position: relative;
+        min-height: 67px;
+        width: 380px;
         margin: 0 auto;
     }
 
@@ -19,28 +23,32 @@
         margin: 0;
 
         &_sign, &_enter {
-            position: relative;
+            position: absolute;
+            left: 0;
             padding: 19px 48px 21px 48px;
             font-weight: 600;
             font-size: 20px;
             line-height: 130%;
             letter-spacing: -0.02em;
             color: #fff;  
-            background-color: $mainc-bg;          
+            background-color: $mainc-bg;  
+            z-index: 0;        
         }
 
         &_enter {
-            left: -32px;
-            min-width: 166px;
+            right: 0;
+            left: auto;
+            min-width: 185px;
             padding: 19px 61px 21px 61px;
             
         }
 
         &_sign {
-            min-width: 213px;
+            min-width: 240px;
         }
 
         &_active {
+            z-index: 5;
             color: #080808;
             background-color: #fff;
         }
@@ -52,14 +60,16 @@
         font-weight: 500;
         font-size: 20px;
         line-height: 130%;
-        text-align: center;
         color: #fff;
+
+        &_tac {
+            text-align: center; 
+        }
     }
 
     &__btn {
         width: 100%;
         max-width: unset;
         margin-top: 16px;
-        
     }   
 }

@@ -19,7 +19,18 @@
     }
 
     &_mt {
-        margin-top: 157px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &_fixedw {
+        width: 730px;
+    }
+
+    &_hidden {
+        display: none;
     }
 
     &__enter {
@@ -37,7 +48,7 @@
             display: block;
             position: absolute;
             top: -8px;
-            left: 24px;
+            left: 17px;
             border-radius: 10px;
             background-color: #1e120e;
         }
@@ -89,6 +100,14 @@
             }
         }
 
+        &_h68 {
+            height: 68px;
+        }
+
+        &_br10 {
+            border-radius: 10px;
+        }
+
         &_mb10 {
             margin-bottom: 10px;
         }
@@ -97,12 +116,20 @@
             margin-bottom: 16px;
         }
 
+        &_mb15 {
+            margin-bottom: 15px;
+        }
+
         &_mb30 {
             margin-bottom: 30px;
         }
 
         &_mb0 {
             margin-bottom: 0;
+        }
+
+        &_fz20 {
+            font-size: 20px;
         }
 
         &_textarea {
@@ -132,12 +159,19 @@
             transition: all 0.4s;
         }
 
+        &_place-fz20 {
+            &::placeholder {
+                font-size: 20px;
+            }
+        }
+
         &:focus::placeholder {
             color: transparent;
         }        
     }
 
     &__select {
+        height: 66px;
         background: url("../img/icons/down.svg") right 23px top 50% no-repeat;
         appearance: none;
 
@@ -187,6 +221,32 @@
         font-weight: 600;
         font-size: 20px;
         line-height: 140%;
+        color:#fff;
+
+        &_colorw70 {
+            color: $mainc-w40;
+        }
+
+        &_tac {
+            text-align: center;
+        }
+        
+        &_mt16 {
+            margin-top: 16px;
+        }
+
+        span {
+            font-weight: 600;
+            color:#fff;
+        }
+    }
+
+    &__forget {
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 110%;
+        letter-spacing: -0.02em;
+        text-align: center;
         color:#fff;
     }
 
