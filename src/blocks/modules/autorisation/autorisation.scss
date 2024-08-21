@@ -13,7 +13,7 @@
 
     &__tabsWrap {
         display: flex;
-        position: relative;
+        
         min-height: 67px;
         width: 380px;
         margin: 0 auto;
@@ -23,8 +23,7 @@
         margin: 0;
 
         &_sign, &_enter {
-            position: absolute;
-            left: 0;
+            position: relative;
             padding: 19px 48px 21px 48px;
             font-weight: 600;
             font-size: 20px;
@@ -36,8 +35,7 @@
         }
 
         &_enter {
-            right: 0;
-            left: auto;
+            left: -32px;
             min-width: 185px;
             padding: 19px 61px 21px 61px;
             
@@ -65,6 +63,10 @@
         &_tac {
             text-align: center; 
         }
+
+        &_m-visible {
+            display: none;
+        }
     }
 
     &__btn {
@@ -72,4 +74,146 @@
         max-width: unset;
         margin-top: 16px;
     }   
+}
+
+@media (max-width: 1679px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .container {
+        max-width: 1120px;
+    }
+
+    .autorization {
+        &__block {
+            min-width: 648px;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 968px;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 648px;
+    }
+
+    .autorization {
+        padding-top: 40px;
+
+        &__block {
+            min-width: 648px;
+            border-radius: 40px;
+        }
+
+        &__tabs {
+            &_sign, &_enter {
+                letter-spacing: -0.02em;     
+            }
+        }
+        
+        &__confidential {
+            line-height: 140%;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    .autorization {
+        &__block {
+            min-width: unset; 
+        }
+
+        &__confidential {
+            font-size: 19px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    .autorization {
+        min-height: 779px;
+        /* min-height: 640px; */
+
+        &__logo {
+            min-width: 160px;
+            min-height: 31px;
+        }
+
+        &__block {
+            width: calc(100% - 40px);
+            min-width: unset;
+            padding: 20px;
+            border-radius: 20px;
+        }
+
+        &__tabsWrap {
+            width: 197px;
+            min-height: unset;
+        }
+
+        &__tabs {
+            &_sign, &_enter {
+                width: unset;
+                min-width: unset;
+                padding: 10px 22px 12px 22px;
+                font-size: 14px;
+                letter-spacing: -0.02em;     
+            }
+
+            &_sign {
+                min-width: 126px;
+            }
+
+            &_enter {
+                left: -14px;
+            }
+        }
+
+        &__title {
+            margin-top: 20px;
+            margin-bottom: 34px;
+            font-size: 14px;
+            text-align: center;
+            letter-spacing: -0.02em;
+
+            &_m-visible {
+                display: block;
+            }
+
+            &_m-hidden {
+                display: none;
+            }
+        }
+
+        &__btn {
+            width: 100%;
+            margin-top: 0;
+            padding: 14px 0 16px 0;
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .container {
+        max-width: 100%;
+        padding: 0 20px;
+    }
 }

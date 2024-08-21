@@ -66,13 +66,7 @@
         font-size: 16px;
         line-height: 130%;
         color: #915c46;
-
-        /* &:hover {
-            background-color: $mainc-input;
-        } */
     }
-
-    
 
     &__input {
         position: relative;
@@ -172,6 +166,8 @@
 
     &__select {
         height: 66px;
+        padding-top: 15px;
+        padding-bottom: 15px;
         background: url("../img/icons/down.svg") right 23px top 50% no-repeat;
         appearance: none;
 
@@ -183,8 +179,6 @@
             font-size: 20px;
             line-height: 130%;
             color:#fff;
-            
-
         }
     }
 
@@ -258,7 +252,7 @@
         position: relative;
         min-width: 26px;
         min-height: 27px;
-        margin-right: 5.5px;
+        margin-right: 8px;
         border-radius: 4px;
         background-color: #fff;
         border: 1.50px solid #fff;
@@ -288,7 +282,6 @@
     .container {
         max-width: 1320px;
     }
-
 }
 
 @media (max-width: 1440px) {
@@ -325,6 +318,12 @@
         max-width: 100%;
         padding: 0 20px;
     }
+
+    .feed-form {
+        &_mt {
+            top: 55%;
+        }
+    }
 }
 
 @media (max-width: 576px) {
@@ -341,10 +340,60 @@
             height: 58px;
             margin-bottom: 10px;
 
+            &_mb30 {
+                margin-bottom: 24px;
+            }
+
             &::placeholder {
                 font-size: 14px;
                 line-height: 130%;
             }
+
+            &_place-fz20 {
+                &::placeholder {
+                    font-size: 16px;
+                    letter-spacing: -0.02em;
+                }
+            }
+        }
+
+        &__checkbox {
+            min-width: 16px;
+            min-height: 16px;
+
+            &::before {
+                width: 8px;
+                height: 6px;
+            }
+        }
+
+        &__select {
+            font-size: 16px;
+
+            option {
+                font-size: 16px;
+                line-height: 140%;
+                letter-spacing: -0.02em;
+            }
+        }
+
+        &__label {
+            font-size: 14px;
+            letter-spacing: -0.02em;
+        }
+
+       &__text {
+            &_m-hidden {
+                display: none;
+            }
+        }
+
+        &__confidentialWrap {
+            margin-top: 10px;
+        }
+
+        &__confidential {
+            font-size: 14px;
         }
     }
 }
