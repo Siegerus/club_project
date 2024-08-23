@@ -76,10 +76,16 @@
 
 
     
-    <div class="feed-form feed-form_fixedw feed-form_mt autorization__block ">
+    <div class="feed-form feed-form_fixedw feed-form_mt autorization__block">
+
+        <div class="autorization__tabsWrap autorization__tabsWrap_m-visible">
+            <div class="feed-form__tabs autorization__tabs autorization__tabs_sign button ">Регистрация</div>
+            <div class="feed-form__tabs autorization__tabs autorization__tabs_enter button autorization__tabs_active">Вход</div>
+        </div>
+
         <div class="feed-form__enter autorization__enter feed-form__enter_active">
             <div class="feed-form__forget autorization__forget">Забыли пароль?</div>
-            <div class="feed-form__title autorization__title">Введите свой адрес электронной почты, чтобы сбросить пароль</div>
+            <div class="feed-form__title autorization__title autorization__title_mt10 autorization__title_tal">Введите свой адрес электронной почты, чтобы сбросить пароль</div>
             <form id="autorization" action="">
                 <div class="feed-form__inputWrap autorization__inputWrap">
                     <input id="forget-email" name="forget-email" type="mail" class="feed-form__input feed-form__input_place-fz20 feed-form__input_h68 feed-form__input_br10 feed-form__input_mb0 autorization__input" placeholder="info@gmail.com">

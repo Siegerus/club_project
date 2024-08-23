@@ -207,8 +207,6 @@
         display: flex;
         align-items: flex-start;
         margin-top: 16px;
-
-
     }
 
     &__text {
@@ -257,7 +255,6 @@
         background-color: #fff;
         border: 1.50px solid #fff;
         
-
         &::before {
             content: "";
             position: absolute;
@@ -266,8 +263,7 @@
             transform: translate(-50%, -50%);
             width: 12px;
             height: 9px;
-            transition: all 0.8s;
-            
+            transition: all 0.8s; 
         }
     }
 
@@ -298,6 +294,10 @@
     .feed-form { 
         max-width: 630px;  
         padding: 40px;
+
+        &_fixedw {
+            width: 648px;
+        }
     }
 }
 
@@ -322,6 +322,10 @@
     .feed-form {
         &_mt {
             top: 55%;
+        }
+
+        &_fixedw {
+            width: calc(100% - 40px);
         }
     }
 }
@@ -383,6 +387,14 @@
         }
 
        &__text {
+            font-size: 14px;
+            line-height: 130%;
+            letter-spacing: -0.02em;
+
+            &_mt16 {
+                margin-top: 20px;
+            }
+
             &_m-hidden {
                 display: none;
             }
@@ -394,6 +406,12 @@
 
         &__confidential {
             font-size: 14px;
+        }
+
+        &__forget {
+            margin-top: 20px;
+            font-size: 24px;
+            line-height: 130%;
         }
     }
 }

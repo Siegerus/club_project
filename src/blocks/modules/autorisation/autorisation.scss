@@ -13,10 +13,13 @@
 
     &__tabsWrap {
         display: flex;
-        
         min-height: 67px;
         width: 380px;
         margin: 0 auto;
+
+        &_m-visible {
+            display: none;
+        }
     }
 
     &__tabs {
@@ -167,6 +170,10 @@
         &__tabsWrap {
             width: 197px;
             min-height: unset;
+
+            &_m-visible {
+                display: flex;
+            }
         }
 
         &__tabs {
@@ -200,6 +207,15 @@
 
             &_m-hidden {
                 display: none;
+            }
+
+            &_mt10 {
+                margin-top: 10px;
+                margin-bottom: 24px;  
+            }
+
+            &_tal {
+                text-align: left;
             }
         }
 
