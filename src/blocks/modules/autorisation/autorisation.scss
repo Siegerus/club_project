@@ -5,10 +5,15 @@
 
     &__logo {
         margin: 0 auto;
+        min-width: 260px;
     }
 
     &__block {
         align-items: unset;
+    }
+
+    &__verify {
+        margin-top: 259px;
     }
 
     &__tabsWrap {
@@ -70,6 +75,10 @@
         &_m-visible {
             display: none;
         }
+
+        &_mt20 {
+            margin-top: 20px;
+        }
     }
 
     &__btn {
@@ -93,6 +102,10 @@
     .autorization {
         &__block {
             min-width: 648px;
+        }
+
+        &__logo {
+            min-width: 260px;
         }
     }
 }
@@ -136,7 +149,7 @@
 
     .autorization {
         &__block {
-            min-width: unset; 
+            min-width: 540px; 
         }
 
         &__confidential {
@@ -153,6 +166,7 @@
 
     .autorization {
         min-height: 779px;
+        padding-top: 30px;
         /* min-height: 640px; */
 
         &__logo {
@@ -210,8 +224,11 @@
             }
 
             &_mt10 {
-                margin-top: 10px;
-                margin-bottom: 24px;  
+                margin-top: 10px; 
+            }
+
+            &_mb24 {
+                margin-bottom: 24px;
             }
 
             &_tal {
@@ -221,6 +238,7 @@
 
         &__btn {
             width: 100%;
+            max-width: unset;
             margin-top: 0;
             padding: 14px 0 16px 0;
         }
