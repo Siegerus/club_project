@@ -76,8 +76,17 @@
             margin-top: 20px;
         }
 
+        &_mt16 {
+            margin: 16px auto 30px auto;
+        }
+
         &_mb20 {
             margin-bottom: 20px;
+        }
+
+        &_w458 {
+            max-width: 458px;
+
         }
     }
 
@@ -130,6 +139,10 @@
         }
             
         &__verify {
+            max-width: 648px;
+        }
+
+        &__set {
             max-width: 648px;
         }
 
@@ -186,6 +199,12 @@
         }
 
         &__verify {
+            width: calc(100% - 40px);
+            max-width: unset;
+            padding: 20px;
+        }
+
+        &__set {
             width: calc(100% - 40px);
             max-width: unset;
             padding: 20px;
@@ -255,6 +274,10 @@
             max-width: unset;
             margin-top: 0;
             padding: 14px 0 16px 0;
+
+            &_mt10 {
+                margin-top: 10px;
+            }
         }
     }
 }
