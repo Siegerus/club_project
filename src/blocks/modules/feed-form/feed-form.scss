@@ -33,6 +33,14 @@
         width: 730px;
     }
 
+    &_center {
+        margin: 0 auto;
+    }
+
+    &_mt259 {
+        margin-top: 259px;
+    }
+
     &_hidden {
         display: none;
     }
@@ -282,6 +290,10 @@
         letter-spacing: -0.02em;
         text-align: center;
         color:#fff;
+
+        &_mt0 {
+            margin-top: 0;
+        }
     }
 
     &__hidden {
@@ -356,6 +368,14 @@
         &_mt {
             top: 53%;
         }
+
+        &_center {
+            margin: 0 auto;
+        }
+
+        &_mt259 {
+            margin-top: 248px;
+        }
     }
 }
 
@@ -390,9 +410,17 @@
         padding: 10px;
         border-radius: 20px;
 
+        &_mt259 {
+            margin-top: 172px;
+        }
+
         &__input {
             height: 58px;
             margin-bottom: 10px;
+
+            &_number {
+                margin-bottom: 20px;
+            }
 
             &_mb30 {
                 margin-bottom: 24px;
@@ -462,6 +490,10 @@
             margin-top: 20px;
             font-size: 24px;
             line-height: 130%;
+
+            &_mt0 {
+                margin-top: 0;
+            }
         }
     }
 }

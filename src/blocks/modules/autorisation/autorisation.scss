@@ -12,10 +12,6 @@
         align-items: unset;
     }
 
-    &__verify {
-        margin-top: 259px;
-    }
-
     &__tabsWrap {
         display: flex;
         min-height: 67px;
@@ -79,6 +75,10 @@
         &_mt20 {
             margin-top: 20px;
         }
+
+        &_mb20 {
+            margin-bottom: 20px;
+        }
     }
 
     &__btn {
@@ -127,6 +127,10 @@
         &__block {
             min-width: 648px;
             border-radius: 40px;
+        }
+            
+        &__verify {
+            max-width: 648px;
         }
 
         &__tabs {
@@ -181,6 +185,12 @@
             border-radius: 20px;
         }
 
+        &__verify {
+            width: calc(100% - 40px);
+            max-width: unset;
+            padding: 20px;
+        }
+
         &__tabsWrap {
             width: 197px;
             min-height: unset;
@@ -229,6 +239,10 @@
 
             &_mb24 {
                 margin-bottom: 24px;
+            }
+
+            &_mb20 {
+                margin-bottom: 20px;
             }
 
             &_tal {
