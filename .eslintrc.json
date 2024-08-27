@@ -10,7 +10,8 @@
     "parser": "@babel/eslint-parser",
     "parserOptions": {
         "ecmaVersion": 6,
-        "sourceType": "module"
+        "sourceType": "module",
+        "requireConfigFile": false //  ! added option for uncorrect paths, can be deleted
     },
 
     "rules": {

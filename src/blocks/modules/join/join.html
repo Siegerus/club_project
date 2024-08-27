@@ -35,4 +35,24 @@
         </div>
         <div class="button button_nobg join__btn join__btn_m-hidden">Подать заявку</div>
     </div>
+
+    <div class="join__overlay">
+        <div class="join__modWrapper">
+            <div class="join-modal">
+                <div class="join-modal__img"><img src="../img/icons/join-modal-icon.svg" alt="icon"></div>
+                <h3 class="join-modal__title">Вход в клуб</h3>
+                <div class="join-modal__descr">Стоимость билета в клуб 100 рублей</div>
+                <form id="join-modal" action="" class="join-modal__form feed-form feed-form_modal">
+                    <input class="join-modal__input feed-form__input feed-form__input_h66 feed-form__input_modal" placeholder="Адрес электронной почты"></input>
+                    <button class="button button_footer button_nobg join-modal__btn">Оплатить вход в клуб</button>
+                    <div class="join-modal__confidentialWrap feed-form__confidentialWrap feed-form__confidentialWrap_mt20 ">
+                        <input id="join-modal-checkbox" name="join-modal-checkbox" type="checkbox" class="feed-form__hidden join-modal__hidden">
+                        <label for="join-modal-checkbox" class="join-modal__checkbox feed-form__checkbox_modal feed-form__checkbox"></label>
+                        <div class="join-modal__confidential feed-form__confidential feed-form__confidential_mt0">Я согласен с правилами клуба</div>
+                    </div>
+                </form>
+                <div class="join__close"></div>
+            </div>
+        </div>
+    </div>
 </section>

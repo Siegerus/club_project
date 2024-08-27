@@ -57,6 +57,13 @@
         }
     }
 
+    &_modal {
+        padding: 0;
+        background: unset;
+        backdrop-filter: unset;
+        box-shadow: unset;
+    }
+
     &__inputWrap {
         position: relative;
 
@@ -119,6 +126,10 @@
 
         &_h68 {
             height: 68px;
+        }
+
+        &_h66 {
+            height: 66px;
         }
 
         &_br10 {
@@ -212,6 +223,13 @@
                 background-color: $mainc-bg;
             }
         }
+
+        &_modal {
+            margin-top: 20px;
+            background-color: $mainc-input;
+            border: none;
+
+        }
     }
 
     &__select {
@@ -257,6 +275,10 @@
         display: flex;
         align-items: flex-start;
         margin-top: 16px;
+
+        &_mt20 {
+            margin-top: 20px;
+        }
     }
 
     &__text {
@@ -323,6 +345,12 @@
             height: 9px;
             transition: all 0.8s; 
         }
+
+        &_modal {
+            min-width: 21px;
+            min-height: 20px;  
+            background-color: transparent;
+        }
     }
 
     &__hidden:checked + &__checkbox {
@@ -356,6 +384,10 @@
         &_fixedw {
             width: 648px;
         }
+
+        &_modal {
+            padding: 0;
+        }
     }
 }
 
@@ -383,7 +415,10 @@
 
         &_mt209 {
             margin-top: 198px;
-            
+        }
+
+        &_modal {
+            padding: 0;
         }
     }
 }
@@ -406,6 +441,10 @@
         &_fixedw {
             width: calc(100% - 40px);
         }
+
+        &_modal {
+            padding: 0;
+        }
     }
 }
 
@@ -425,6 +464,10 @@
 
         &_mt209 {
             margin-top: 97px;
+        }
+
+        &_modal {
+            padding: 0;
         }
 
         &__input {

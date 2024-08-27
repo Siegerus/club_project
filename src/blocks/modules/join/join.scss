@@ -1,4 +1,5 @@
 .join {
+    position: relative;
     padding: 80px 0;
 
     &__title {
@@ -56,12 +57,113 @@
     }
 
     &__btn {
-        max-width: 237px;
-        margin-top: 60px;
+        max-width: 300px;
+        margin-top: 25px;
         line-height: 24px;
 
         &_m-visible {
             display: none;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        top: 0;
+        right: -82px;
+        width: 62px;
+        height: 62px;
+        border-radius: 100px;
+        background-color: rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(24px);
+        transform: rotate(45deg);
+        
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 21px;
+            width: 3px;
+            border-radius: 20px;
+            background-color: #fff; 
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 3px;
+            width: 21px;
+            border-radius: 20px;
+            background-color: #fff;
+        }
+    }
+
+    &__overlay {
+        /* display: none; */
+        z-index: 20;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.6);
+
+    }
+
+    &-modal {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 603px;
+        padding: 40px;
+        border-radius: 40px;
+        background-color: $mainc-bg;
+        backdrop-filter: blur(24px);
+
+        &__img {
+            width: 141px;
+            height: 140px;
+            margin: 0 auto;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &__title {
+            margin-top: 20px;
+            font-weight: 600;
+            font-size: 36px;
+            line-height: 140%;
+            text-align: center;
+            color: #fff;
+        }
+
+        &__descr {
+            margin-top: 10px;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 140%;
+            text-align: center;
+            color: $mainc-w40;
+        }
+
+        &__btn {
+            width: 100%;
+            max-width: unset;
+            margin: 0;
+        }
+
+        &__hidden:checked + &__checkbox {
+            &::before {
+                background: url("../img/icons/check\ -white.svg") center / cover no-repeat; 
+            }
         }
     }
 }
@@ -85,6 +187,10 @@
 
     .join {
         padding-top: 10px;
+
+        &-modal {
+            max-height: 100vh;
+        }
 
         &__wrapper {
             margin-top: 50px;
@@ -166,6 +272,16 @@
             &__text {
                 text-wrap: wrap;
             }
+
+            &-modal {
+                width: 80%;
+                min-width: unset;
+            }
+
+            &__close  {
+                top: 15px;
+                right: 15px;
+            }
         }
     } 
 
@@ -237,6 +353,36 @@
             margin-top: 10px;
             padding: 14px 0 16px 0;
             font-size: 14px;
+        }
+
+        &__close {
+            width: 55px;
+            height: 55px;
+
+            &::after {
+                width: 20px;
+            } 
+
+            &::before {
+                height: 20px;
+            }
+        }
+
+        &-modal {
+            height: 100%;
+            width: 100%;
+        
+            &__btn {
+                width: 100%;
+                max-width: unset;
+                margin-top: 15px;
+                padding: 20px 12px;
+                font-size: 16px;
+            }
+
+            &__confidentialWrap {
+                margin-top: 30px;
+            }
         }
     }
 }
