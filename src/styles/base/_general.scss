@@ -17,3 +17,15 @@ h1, h2, h3, h4, h5, h6, ul {
 body {
     background: linear-gradient(270deg, #080808 0%, #1e120e 72.09%, #2d1910 100%);
 }
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.swow-f {
+    display: flex;
+}

@@ -102,8 +102,8 @@
         }
     }
 
-    &__overlay {
-        /* display: none; */
+    /* &__overlay {
+        display: none;
         z-index: 20;
         position: fixed;
         top: 0;
@@ -111,18 +111,19 @@
         height: 100vh;
         background-color: rgba(0, 0, 0, 0.6);
 
-    }
+    } */
 
     &-modal {
-        position: absolute;
+        /* position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); */
         min-width: 603px;
         padding: 40px;
         border-radius: 40px;
         background-color: $mainc-bg;
         backdrop-filter: blur(24px);
+        background: url("../img/bg/modal-bg.png") center / cover no-repeat;
 
         &__img {
             width: 141px;

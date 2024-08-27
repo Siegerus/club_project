@@ -176,6 +176,107 @@
     &__btn {
         margin-top: 30px;
     }
+
+    &-modal {
+        min-width: 732px;
+        backdrop-filter: blur(100px);
+
+        &_hidden {
+            /* display: none; */
+        }
+
+        &__title {
+            max-width: 438px;
+            margin: 0 auto;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 130%;
+            text-align: center;
+            color: $mainc-w70;
+        }
+
+        &__wrapper {
+            display: flex;
+            align-items: center;
+            margin: 40px auto 0 auto;
+            width: 545px;
+            border-radius: 100px;
+            background-color: $mainc-bg;
+        }
+
+        &__label {
+            min-width: 166px;
+            padding: 20px 0;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 130%;
+            letter-spacing: -0.02em;
+            color: #fff;
+            text-align: center;
+
+            &_mw213 {
+                min-width: 213px;
+            }
+        }
+
+        &__btn {
+            width: 100%;
+            max-width: unset;
+        }
+
+        &__hidden:checked + &__label {
+            border-radius: 100px;
+            background-color: #fff;
+            color: #150d0b;
+        }
+
+        &__price {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-top: 16px;
+
+            div {
+                &:first-child {
+                    display: flex;
+                }
+            }
+        }
+
+        &__cost {
+            font-size: 20px;
+            line-height: 130%;
+            font-weight: 600;
+            color: #fff; 
+        }
+
+        &__radio {
+            position: relative;
+            width: 28px;
+            height: 28px;
+            border-radius: 100%;
+            border: 1px solid #fff;
+
+            &::before {
+                content: "" ;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 20px;
+                height: 20px;
+                border-radius: 100%;  
+            }
+        }
+
+        &__hidden_price:checked + &__radio {
+            &::before {
+                content: "" ;
+                background-color: #fff;
+
+            }
+        }
+    }
 }
 
 @media (max-width: 1679px) {
@@ -323,6 +424,28 @@
 
         &__timer {
             width: 210px;
+        }
+
+        &-modal {
+            width: 80%;
+            min-width: unset;
+
+            &__wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+            }
+
+            &__label {
+                min-width: 33%;
+                font-size: 18px;
+                
+            }
+
+            &__title {
+                font-size: 18px;
+            }
         }
     }
 }
