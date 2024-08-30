@@ -536,6 +536,10 @@
         &__label {
             font-size: 14px;
             letter-spacing: -0.02em;
+
+            &_white {
+                font-size: 16px;
+            }
         }
 
        &__text {
@@ -567,6 +571,10 @@
 
             &_mt0 {
                 margin-top: 0;
+            }
+
+            &_promo {
+                font-size: 26px;
             }
         }
     }
