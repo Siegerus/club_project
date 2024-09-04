@@ -8,8 +8,21 @@
         min-width: 260px;
     }
 
+    &__set {
+        display: none;
+    }
+
+    &__pass {
+        display: none; 
+    }
+
     &__block {
+        display: flex;
         align-items: unset;
+    }
+
+    &__verify {
+        display: none;
     }
 
     &__tabsWrap {
@@ -25,6 +38,12 @@
 
     &__tabs {
         margin: 0;
+
+        &:hover {
+            background:rgba(255, 255, 255, 0.04);
+            color: #fff;
+            box-shadow: unset;
+        }
 
         &_sign, &_enter {
             position: relative;
@@ -53,6 +72,12 @@
             z-index: 5;
             color: #080808;
             background-color: #fff;
+
+            &:hover {
+                background: #fff;
+                color: #080808;
+                box-shadow: unset;
+            }
         }
     }
 

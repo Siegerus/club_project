@@ -32,6 +32,10 @@
         align-items: center;
         justify-content: space-between;
         padding: 40px;
+        border-radius: 30px;
+        backdrop-filter: blur(24px);
+        box-shadow: 0 75px 75px 0 rgba(10, 10, 10, 0.09), 0 170px 102px 0 rgba(10, 10, 10, 0.05), 0 302px 121px 0 rgba(10, 10, 10, 0.01), 0 471px 132px 0 rgba(10, 10, 10, 0), 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        background: $mainc-bg;
     }
 
     &__img {
@@ -107,10 +111,15 @@
             grid-template-rows: minmax(370px, auto);
             grid-auto-rows: minmax(370px, auto);
         }
+
+        &__item {
+            padding: 15px 10px;
+        }
     
         &__body {
             min-height: 150px;
         }
+        
     }
 }
 

@@ -50,10 +50,12 @@
     }
 
     &__enter {
-        display: none;
-        
-        &_active {
+        &_show {
             display: block;
+        }
+
+        &_hide {
+            display: none;
         }
     }
 

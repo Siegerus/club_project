@@ -25,6 +25,8 @@
         padding: 0;
         background: unset;
         box-shadow: none;
+        border-radius: 30px;
+        backdrop-filter: blur(24px);
     }
 
     &__body {

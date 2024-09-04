@@ -35,6 +35,10 @@
         display: flex;
         align-items: flex-start;
         padding: 40px;
+        border-radius: 30px;
+        backdrop-filter: blur(24px);
+        box-shadow: 0 75px 75px 0 rgba(10, 10, 10, 0.09), 0 170px 102px 0 rgba(10, 10, 10, 0.05), 0 302px 121px 0 rgba(10, 10, 10, 0.01), 0 471px 132px 0 rgba(10, 10, 10, 0), 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        background: rgba(255, 255, 255, 0.04);
     }
 
     &__icon {
@@ -84,6 +88,10 @@
         /* width: 353px; */
         width: 31.7%;
         padding: 40px;
+        border-radius: 30px;
+        backdrop-filter: blur(24px);
+        box-shadow: 0 75px 75px 0 rgba(10, 10, 10, 0.09), 0 170px 102px 0 rgba(10, 10, 10, 0.05), 0 302px 121px 0 rgba(10, 10, 10, 0.01), 0 471px 132px 0 rgba(10, 10, 10, 0), 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        background: rgba(255, 255, 255, 0.04);
 
         &_w365 {
             /* width: 365px; */
@@ -140,6 +148,14 @@
         &__wrapper {
             grid-template-columns: repeat(2, 550px);
             justify-content: center;
+        }
+
+        &__item {
+            padding: 20px 30px 31px 30px;
+        }
+
+        &__subitem {
+            padding: 20px 30px 31px 30px;
         }
 
         &__headline {
@@ -263,10 +279,6 @@
         &__wrapper {
             grid-template-columns: repeat(2, 265px);
             /* grid-template-rows: repeat(2, (minmax(297px, auto))); */
-        }
-
-        &__item {
-            padding: 10px;
         }
 
         &__headline {
