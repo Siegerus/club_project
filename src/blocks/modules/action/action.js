@@ -2,7 +2,6 @@ window.addEventListener("DOMContentLoaded", function () {
     "use strict";
     
     function getValue() {
-
         let radio = Array.from(document.querySelectorAll("input[type='radio'][name=couple]")),
             btn = document.querySelector(".action-modal__btn");
 
@@ -21,11 +20,9 @@ window.addEventListener("DOMContentLoaded", function () {
 
     getValue();
 
-
-    function TabsSet() {
-        let tabsParent = document.querySelector(".action__tabs-wrap"),
-            tabs = Array.from(document.querySelectorAll(".action__tabs")),
-            tabsContent = Array.from(document.querySelectorAll(".action__content"));
+    function tabsSet(tabClass, contentClass) {
+        let tabs = Array.from(document.querySelectorAll(tabClass)),
+            tabsContent = Array.from(document.querySelectorAll(contentClass));
 
         /* console.log(tabs); */
 
@@ -48,9 +45,12 @@ window.addEventListener("DOMContentLoaded", function () {
         tabs.forEach((item) => {
             item.addEventListener("click", function (e) {
                 for (let i = 0; i < tabs.length; i++) {
-                    tabs[i].classList.remove("action__tabs_active");
-                    this.classList.add("action__tabs_active");
+                    if (tabs[i].classList.contains("action__tabs")) {
 
+                        tabs[i].classList.remove("action__tabs_active");
+                        this.classList.add("action__tabs_active");
+                    }
+                    
                     if(e.target == tabs[i]) {
                         hideContent(0);
                         showContent(i);
@@ -58,47 +58,10 @@ window.addEventListener("DOMContentLoaded", function () {
                 }
             });
         });
-
     }
 
-    TabsSet();
-
-
-
-
-    function modalTabsSet() {
-        let tabs = Array.from(document.querySelectorAll(".action-modal__label")),
-            content = Array.from(document.querySelectorAll(".action-modal__content"));
-
-        function hideModalContent(b) {
-            for (let a = b; a < content.length; a++) {
-                content[a].classList.remove("show");
-                content[a].classList.add("hide");
-            }
-        }
-
-        hideModalContent(1);
-
-        function showModalContent(c) {
-            if (content[c].classList.contains("hide")) {
-                content[c].classList.remove("hide");
-                content[c].classList.add("show");
-            }
-        }
-
-        tabs.forEach((item) => {
-            item.addEventListener("click", function(e) {
-                for (let i = 0; i < tabs.length; i++) {
-                    if (e.target == tabs[i]) {
-                        hideModalContent(0);
-                        showModalContent(i);
-                    }
-                }
-            });
-        });  
-    }
-
-    modalTabsSet();
-
+    tabsSet(".action__tabs", ".action__content");
+    tabsSet(".action-modal__label", ".action-modal__content");
+    
     
 });

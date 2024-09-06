@@ -1,16 +1,51 @@
-.fade {
-    animation-name: fade;
-    animation-duration: 1s;
+.animation {
+    &__fade {
+        animation-name: animation__fade;
+        animation-duration: 1s;
+
+        &_modal {
+        animation-name: animation__fade_modal;
+        animation-duration: 0.7s;
+        }
+    }
+
+    &__shadow {
+        animation-name: animation__shadow;
+        animation-duration: 1.5s;
+    }
 }
 
-@keyframes fade {
+
+@keyframes animation__fade {
     from {
-        transform: translateY(-100%);
         opacity: 0.1;
     }
 
     to {
-        transform: translateY(50%0);
         opacity: 1;
+    }
+}
+
+@keyframes animation__fade_modal {
+    from {
+        opacity: 0.5;
+        top: -100%;  
+    }
+
+    to {
+        opacity: 1;
+        top: 50%;
+    }
+}
+
+@keyframes animation__shadow {
+    from {
+        opacity: 0.1;
+        box-shadow: 0 0 115px #f6f6f6;
+    }
+
+    to {
+        opacity: 1;
+        box-shadow: 0 0 0 #000000;
     }
 }
