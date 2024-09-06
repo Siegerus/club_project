@@ -35,8 +35,8 @@
             </div>
         </div>
         <div class="action__tabs-wrap">
-           <div class="action__tabs">О событии</div>
-           <div class="action__tabs action__tabs_active">Формат мероприятия</div>
+           <div class="action__tabs action__tabs_active">О событии</div>
+           <div class="action__tabs ">Формат мероприятия</div>
            <div class="action__tabs">Тайминг</div>
            <div class="action__tabs action__tabs_m-hidden">Браслеты</div>
            <div class="action__tabs action__tabs_m-hidden">Дресс-код</div>
@@ -48,6 +48,17 @@
         </div>   
 
         <div class="action__content">
+            <div class="action__headline">О событии</div>
+            <div class="action__body">
+                Что же вас ждёт на этой уникальной свадьбе?<br>
+                Приоткроем пару фишек мероприятия: <br>
+                -Свадебные традиции с уклоном на формат свадьбы<br>
+                -Горячий сюрприз для молодоженов и гостей <br>
+                Как всегда много вкусных и сочный блюд. <br>
+                Всеми любимые ведущий и диджей с ещё более горячей программой!
+            </div>
+        </div>
+        <div class="action__content">
             <div class="action__headline">Формат мероприятия</div>
             <div class="action__body">
                 Что же вас ждёт на этой уникальной свадьбе?<br>
@@ -58,6 +69,40 @@
                 Всеми любимые ведущий и диджей с ещё более горячей программой!
             </div>
         </div>
+        <div class="action__content">
+            <div class="action__headline">Тайминг</div>
+            <div class="action__body">
+                Что же вас ждёт на этой уникальной свадьбе?<br>
+                Приоткроем пару фишек мероприятия: <br>
+                -Свадебные традиции с уклоном на формат свадьбы<br>
+                -Горячий сюрприз для молодоженов и гостей <br>
+                Как всегда много вкусных и сочный блюд. <br>
+                Всеми любимые ведущий и диджей с ещё более горячей программой!
+            </div>
+        </div>
+        <div class="action__content">
+            <div class="action__headline">Браслеты</div>
+            <div class="action__body">
+                Что же вас ждёт на этой уникальной свадьбе?<br>
+                Приоткроем пару фишек мероприятия: <br>
+                -Свадебные традиции с уклоном на формат свадьбы<br>
+                -Горячий сюрприз для молодоженов и гостей <br>
+                Как всегда много вкусных и сочный блюд. <br>
+                Всеми любимые ведущий и диджей с ещё более горячей программой!
+            </div>
+        </div>
+        <div class="action__content">
+            <div class="action__headline">Дресс-код</div>
+            <div class="action__body">
+                Что же вас ждёт на этой уникальной свадьбе?<br>
+                Приоткроем пару фишек мероприятия: <br>
+                -Свадебные традиции с уклоном на формат свадьбы<br>
+                -Горячий сюрприз для молодоженов и гостей <br>
+                Как всегда много вкусных и сочный блюд. <br>
+                Всеми любимые ведущий и диджей с ещё более горячей программой!
+            </div>
+        </div>
+
         <div class="action__armor">Бронирование закроется через</div>
         <div class="action__timer action__timer_m-visible">
             <div class="action__timeBox">
@@ -88,9 +133,10 @@
         <div class="action__btn button button_footer">Забронировать</div>
         <div class="action__footer">*За 7 дней до начала мероприятия +1000 ₽ к стоимости билета</div>
     </div>
-    <div class="action__overlay modal__overlay hide">
-        <div class="action-modal modal feed-form feed-form_alit-stretch>
-            <h3 class="action-modal__title">Вы зарегистированы как пара, поэтому у Вас есть возможность выбрать билет для двоих</h3>
+    <div class="action__overlay modal__overlay ">
+        <div class="action-modal modal feed-form feed-form_alit-stretch fade">
+            <h3 class="action-modal__title">Вы зарегистированы как пара, поэтому у Вас есть возможность выбрать билет для двоих
+            </h3>
             <form id="armor-first-step" action="">
                 <div class="action-modal__wrapper">
                     <input name="sex" id="couple" value="couple" type="radio" class="feed-form__hidden action-modal__hidden" id=""></input>
@@ -106,7 +152,7 @@
                 <div class="action-modal__content">
                     <div class="action-modal__price">
                         <div>
-                            <input id="couple-cost" name="couple" value="couple" type="radio" class="feed-form__hidden action-modal__hidden_price">
+                            <input id="couple-cost" name="couple" value="10 000 ₽" type="radio" class="feed-form__hidden action-modal__hidden_price">
                             <label class="action-modal__radio" for="couple-cost"></label>
                             <div class="feed-form__label_white">Билет вход с пары</div>
                         </div>
@@ -114,32 +160,50 @@
                     </div>
                     <div class="action-modal__price">
                         <div>
-                            <input id="couple-cost=comfort" name="couple" value="couple-comfort" type="radio" class="feed-form__hidden action-modal__hidden_price">
-                            <label class="action-modal__radio" for="couple-cost=comfort"></label>
+                            <input id="couple-cost-comfort" name="couple" value="11 000 ₽" type="radio" class="feed-form__hidden action-modal__hidden_price">
+                            <label class="action-modal__radio" for="couple-cost-comfort"></label>
                             <div class="feed-form__label_white">Билет вход Comfort с пары</div>
                         </div>
                         <div class="action-modal__cost">11 000 ₽</div>
                     </div>
                 </div>
-                <div class="action-modal__content hide">
+                <div class="action-modal__content">
                     <div class="action-modal__price">
                         <div>
-                            <input id="couple-cost" name="couple" value="couple" type="radio" class="feed-form__hidden action-modal__hidden_price">
-                            <label class="action-modal__radio" for="couple-cost"></label>
+                            <input id="single-man-cost" name="couple" value="5000 ₽" type="radio" class="feed-form__hidden action-modal__hidden_price">
+                            <label class="action-modal__radio" for="single-man-cost"></label>
                             <div class="feed-form__label_white">Билет вход с человека</div>
                         </div>
                         <div class="action-modal__cost">5000 ₽</div>
                     </div>
                     <div class="action-modal__price">
                         <div>
-                            <input id="couple-cost=comfort" name="couple" value="couple-comfort" type="radio" class="feed-form__hidden action-modal__hidden_price">
-                            <label class="action-modal__radio" for="couple-cost=comfort"></label>
+                            <input id="single-man-cost-comfort" name="couple" value="6000 ₽" type="radio" class="feed-form__hidden action-modal__hidden_price">
+                            <label class="action-modal__radio" for="single-man-cost-comfort"></label>
                             <div class="feed-form__label_white">Билет вход Comfort с человека</div>
                         </div>
                         <div class="action-modal__cost">6000 ₽</div>
                     </div>
                 </div>
-                <button class="button button_footer action-modal__btn">Оплатить 11 000 ₽</button>
+                <div class="action-modal__content">
+                    <div class="action-modal__price">
+                        <div>
+                            <input id="single-woman-cost" name="couple" value="5000 ₽" type="radio" class="feed-form__hidden action-modal__hidden_price">
+                            <label class="action-modal__radio" for="single-woman-cost"></label>
+                            <div class="feed-form__label_white">Билет вход с человека</div>
+                        </div>
+                        <div class="action-modal__cost">5000 ₽</div>
+                    </div>
+                    <div class="action-modal__price">
+                        <div>
+                            <input id="single-woman-cost-comfort" name="couple" value="6000 ₽" type="radio" class="feed-form__hidden action-modal__hidden_price">
+                            <label class="action-modal__radio" for="single-woman-cost-comfort"></label>
+                            <div class="feed-form__label_white">Билет вход Comfort с человека</div>
+                        </div>
+                        <div class="action-modal__cost">6000 ₽</div>
+                    </div>
+                </div>
+                <button class="button button_footer action-modal__btn">Оплатить</button>
             </form>
         </div>
     </div>

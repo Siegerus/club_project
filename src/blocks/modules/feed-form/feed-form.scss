@@ -183,6 +183,10 @@
             overflow: hidden;
         }
 
+        &_gray {
+            color: #999;
+        }
+
         &:hover {
             background-color: $mainc-input;
             
@@ -252,15 +256,22 @@
         padding-bottom: 15px;
         background: url("../img/icons/down.svg") right 23px top 50% no-repeat;
         appearance: none;
+        cursor: pointer;
 
         &::-ms-expand { display: none; }
+    }
 
-        option {
-            /* padding: .61em .8em .5em 1.4em;  */
-            font-weight: 500;
-            font-size: 20px;
-            line-height: 130%;
-            color:#fff;
+    &__option {
+        /* padding: .61em .8em .5em 1.4em;  */
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 130%;
+        color:#fff;
+        cursor: pointer;
+
+        &_reviews {
+            font-size: 16px; 
+            text-align: center;
         }
     }
 

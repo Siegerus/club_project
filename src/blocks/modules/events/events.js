@@ -1,13 +1,5 @@
-modules.define('events', ['i-bem-dom'], function(provide, bemDom) {
+window.addEventListener("DOMContentLoaded", function () {
+    "use strict";
 
-provide(bemDom.declBlock(this.name, {
-    onSetMod: {
-        js: {
-            inited: function() {
-                
-            }
-        }
-    }
-}));
-
+    
 });
