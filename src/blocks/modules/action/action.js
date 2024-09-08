@@ -1,5 +1,69 @@
 window.addEventListener("DOMContentLoaded", function () {
     "use strict";
+
+    function launchTimer() {
+
+        function getTime() {
+            let deadline = "2024-09-8",
+                t = Date.parse(deadline) - Date.parse(new Date()),
+                seconds = Math.floor((t / 1000) % 60),
+                minutes = Math.floor((t / 1000 / 60) % 60),
+                hours = Math.floor((t / 1000 / 60 / 60) % 24),
+                days = Math.floor(t /1000 / 60 / 60 / 24);
+            
+            return{
+                "total" :  t,
+                "seconds" : seconds,
+                "minutes" : minutes,
+                "hours" : hours,
+                "days" : days
+            };
+        }
+    
+        function setTime() {
+            let days = document.querySelector(".action__days"),
+                hours = document.querySelector(".action__hours"),
+                minutes = document.querySelector(".action__minutes"),
+                seconds = document.querySelector(".action__seconds");
+                
+            function updateTime() {
+                let get = getTime();
+                days.textContent = get.days;
+                hours.textContent = get.hours;
+                minutes.textContent = get.minutes;
+                seconds.textContent = get.seconds;
+    
+                function plusZero(timeItem,value) {
+                    if (value < 10) {
+                        timeItem.textContent = "0" + value;
+                    } else {
+                        timeItem.textContent = value;
+                    }
+                }
+    
+                plusZero(days, get.days);
+                plusZero(hours, get.hours);
+                plusZero(minutes, get.minutes);
+                plusZero(seconds, get.seconds);
+    
+                if (get.total <= 0) {
+                  
+                    days.textContent = "00";
+                    hours.textContent = "00";
+                    minutes.textContent = "00";
+                    seconds.textContent = "00";
+                    clearInterval(int);
+                }
+            }  
+    
+            let int = setInterval(updateTime, 1000);
+        }
+    
+        setTime();
+    }
+
+    launchTimer();
+    
     
     function getValue() {
         let radio = Array.from(document.querySelectorAll("input[type='radio'][name=couple]")),
@@ -20,7 +84,8 @@ window.addEventListener("DOMContentLoaded", function () {
 
     getValue();
 
-    function tabsSet(tabClass, contentClass) {
+
+    function setTabs(tabClass, contentClass) {
         let tabs = Array.from(document.querySelectorAll(tabClass)),
             tabsContent = Array.from(document.querySelectorAll(contentClass));
 
@@ -60,8 +125,7 @@ window.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    tabsSet(".action__tabs", ".action__content");
-    tabsSet(".action-modal__label", ".action-modal__content");
-    
-    
+    setTabs(".action__tabs", ".action__content");
+    setTabs(".action-modal__label", ".action-modal__content");
+
 });

@@ -15,9 +15,6 @@ window.addEventListener("DOMContentLoaded", function () {
 
     showModal();
 
-    function closeModal() {
-
-    }
 
     function closeByOverclick() {
         overlay.forEach(function (item) {
@@ -32,10 +29,5 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
     closeByOverclick(); 
-
-    
-
-
-    
     
 });

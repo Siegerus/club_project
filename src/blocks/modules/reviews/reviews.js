@@ -10,6 +10,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
         /* console.log(slide, prev, next); */
         function slideShow(n) {
+
             if (n > slide.length) {
                 currentIndex = 1;
             }
@@ -21,24 +22,25 @@ window.addEventListener("DOMContentLoaded", function () {
             for(let i = 0; i < slide.length; i++) {
                 slide[i].style.display = "none";
                 slide[currentIndex - 1].style.display = "flex";
-            }
-
-            
+            } 
         }
 
         slideShow(currentIndex);
 
         function slidePlus(n) {
-            slideShow(currentIndex += n);
+            slideShow(currentIndex = currentIndex + n );
         }
 
+        function slideMinus(n) {
+            slideShow(currentIndex = currentIndex - n );
+        }
 
         next.addEventListener("click", function () {
             slidePlus(1);
         });
 
         prev.addEventListener("click", function () {
-            slidePlus(-1);
+            slideMinus(1);
         });
 
     }
