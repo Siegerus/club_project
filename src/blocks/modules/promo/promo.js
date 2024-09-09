@@ -3,24 +3,22 @@ window.addEventListener("DOMContentLoaded", function () {
     let overlay = document.querySelector(".join__overlay"),
         close = document.querySelector(".join__close");
 
-    function launchModal(btnClass) {
+
+    function showModal(btnClass) {
         let btn = document.querySelectorAll(btnClass);
 
-        function showModal() {
-            btn.forEach((item) => {
-                item.addEventListener("click", function () {
-                    overlay.style.display = "block";
-                });
+        btn.forEach((item) => {
+            item.addEventListener("click", function () {
+                overlay.style.display = "block";
             });
-            
-        }
-    
-        showModal();
-
+        });
+        
     }
-    launchModal(".promo__btn"); 
-    launchModal(".join__btn");
 
+    showModal(".promo__btn");
+    showModal(".join__btn");
+
+    
     function closeModal() {
         close.addEventListener("click", function() {
             overlay.style.display = "none";

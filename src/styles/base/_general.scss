@@ -24,6 +24,10 @@ body {
     background: linear-gradient(270deg, #080808 0%, #1e120e 72.09%, #2d1910 100%);
 }
 
+.body_noscroll {
+    overflow-y: hidden;
+}
+
 .body_blur > :not(.promo__overlay) {
     filter: blur(15px);
 }

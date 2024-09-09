@@ -230,7 +230,7 @@
 
             &__close  {
                 top: 15px;
-                right: 15px;
+                right: 0px;
             }
         }
     } 
@@ -306,6 +306,7 @@
         }
 
         &__close {
+            right: 15px;
             width: 55px;
             height: 55px;
 
@@ -318,9 +319,17 @@
             }
         }
 
+        &__modWrapper {
+            height: 100%;
+            width: 100%;
+            min-width: unset;
+            min-height: unset;
+        }
+
         &-modal {
             height: 100%;
             width: 100%;
+            border-radius: 0;
         
             &__btn {
                 width: 100%;

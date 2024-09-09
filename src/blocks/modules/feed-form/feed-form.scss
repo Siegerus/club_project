@@ -598,4 +598,10 @@
         max-width: 100%;
         padding: 0 20px;
     }
+
+    .feed-form {
+        &_mt {
+            top: 56%;
+        }
+    }
 }
