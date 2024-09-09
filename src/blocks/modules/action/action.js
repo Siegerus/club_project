@@ -1,10 +1,10 @@
 window.addEventListener("DOMContentLoaded", function () {
     "use strict";
-
+    
     function launchTimer() {
 
         function getTime() {
-            let deadline = "2024-09-8",
+            let deadline = "2024-10-8",
                 t = Date.parse(deadline) - Date.parse(new Date()),
                 seconds = Math.floor((t / 1000) % 60),
                 minutes = Math.floor((t / 1000 / 60) % 60),
@@ -47,12 +47,11 @@ window.addEventListener("DOMContentLoaded", function () {
                 plusZero(seconds, get.seconds);
     
                 if (get.total <= 0) {
-                  
+                    clearInterval(int);
                     days.textContent = "00";
                     hours.textContent = "00";
                     minutes.textContent = "00";
-                    seconds.textContent = "00";
-                    clearInterval(int);
+                    seconds.textContent = "00"; 
                 }
             }  
     
@@ -66,7 +65,7 @@ window.addEventListener("DOMContentLoaded", function () {
     
     
     function getValue() {
-        let radio = Array.from(document.querySelectorAll("input[type='radio'][name=couple]")),
+        let radio = document.querySelectorAll("input[type='radio'][name=couple]"),
             btn = document.querySelector(".action-modal__btn");
 
         radio.forEach(function (item) {
@@ -88,8 +87,6 @@ window.addEventListener("DOMContentLoaded", function () {
     function setTabs(tabClass, contentClass) {
         let tabs = Array.from(document.querySelectorAll(tabClass)),
             tabsContent = Array.from(document.querySelectorAll(contentClass));
-
-        /* console.log(tabs); */
 
         function hideContent(a) {
             for (let b = a; b < tabsContent.length; b++) {

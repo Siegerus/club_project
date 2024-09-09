@@ -6,6 +6,43 @@
     transform: translate(-50%, -50%);
     padding: 40px;
     border-radius: 40px;
+
+    &__close {
+        position: absolute;
+        top: 0;
+        right: -82px;
+        width: 62px;
+        height: 62px;
+        border-radius: 100px;
+        background-color: $mainc-bg;
+        backdrop-filter: blur(24px);
+        transform: rotate(45deg);
+        cursor: pointer;
+        
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 21px;
+            width: 3px;
+            border-radius: 20px;
+            background-color: #fff; 
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 3px;
+            width: 21px;
+            border-radius: 20px;
+            background-color: #fff;
+        }
+    }
     
     &__overlay {
         display: none;
@@ -15,5 +52,24 @@
         width: 100%;
         height: 100vh;
         background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    &__modWrapper {
+        z-index: 30;
+        position: relative;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 603px;
+        min-height: 550px;
+
+        &_w732 {
+            width: 732px;
+        }
+
+        &_h590 {
+            height: 590px;
+        }
     }
 }

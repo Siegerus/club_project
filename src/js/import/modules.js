@@ -1,11 +1,11 @@
 import "%modules%/header/header";
 import "%modules%/action/action";
+import "%modules%/join/join";
 import "%modules%/autorization/autorization";
 import "%modules%/bangles/bangles";
 import "%modules%/benefit/benefit";
 import "%modules%/connect/connect";
 import "%modules%/events/events";
-import "%modules%/join/join";
 import "%modules%/partners/partners";
 import "%modules%/promo/promo";
 import "%modules%/questions/questions";

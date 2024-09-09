@@ -1,9 +1,8 @@
 window.addEventListener("DOMContentLoaded", function () {
     "use strict";
 
-    let btn = this.document.querySelector(".action__btn"),
-        overlay = Array.from(this.document.querySelectorAll(".modal__overlay")),
-        modal = this.document.querySelector(".action-modal");
+    let btn = document.querySelector(".action__btn"),
+        overlay = document.querySelectorAll(".modal__overlay");
 
     function showModal() {
         btn.addEventListener("click", function () {
@@ -14,7 +13,6 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
     showModal();
-
 
     function closeByOverclick() {
         overlay.forEach(function (item) {
@@ -29,5 +27,10 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
     closeByOverclick(); 
+
+    
+
+
+    
     
 });

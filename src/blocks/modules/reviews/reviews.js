@@ -3,12 +3,10 @@ window.addEventListener("DOMContentLoaded", function () {
 
     function sliderSet() {
         let currentIndex = 1,
-            /* slide = Array.from(document.querySelectorAll(".reviews__slide")), */
             slide = document.querySelectorAll(".reviews__slide"),
             prev = document.querySelector(".reviews__arrowLeft"),
             next = document.querySelector(".reviews__arrowRight");
 
-        /* console.log(slide, prev, next); */
         function slideShow(n) {
 
             if (n > slide.length) {
@@ -48,14 +46,3 @@ window.addEventListener("DOMContentLoaded", function () {
     sliderSet();
     
 });
-
-
-
-
-
-
-/* slide.forEach((item) => {
-            item.style.display = "none";
-        });
-
-        slide[currentIndex - 1].style.display = "flex"; */
