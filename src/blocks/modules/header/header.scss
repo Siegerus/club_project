@@ -16,7 +16,6 @@
 
     &__nav {
         width: 55.8%;
-        /* width: 860px; */
         padding: 20px 30px 23px 30px;
         border-radius: 100px;
         background-color: $mainc-bg;
@@ -56,14 +55,15 @@
         -webkit-text-fill-color: transparent;
     }
 
-    &__enter {
+    & &__enter {
+        display: block;
         width: 253px;
         font-weight: 500;
         font-size: 24px;
         line-height: 24px;
         letter-spacing: -0.02em;
         text-align: center;
-        color: #fff;
+        color: #fff;       
         padding: 21px 16px 24px 16px;
         border-radius: 100px;
         background-color: $mainc-bg;
@@ -105,7 +105,7 @@
     }
 
     .header {
-        &__enter {
+        & &__enter {
             width: 16.4%;
             min-width: 250px;
             font-size: 22px;
@@ -129,7 +129,7 @@
             padding-top: 40px;
         }
 
-        &__enter {
+        & &__enter {
             min-width: 220px;
             font-size: 20px;
         }
@@ -166,7 +166,7 @@
             margin-top: 20px;
         }
 
-        &__enter {
+        & &__enter {
             min-width: 250px;
             font-size: 22px;
         }
@@ -188,7 +188,7 @@
             }
         }
 
-        &__enter {
+        & &__enter {
             width: 197px;
             min-width: unset;
             padding: 18px 30px 20px 30px;
@@ -225,7 +225,7 @@
             background: $mainc-bg;
         }
 
-        &__enter {
+        & &__enter {
             display: none;
         }
         &__hamburger {
@@ -315,6 +315,13 @@
             line-height: 130%;
             letter-spacing: -0.02em;
             color: $mainc-w70;
+
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+            }
 
             &_li-m {
                 display: none;

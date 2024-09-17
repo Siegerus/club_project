@@ -243,24 +243,16 @@
     .reviews {
         &__img {
             min-height: unset;
-            min-width: auto;
+            min-width: 130px;
             max-height: 165px;
         }
 
         &__body {
-            padding: 15px;
+            padding: 15px 15px 75px 15px;
         }
 
         &__confidential {
             font-size: 18px;
-        }
-
-        &__arrows {
-            width: 120px;
-        }
-
-        &__arrowLeft, &__arrowRight {
-            width: 60px;
         }
     }
 }
@@ -278,6 +270,7 @@
 
         &__img {
             max-width: 100px;
+            min-width: unset;
             max-height: unset;
 
             &_m-hidden {
@@ -287,6 +280,10 @@
             &_m-visible {
                 display: block;
             }
+        }
+
+        &__starsWrap {
+            width: 140px;
         }
 
         &__headline {
@@ -300,6 +297,7 @@
         &__subhead {
             display: none;
         }
+
     }
 }
 
@@ -407,7 +405,7 @@
         }
 
         &__descr {
-            max-width: 250px;
+            max-width: 235px;
         }
 
         &__body {
@@ -482,6 +480,7 @@
        &__title {
         font-size: 60px;
        }
+
     }
 }
 
@@ -506,6 +505,10 @@
         max-width: unset;
         margin-bottom: 40px;
        }
+
+       &__descr {
+        max-width: 300px;
+        }
 
        &__form {
         max-width: unset;
@@ -544,6 +547,10 @@
             max-width: 304px;
             margin-left: 0;
             margin-bottom: 27.19px;
+        }
+
+        &__descr {
+            max-width: 235px;
         }
 
         &__star {
@@ -591,6 +598,10 @@
             &_small {
                 width: 100px;
             }
+        }
+
+        &__descr {
+            max-width: 200px;
         }
     }
 }

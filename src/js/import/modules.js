@@ -12,5 +12,6 @@ import "%modules%/questions/questions";
 import "%modules%/reviews/reviews";
 import "%modules%/sign/sign";
 import "%modules%/vip/vip";
+import "%modules%/rules/rules";
 import "%modules%/modal/modal";
 import "%modules%/footer/footer";

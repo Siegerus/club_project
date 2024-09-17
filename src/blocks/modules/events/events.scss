@@ -228,6 +228,11 @@
             padding: 14px 0 16px 0;
             font-size: 14px;
         }
+
+        &__close {
+            top: 15px;
+            right: 15px;
+        }
     }
 }
 
@@ -247,6 +252,28 @@
 
         &__label {
             bottom: -18%;
+        }
+
+        &__close {
+            top: 15px;
+            right: 10px;
+            width: 60px;
+            height: 60px;
+
+            &::after {
+                width: 21px;
+            }
+
+            &::before {
+                height: 21px;
+            }
+        }
+
+        &__modWrapper {
+            width: 90%;
+            height: 100vh;
+            min-width: unset;
+            max-height: 100vh;
         }
     }
 }
@@ -286,6 +313,12 @@
         &__label {
             bottom: -15%;
             padding-left: 8px;
+        }
+
+        &__modWrapper {
+            width: 100%;
+            min-width: unset;
+            max-height: 100vh;
         }
     }
 }

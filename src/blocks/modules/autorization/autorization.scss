@@ -245,7 +245,8 @@
         }
 
         &__tabsWrap {
-            width: 197px;
+            justify-content: center;
+            width: 100%;
             min-height: unset;
 
             &_m-visible {
