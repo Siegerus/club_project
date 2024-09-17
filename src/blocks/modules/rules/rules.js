@@ -1,19 +1,20 @@
+window.addEventListener("DOMContentLoaded", function() {
+
+    "use strict";
+
+    let rulesList = document.querySelector(".rules__list"),
+        rulesContinue = document.querySelector(".rules__continue");
 
 
-"use strict";
+    function rulesShow() {
+        rulesList.style.display = "none";
+        
+        rulesContinue.addEventListener("click", () => {
+            rulesList.classList.add("animation__fade");
+            rulesList.style.display = "block";
+        });
+    }
 
-let rulesList = document.querySelector(".rules__list"),
-    rulesContinue = document.querySelector(".rules__continue");
+    rulesShow();
 
-
-function rulesShow() {
-    rulesList.style.display = "none";
-    
-    rulesContinue.addEventListener("click", () => {
-        rulesList.classList.add("animation__fade");
-        rulesList.style.display = "block";
-    });
-}
-
-rulesShow();
-
+});

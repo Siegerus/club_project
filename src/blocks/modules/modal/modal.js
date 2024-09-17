@@ -1,30 +1,31 @@
+window.addEventListener("DOMContentLoaded", function () {
+    "use strict";
 
-"use strict";
+    let btn = document.querySelector(".action__btn"),
+        overlay = document.querySelectorAll(".modal__overlay");
 
-let btn = document.querySelector(".action__btn"),
-    overlay = document.querySelectorAll(".modal__overlay");
+    function showModal() {
+        btn.addEventListener("click", function () {
+            overlay.forEach(function (item) {
+                item.style.display = "block";
+            });
+        });
+    }
 
-function showModal() {
-    btn.addEventListener("click", function () {
+    showModal();
+
+    function closeByOverclick() {
         overlay.forEach(function (item) {
-            item.style.display = "block";
+            item.addEventListener("click", function (e) {
+                let curentModal = e.target.closest(".modal");
+
+                if (!curentModal) {
+                    item.style.display = "none";
+                }
+            });
         });
-    });
-}
+    }
 
-showModal();
-
-function closeByOverclick() {
-    overlay.forEach(function (item) {
-        item.addEventListener("click", function (e) {
-            let curentModal = e.target.closest(".modal");
-
-            if (!curentModal) {
-                item.style.display = "none";
-            }
-        });
-    });
-}
-
-closeByOverclick(); 
+    closeByOverclick(); 
     
+});
