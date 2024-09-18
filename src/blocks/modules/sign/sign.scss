@@ -214,3 +214,16 @@
         }
     }
 }
+
+@media (max-width: 360px) {
+    .container {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    .sign {
+        &__title {
+            font-size: 30px;
+        }
+    }
+}

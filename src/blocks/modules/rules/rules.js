@@ -1,20 +1,29 @@
 window.addEventListener("DOMContentLoaded", function() {
 
     "use strict";
+    
+    if (document.body.querySelector(".rules")) {
 
-    let rulesList = document.querySelector(".rules__list"),
-        rulesContinue = document.querySelector(".rules__continue");
+        let rulesSection = document.querySelector(".rules"),
+            rulesList = rulesSection.querySelector(".rules__list"),
+            rulesContinue = rulesSection.querySelector(".rules__continue");
 
-
-    function rulesShow() {
         rulesList.style.display = "none";
         
         rulesContinue.addEventListener("click", () => {
             rulesList.classList.add("animation__fade");
             rulesList.style.display = "block";
         });
+        
     }
 
-    rulesShow();
+    
+
+
+    /* function rulesShow() {
+        
+    }
+
+    rulesShow(); */
 
 });

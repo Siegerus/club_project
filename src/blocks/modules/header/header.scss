@@ -228,6 +228,7 @@
         & &__enter {
             display: none;
         }
+
         &__hamburger {
             display: block;
             width: 17px;
@@ -456,7 +457,7 @@
             color: $mainc-w70;
         }
 
-        &__btn-m {
+        & &__btn-m {
             display: block;
             width: 100%;
             max-width: 320px;

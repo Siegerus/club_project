@@ -1,48 +1,52 @@
 window.addEventListener("DOMContentLoaded", function () {
     "use strict";
 
-    function sliderSet() {
-        let currentIndex = 1,
-            slide = document.querySelectorAll(".reviews__slide"),
-            prev = document.querySelector(".reviews__arrowLeft"),
-            next = document.querySelector(".reviews__arrowRight");
+    if (document.body.querySelector(".reviews")) {
 
-        function slideShow(n) {
+        let sliderSet = function sliderSet() {
+            let currentIndex = 1,
+                slide = document.querySelectorAll(".reviews__slide"),
+                prev = document.querySelector(".reviews__arrowLeft"),
+                next = document.querySelector(".reviews__arrowRight");
 
-            if (n > slide.length) {
-                currentIndex = 1;
+            function slideShow(n) {
+
+                if (n > slide.length) {
+                    currentIndex = 1;
+                }
+
+                if (n < 1) {
+                    currentIndex = slide.length;
+                }
+
+                for(let i = 0; i < slide.length; i++) {
+                    slide[i].style.display = "none";
+                    slide[currentIndex - 1].style.display = "flex";
+                } 
             }
 
-            if (n < 1) {
-                currentIndex = slide.length;
+            slideShow(currentIndex);
+
+            function slidePlus(n) {
+                slideShow(currentIndex = currentIndex + n );
             }
 
-            for(let i = 0; i < slide.length; i++) {
-                slide[i].style.display = "none";
-                slide[currentIndex - 1].style.display = "flex";
-            } 
-        }
+            function slideMinus(n) {
+                slideShow(currentIndex = currentIndex - n );
+            }
 
-        slideShow(currentIndex);
+            next.addEventListener("click", function () {
+                slidePlus(1);
+            });
 
-        function slidePlus(n) {
-            slideShow(currentIndex = currentIndex + n );
-        }
+            prev.addEventListener("click", function () {
+                slideMinus(1);
+            });
 
-        function slideMinus(n) {
-            slideShow(currentIndex = currentIndex - n );
-        }
-
-        next.addEventListener("click", function () {
-            slidePlus(1);
-        });
-
-        prev.addEventListener("click", function () {
-            slideMinus(1);
-        });
+        };
+        
+        sliderSet();
 
     }
-    
-    sliderSet();
     
 });

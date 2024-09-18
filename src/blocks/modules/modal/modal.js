@@ -1,7 +1,7 @@
 window.addEventListener("DOMContentLoaded", function () {
     "use strict";
 
-    let btn = document.querySelector(".action__btn"),
+    /* let btn = document.querySelector(".action__btn"),
         overlay = document.querySelectorAll(".modal__overlay");
 
     function showModal() {
@@ -26,6 +26,6 @@ window.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    closeByOverclick(); 
+    closeByOverclick();  */
     
 });

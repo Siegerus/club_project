@@ -1,14 +1,26 @@
 window.addEventListener("DOMContentLoaded", function(){
-    let hamburger = document.querySelector(".header__hamburger"),
-        nav = document.querySelector(".header__nav_m-visible");
+    "use striсt";
 
-    function navShow() {
-        hamburger.addEventListener("click", function() {
-            this.classList.toggle("header__hamburger_active");
-            nav.classList.toggle("header__nav_active"); 
-            document.body.classList.toggle("body_noscroll");
-        });
+    if (document.querySelector(".header")) {
+
+        let hamburger = document.querySelector(".header__hamburger"),
+            nav = document.querySelector(".header__nav_m-visible");
+
+        let navShow = function navShow() {
+            hamburger.addEventListener("click", function() {
+                this.classList.toggle("header__hamburger_active");
+                nav.classList.toggle("header__nav_active"); 
+                document.body.classList.toggle("body_noscroll");
+
+                if (nav.classList.contains("header__nav_active")) {
+                    document.body.classList.remove("body_eclipse");
+                } else if (document.body.querySelector(".action")) {
+                    document.body.classList.add("body_eclipse");
+                }
+            });
+        };
+
+        navShow();
+
     }
-
-    navShow();
 });

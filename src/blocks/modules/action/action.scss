@@ -439,6 +439,10 @@
             width: 210px;
         }
 
+        &__timeBox {
+            margin-bottom: 10px;
+        }
+
         &__modWrapper {
             width: 90%;
             min-width: unset;
@@ -518,6 +522,7 @@
         }
 
         &__timer {
+            width: 280px;
             margin: 0 auto;
             margin-top: 10px;
 
@@ -527,6 +532,7 @@
 
             &_m-visible {
                 display: flex;
+                justify-content: space-around;
             }
         }
 
@@ -619,10 +625,6 @@
             height: 80px;
         }
 
-        &__timer {
-            width: 280px;;
-        }
-
         &__modWrapper {
             width: 100%;
             height: 100%;
@@ -688,6 +690,18 @@
 
             &::before {
                 height: 17px;
+            }
+        }
+
+        &-modal {
+            &__price {
+                & > div {
+                    max-width: 180px;
+                }
+            }
+
+            &__close {
+                right: 0;
             }
         }
     }

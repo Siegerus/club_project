@@ -137,6 +137,57 @@
         max-width: unset;
         margin-top: 20px;
     }
+
+    &-modal {
+        min-width: 603px;
+        padding: 40px;
+        border-radius: 40px;
+        background-color: $mainc-bg;
+        backdrop-filter: blur(24px);
+        background: url("../img/bg/modal-bg.png") center / cover no-repeat;
+
+        &__img {
+            width: 141px;
+            height: 140px;
+            margin: 0 auto;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &__title {
+            margin-top: 20px;
+            font-weight: 600;
+            font-size: 36px;
+            line-height: 140%;
+            text-align: center;
+            color: #fff;
+        }
+
+        &__descr {
+            margin-top: 10px;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 140%;
+            text-align: center;
+            color: $mainc-w40;
+        }
+
+        &__btn {
+            width: 100%;
+            max-width: unset;
+            margin: 0;
+        }
+
+        &__hidden:checked + &__checkbox {
+            &::before {
+                background: url("../img/icons/check\ -white.svg") center / cover no-repeat; 
+            }
+        }
+    }
 }
 
 @media (max-width: 1679px) {
