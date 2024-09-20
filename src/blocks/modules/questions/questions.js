@@ -7,12 +7,12 @@ window.addEventListener("DOMContentLoaded", function () {
             content = document.querySelectorAll(".questions__content"),
             plus = document.querySelectorAll(".questions__plus");
 
-        let showContent = function showContent(a) {
+        let showContent = function (a) {
             content[a].classList.toggle("questions__content_active");
             plus[a].classList.toggle("questions__plus_active");
         };
 
-        let toClickItem = function toClickItem(clickItem) {
+        let toClickItem = function (clickItem) {
             clickItem.forEach((item) => {
                 item.addEventListener("click", function (e) {
 
