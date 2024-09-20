@@ -76,6 +76,7 @@
     &__starsWrap {
         display: flex;
         align-items: center;
+        flex-flow: row-reverse;
         justify-content: space-between;
         width: 168px;
     }
@@ -95,15 +96,29 @@
             width: 25px;
             height: 24px;
             background: url('../img/icons/black-star.svg') center / cover no-repeat;
+            transition: all 0.5s;
         }
     }
 
-    &__hidden:checked + &__star {
+    &__hidden:checked ~ &__star {
         &::before {
             background: url('../img/icons/yellow-star.svg') center / cover no-repeat;
         }
     }
 
+    &__hidden:not(:checked) ~ &__star {
+        &:hover {
+            &::before {
+                background: url('../img/icons/yellow-star.svg') center / cover no-repeat;
+                }
+            }
+        }
+
+    &__star:hover ~ label {
+        &::before {
+            background: url('../img/icons/yellow-star.svg') center / cover no-repeat;
+            }
+    }
 
     &__headline {
         font-weight: 600;

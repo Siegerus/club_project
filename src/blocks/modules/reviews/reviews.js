@@ -49,51 +49,44 @@ window.addEventListener("DOMContentLoaded", function () {
 
     }
 
-    let rateSelect = function rateSelect() {
+    /*  let rateSelect = function rateSelect() {
 
         let star =  Array.from(document.querySelectorAll(".reviews__hidden-js"));
         
         star.forEach((item) => {
-            item.addEventListener("click", function(){
+            item.addEventListener("click", function(e){
                 for(let i = 0; i < star.length; i++) {
 
+                    if (e.target == star[i]) {
+                        let getOi = function() {
+                            let oi = 0;
+                            
+                            while (star[i] = star[i].previousSibling) {
+                                star[i].nodeType == 1 && oi++; 
+                            }
+
+                            return oi;
+                        };
+
+                        let orderIndex = getOi();
+                        
+                        console.log(orderIndex);
+                        let setChecked = function() {
+                            for(let i = 0; i <= orderIndex; i++){
+                                star[i].checked = true;
+                            }
+                        };
+
+                        setChecked();  
+                    } 
                 } 
             });
         });
 
     };
 
-    rateSelect(); 
+    rateSelect(); */ 
     
 });
 
 
-/* star.forEach((item) => {
-    item.addEventListener("click", function(e){
-        for(let i = 0; i < star.length; i++) {
-
-            if (e.target == star[i]) {
-                let getOi = function() {
-                    let oi = 0;
-                    
-                    while (star[i] = star[i].previousSibling) {
-                        star[i].nodeType == 1 && oi++; 
-                    }
-
-                    return oi;
-                };
-
-                let orderIndex = getOi();
-                
-                console.log(orderIndex);
-                let setChecked = function() {
-                    for(let i = 0; i <= orderIndex; i++){
-                        star[i].checked = true;
-                    }
-                };
-
-                setChecked();  
-            } 
-        } 
-    });
-}); */
