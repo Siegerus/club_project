@@ -37,6 +37,5 @@ window.addEventListener("DOMContentLoaded", function () {
         };
 
         closeByOverclick();
-
     }
 });

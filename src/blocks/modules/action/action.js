@@ -90,14 +90,11 @@ window.addEventListener("DOMContentLoaded", function () {
             let radio = document.querySelectorAll("input[type='radio'][name=couple]"),
                 btn = document.querySelector(".action-modal__btn");
 
-            radio.forEach(function (item) {
+            radio.forEach(function (item, i) {
                 item.addEventListener("click", () => {
-
-                    for (let i = 0; i < radio.length; i++) {
-                        if (radio[i].checked) {
-                            let val = radio[i].value;
-                            btn.textContent = "Оплатить " + val;
-                        }
+                    if (radio[i].checked) {
+                        let val = radio[i].value;
+                        btn.textContent = "Оплатить " + val;                        
                     }
                 });
             });

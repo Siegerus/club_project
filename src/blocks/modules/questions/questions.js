@@ -12,10 +12,10 @@ window.addEventListener("DOMContentLoaded", function () {
             plus[a].classList.toggle("questions__plus_active");
         };
 
-        let toClickItem = function (clickItem) {
+        /* let toClickItem = function (clickItem) {
             clickItem.forEach((item) => {
                 item.addEventListener("click", function (e) {
-
+                                                                                 //старый вариант
                     for (let i = 0; i < clickItem.length; i++) {
                         if (e.target == clickItem[i]) {
                             showContent(i);
@@ -23,10 +23,20 @@ window.addEventListener("DOMContentLoaded", function () {
                     }
                 });
             });
+        }; */
+
+        let toClickItem = function (clickItem) {
+            clickItem.forEach((item, i) => {
+                item.addEventListener("click", function () {                       //новый вариант
+                    showContent(i);
+                });
+            });
         };
 
         toClickItem(plus);
         toClickItem(question);
+
+        
 
     }
 });

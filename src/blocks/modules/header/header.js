@@ -6,7 +6,7 @@ window.addEventListener("DOMContentLoaded", function(){
         let hamburger = document.querySelector(".header__hamburger"),
             nav = document.querySelector(".header__nav_m-visible");
 
-        let navShow = function navShow() {
+        let navShow = function () {
             hamburger.addEventListener("click", function() {
                 this.classList.toggle("header__hamburger_active");
                 nav.classList.toggle("header__nav_active"); 
@@ -14,7 +14,7 @@ window.addEventListener("DOMContentLoaded", function(){
 
                 if (nav.classList.contains("header__nav_active")) {
                     document.body.classList.remove("body_eclipse");
-                } else if (document.body.querySelector(".action")) {
+                } else if (document.body.querySelector(".action") || (document.body.querySelector(".connect"))) {
                     document.body.classList.add("body_eclipse");
                 }
             });

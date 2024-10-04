@@ -12,7 +12,7 @@ window.addEventListener("DOMContentLoaded", function() {
                                             
     if (document.body.querySelector(".autorization")) {
 
-        let contentHide = function contentHide(b) {
+        let contentHide = function (b) {
             for (let a = b; a < content.length; a++) {
                 content[a].classList.remove("show");
                 content[a].classList.add("hide");
@@ -21,7 +21,7 @@ window.addEventListener("DOMContentLoaded", function() {
     
         contentHide(1);
     
-        let contentShow = function contentShow(c) {
+        let contentShow = function (c) {
             if (content[c].classList.contains("hide")) {
                 content[c].classList.remove("hide");
                 content[c].classList.add("show");
@@ -43,7 +43,7 @@ window.addEventListener("DOMContentLoaded", function() {
             });
         });
 
-        let blockShow = function blockShow(itemClick, itemHide, itemShow) {
+        let blockShow = function (itemClick, itemHide, itemShow) {
             itemClick.addEventListener("click", () => {
                 itemHide.style.display = "none";
                 itemShow.style.display = "block";
@@ -55,6 +55,7 @@ window.addEventListener("DOMContentLoaded", function() {
         blockShow(recover, blockPass, blockVerify);
 
     }
+
 
     
 

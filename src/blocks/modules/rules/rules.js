@@ -14,7 +14,6 @@ window.addEventListener("DOMContentLoaded", function() {
             rulesList.classList.add("animation__fade");
             rulesList.style.display = "block";
         });
-        
     }
 
     
