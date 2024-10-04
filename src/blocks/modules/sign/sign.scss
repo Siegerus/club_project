@@ -2,15 +2,19 @@
     padding: 100px 0;
 
     &__wrapper {
-        position: relative;
+        display: flex;
         align-items: center;
+        justify-content: space-between;
+        position: relative;
+        width: 100%;
         min-height: 611px;
         margin: 0;
         padding: 0;
         padding-left: 108px;
+        border-radius: 30px;
+        border: 2px solid #2d1910;
         background: unset;
         background-color: #120d0a;
-
     }
 
     &__item {
@@ -89,6 +93,10 @@
     .sign {
         padding-top: 10px;
 
+        &__wrapper {
+            margin-top: 50px;
+        }
+
         &__img {
             right: 40px;
             min-width: unset;
@@ -112,7 +120,11 @@
         padding-bottom: 180px;
         
         &__wrapper {
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
             min-height: 863px;
+            margin-top: 26px;
             padding: 60px 23px 0 23px; 
         }
         &__item {
@@ -180,6 +192,7 @@
             background-image: none;
             border-radius: 30px;
             background-color: $mainc-bg2;
+            border: none;
         }
 
         &__title {
