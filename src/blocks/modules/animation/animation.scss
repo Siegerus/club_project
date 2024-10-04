@@ -1,26 +1,26 @@
 .animation {
-    &__fade {
-        animation-name: animation__fade;
+    &__type__fade {
+        animation-name: animation__type__fade;
         animation-duration: 1.5s;
 
         &_modal {
-        animation-name: animation__fade_modal;
+        animation-name: animation__type__fade_modal;
         animation-duration: 1.2s;
         }
     }
 
-    &-shadow {
-        animation-name: animation__shadow;
+    &__type__shadow {
+        animation-name: animation__type__shadow;
         animation-duration: 1.5s;
     }
 
-    &__slide {
-        animation-name: animation__slide;
+    &__type__slide {
+        animation-name: animation__type__slide;
         animation-duration: 1.2s;
     }
 
-    &__logo {
-        animation-name: animation__logo;
+    &__type__logo {
+        animation-name: animation__type__logo;
         border-radius: 20%;
         animation-duration: 1.6s;
         
@@ -28,7 +28,7 @@
 }
 
 
-@keyframes animation__fade {
+@keyframes animation__type__fade {
     from {
         opacity: 0.1;
     }
@@ -38,7 +38,7 @@
     }
 }
 
-@keyframes animation__fade_modal {
+@keyframes animation__type__fade_modal {
     from {
         opacity: 0.8;
         top: -100%;  
@@ -50,7 +50,7 @@
     }
 }
 
-@keyframes animation__shadow {
+@keyframes animation__type__shadow {
     from {
         opacity: 0.1;
         box-shadow: 0 0 115px #f6f6f6;
@@ -62,7 +62,7 @@
     }
 }
 
-@keyframes animation__slide {
+@keyframes animation__type__slide {
     from {
         opacity: 0.1;
         transform: scale(50%);
@@ -74,7 +74,7 @@
     }
 }
 
-@keyframes animation__logo {
+@keyframes animation__type__logo {
     from {
         transform: scale(100%);
         opacity: 1;
