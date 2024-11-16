@@ -11,15 +11,14 @@
         align-items: flex-start;
         justify-content: space-between;
         width: 100%;
-        padding: 76px 40px 55px 40px;
+        border: 2px solid #2d1910;
+        padding: 76px 40px 55px;
         margin-top: 60px;
         border-radius: 30px;
-        border: 2px solid #2d1910;
         background: url("../img/bg/join-bg.png") top 12% center / contain no-repeat;
         background-color: #120d0a;
-        
     }
-    
+
     &__list {
         width: 413px;
         list-style-type: none;
@@ -37,7 +36,6 @@
         &_ai-centr {
             align-items: center;
         }
-
     }
 
     &__icon {
@@ -45,7 +43,7 @@
         align-items: center;
         justify-content: center;
         width: 20px;
-        height: 20px; 
+        height: 20px;
     }
 
     &__text {
@@ -53,7 +51,7 @@
         font-weight: 500;
         font-size: 20px;
         line-height: 140%;
-        color: $mainc-w70; 
+        color: $mainc-w70;
     }
 
     &__btn {
@@ -112,7 +110,7 @@
 
         &__hidden:checked + &__checkbox {
             &::before {
-                background: url("../img/icons/check\ -white.svg") center / cover no-repeat; 
+                background: url("../img/icons/check\ -white.svg") center / cover no-repeat;
             }
         }
     }
@@ -158,8 +156,8 @@
     }
 
     .join {
-        padding: 30px 0 20px 0;
-        
+        padding: 30px 0 20px;
+
         &__title {
             max-width: 570px;
             margin: 0 auto;
@@ -170,11 +168,10 @@
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
-            padding: 39px 40px 60px 40px;
+            padding: 39px 40px 60px;
             margin-top: 26px;
             background: url("../img/bg/join-bg-tablet.png") top 12% center / 589px 393px  no-repeat;
             background-color: #120d0a;
-            
         }
 
         &__list {
@@ -216,24 +213,24 @@
     .container {
         max-width: 100%;
         padding: 0 20px;
+    }
+
+    .join {
+        &__text {
+            text-wrap: wrap;
         }
 
-        .join {
-            &__text {
-                text-wrap: wrap;
-            }
-
-            &-modal {
-                width: 80%;
-                min-width: unset;
-            }
-
-            &__close  {
-                top: 15px;
-                right: 0px;
-            }
+        &-modal {
+            width: 80%;
+            min-width: unset;
         }
-    } 
+
+        &__close {
+            top: 15px;
+            right: 0;
+        }
+    }
+}
 
 @media (max-width: 695px) {
     .container {
@@ -261,13 +258,13 @@
     }
 
     .join {
-        padding: 40px 0 88px 0;
+        padding: 40px 0 88px;
 
         &__wrapper {
             min-height: 671px;
-            margin-top: 10px;
-            padding: 20px 20px;
             border: none;
+            padding: 20px;
+            margin-top: 10px;
             background: url("../img/bg/join-bg-mobile.png") top 33% right 13% / 120%  no-repeat;
             background-color: #120d0a;
         }
@@ -301,7 +298,7 @@
         &__btn {
             max-width: 320px;
             margin-top: 10px;
-            padding: 14px 0 16px 0;
+            padding: 14px 0 16px;
             font-size: 14px;
         }
 
@@ -312,7 +309,7 @@
 
             &::after {
                 width: 20px;
-            } 
+            }
 
             &::before {
                 height: 20px;
@@ -320,17 +317,17 @@
         }
 
         &__modWrapper {
-            height: 100%;
             width: 100%;
             min-width: unset;
+            height: 100%;
             min-height: unset;
         }
 
         &-modal {
-            height: 100%;
             width: 100%;
+            height: 100%;
             border-radius: 0;
-        
+
             &__btn {
                 width: 100%;
                 max-width: unset;

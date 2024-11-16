@@ -1,5 +1,5 @@
 .vip {
-    padding: 80px 0 70px 0;
+    padding: 80px 0 70px;
 
     &__title {
         font-weight: 600;
@@ -10,13 +10,13 @@
         text-transform: uppercase;
         background: linear-gradient(90deg, #f43b47 0%, #453a94 100%);
         background-clip: text;
-        -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
     }
 
     &__subtitle {
         max-width: 750px;
-        margin: 20px auto 0 auto;
+        margin: 20px auto 0;
         font-size: 20px;
         text-align: center;
     }
@@ -37,8 +37,8 @@
         padding: 40px;
         border-radius: 30px;
         backdrop-filter: blur(24px);
-        box-shadow: 0 75px 75px 0 rgba(10, 10, 10, 0.09), 0 170px 102px 0 rgba(10, 10, 10, 0.05), 0 302px 121px 0 rgba(10, 10, 10, 0.01), 0 471px 132px 0 rgba(10, 10, 10, 0), 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-        background: rgba(255, 255, 255, 0.04);
+        box-shadow: 0 75px 75px 0 rgb(10 10 10 / 9%), 0 170px 102px 0 rgb(10 10 10 / 5%), 0 302px 121px 0 rgb(10 10 10 / 1%), 0 471px 132px 0 rgb(10 10 10 / 0%), 0 4px 4px 0 rgb(0 0 0 / 25%);
+        background: rgb(255 255 255 / 4%);
     }
 
     &__icon {
@@ -73,15 +73,14 @@
         font-size: 20px;
         line-height: 130%;
         color: $mainc-w70;
-
     }
 
     &__bottom {
         display: flex;
-        justify-content: space-between;
         align-items: flex-end;
+        justify-content: space-between;
         width: 1111px;
-        margin: 40px auto 0 auto;
+        margin: 40px auto 0;
     }
 
     &__subitem {
@@ -90,8 +89,8 @@
         padding: 40px;
         border-radius: 30px;
         backdrop-filter: blur(24px);
-        box-shadow: 0 75px 75px 0 rgba(10, 10, 10, 0.09), 0 170px 102px 0 rgba(10, 10, 10, 0.05), 0 302px 121px 0 rgba(10, 10, 10, 0.01), 0 471px 132px 0 rgba(10, 10, 10, 0), 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-        background: rgba(255, 255, 255, 0.04);
+        box-shadow: 0 75px 75px 0 rgb(10 10 10 / 9%), 0 170px 102px 0 rgb(10 10 10 / 5%), 0 302px 121px 0 rgb(10 10 10 / 1%), 0 471px 132px 0 rgb(10 10 10 / 0%), 0 4px 4px 0 rgb(0 0 0 / 25%);
+        background: rgb(255 255 255 / 4%);
 
         &_w365 {
             /* width: 365px; */
@@ -101,7 +100,7 @@
         &_pt134 {
             padding-top: 118px;
         }
-        
+
         &_pt68 {
             padding-top: 55px;
         }
@@ -115,7 +114,7 @@
         text-align: center;
         background: linear-gradient(270deg, #915c46 0%, #c47a5c 100%);
         background-clip: text;
-        -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
     }
 
@@ -184,7 +183,7 @@
 
         &__hidden:checked + &__checkbox {
             &::before {
-                background: url("../img/icons/check\ -white.svg") center / cover no-repeat; 
+                background: url("../img/icons/check\ -white.svg") center / cover no-repeat;
             }
         }
     }
@@ -202,18 +201,18 @@
         }
 
         &__item {
-            padding: 20px 30px 31px 30px;
+            padding: 20px 30px 31px;
         }
 
         &__subitem {
-            padding: 20px 30px 31px 30px;
+            padding: 20px 30px 31px;
         }
 
         &__headline {
             font-size: 30px;
         }
 
-        &__descr ,&__text {
+        &__descr, &__text {
             font-size: 19px;
         }
     }
@@ -244,7 +243,7 @@
         }
 
         &__bottom {
-            width: 100%;  
+            width: 100%;
         }
 
         &__subitem {
@@ -265,7 +264,8 @@
     }
 
     .vip {
-        padding: 20px 0 100px 0;
+        padding: 20px 0 100px;
+
         &__wrapper {
             grid-template-columns: repeat(2, 315px);
             grid-template-rows: repeat(2, (minmax(297px, auto)));
@@ -294,11 +294,11 @@
         }
 
         &__icon {
-            margin-right: 40px;
             width: 70px;
-            height: 70px;
             min-width: 70px;
+            height: 70px;
             min-height: 70px;
+            margin-right: 40px;
         }
 
         &__headline {
@@ -329,6 +329,7 @@
     .vip {
         &__wrapper {
             grid-template-columns: repeat(2, 265px);
+
             /* grid-template-rows: repeat(2, (minmax(297px, auto))); */
         }
 
@@ -359,15 +360,15 @@
             justify-items: center;
             margin-top: 20px;
         }
-        
+
         &__subtitle {
             margin-top: 20px;
             padding: 0;
         }
 
         &__item {
-            max-width: 335px;
             flex-direction: row;
+            max-width: 335px;
             padding: 16px;
         }
 
@@ -387,11 +388,11 @@
         }
 
         &__icon {
-            margin-right: 20px;
             width: 40px;
-            height: 40px;
             min-width: 40px;
+            height: 40px;
             min-height: 40px;
+            margin-right: 20px;
         }
     }
 }

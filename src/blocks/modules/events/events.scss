@@ -1,7 +1,7 @@
 .events {
-    padding: 40px 0 70px 0;
+    padding: 40px 0 70px;
 
-    
+
 
     &__wrapper {
         display: grid;
@@ -46,16 +46,16 @@
     }
 
     &__label {
-        position: absolute;
-        right: 3%;
-        bottom: -11%;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 0 12px 0 22px;
+        position: absolute;
+        right: 3%;
+        bottom: -11%;
         width: 34.4%;
         height: 22.5%;
-        background: url("../img/events-label.png") center / contain no-repeat; 
+        padding: 0 12px 0 22px;
+        background: url("../img/events-label.png") center / contain no-repeat;
     }
 
     &__date {
@@ -65,7 +65,7 @@
         line-height: 100%;
         text-transform: uppercase;
         color: #fff;
-        
+
         &_rotate {
             max-width: 45px;
             transform: rotate(270deg);
@@ -105,13 +105,14 @@
     .container {
         max-width: 1120px;
     }
+
     .events {
         &__wrapper {
             grid-template-columns: repeat(3, 360px);
             grid-template-rows: minmax(470px, auto);
             grid-auto-rows: minmax(470px, auto);
         }
-    
+
         &__label {
             bottom: -11%;
             padding-right: 6px;
@@ -126,7 +127,7 @@
             max-width: 50px;
             font-size: 15px;
         }
-        
+
         &__btn {
             margin-top: 20px;
         }
@@ -144,16 +145,16 @@
             grid-template-rows: minmax(410px, auto);
             grid-auto-rows: minmax(410px, auto);
         }
-    
+
         &__label {
-            bottom: -12%;
             right: 4%;
+            bottom: -12%;
             min-width: 94px;
             padding: 0 3px 0 12px;
         }
 
         &__descr {
-            min-height: 60px;   
+            min-height: 60px;
             font-size: 26px;
         }
 
@@ -163,8 +164,8 @@
             font-size: 14px;
 
             &_rotate {
-                left: auto;
                 right: 3%;
+                left: auto;
             }
         }
     }
@@ -176,7 +177,7 @@
     }
 
     .events {
-        padding: 20px 0 115px 0;
+        padding: 20px 0 115px;
 
         &__wrapper {
             grid-template-columns: repeat(2, 319px);
@@ -200,12 +201,12 @@
 
         &__img {
             max-width: 299px;
-            max-height: 159px;  
+            max-height: 159px;
         }
 
         &__descr {
-            min-height: 66px;  
-            margin-top: 33px; 
+            min-height: 66px;
+            margin-top: 33px;
             font-size: 30px;
         }
 
@@ -214,8 +215,8 @@
             bottom: -14%;
             width: 31%;
             min-width: 92px;
-            min-height: 46px;
             height: 12.7%;
+            min-height: 46px;
             padding: 0 3px 0 10px;
         }
 
@@ -225,7 +226,7 @@
         }
 
         &__btn {
-            padding: 14px 0 16px 0;
+            padding: 14px 0 16px;
             font-size: 14px;
         }
 
@@ -271,8 +272,8 @@
 
         &__modWrapper {
             width: 90%;
-            height: 100vh;
             min-width: unset;
+            height: 100vh;
             max-height: 100vh;
         }
     }
@@ -302,12 +303,11 @@
 
         &__descr {
             min-height: unset;
-        }    
+        }
 
         &__btn {
             width: 100%;
-            padding: 14px 0 16px 0;
-
+            padding: 14px 0 16px;
         }
 
         &__label {

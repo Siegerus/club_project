@@ -9,10 +9,10 @@
         width: 100%;
         min-height: 611px;
         margin: 0;
+        border: 2px solid #2d1910;
         padding: 0;
         padding-left: 108px;
         border-radius: 30px;
-        border: 2px solid #2d1910;
         background: unset;
         background-color: #120d0a;
     }
@@ -22,7 +22,6 @@
         flex-direction: column;
         align-items: flex-start;
         width: 746px;
-        
     }
 
     &__title {
@@ -37,15 +36,15 @@
         max-width: 310px;
         margin: 0;
         margin-top: 34px;
-        padding: 28px 40px 30px 40px;
+        padding: 28px 40px 30px;
     }
 
     &__img {
         position: absolute;
         top: 50%;
-        transform: translateY(-50%);
         right: 226px;
         max-width: 373px;
+        transform: translateY(-50%);
 
         img {
             width: 100%;
@@ -62,12 +61,13 @@
 
     .sign {
         &__img {
+            right: 85px;
             width: 24.2%;
             min-width: 373px;
-            right: 85px;
         }
     }
 }
+
 @media (max-width: 1440px) {
     .container {
         max-width: 1120px;
@@ -111,6 +111,7 @@
         }
     }
 }
+
 @media (max-width: 992px) {
     .container {
         max-width: 648px;
@@ -118,18 +119,19 @@
 
     .sign {
         padding-bottom: 180px;
-        
+
         &__wrapper {
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
             min-height: 863px;
             margin-top: 26px;
-            padding: 60px 23px 0 23px; 
+            padding: 60px 23px 0;
         }
+
         &__item {
-            width: 95.6%;
             align-items: center;
+            width: 95.6%;
         }
 
         &__title {
@@ -148,13 +150,13 @@
             top: auto;
             right: 50%;
             bottom: -54px;
-            transform: translateY(0);
-            transform: translateX(50%);
             width: 303px;
             height: 570px;
+            transform: translateX(50%);
         }
     }
 }
+
 @media (max-width: 767px) {
     .container {
         max-width: 100%;
@@ -187,12 +189,12 @@
 
         &__wrapper {
             min-height: 707px;
+            border: none;
+            padding: 48px 20px 0;
             margin-top: 0;
-            padding: 48px 20px 0 20px;
             background-image: none;
             border-radius: 30px;
             background-color: $mainc-bg2;
-            border: none;
         }
 
         &__title {
@@ -200,7 +202,7 @@
         }
 
         &__item {
-            width: 100%
+            width: 100%;
         }
 
         &__subtitle {
@@ -209,11 +211,10 @@
             line-height: 130%;
         }
 
-
         &__btn {
             margin-top: 16px;
             max-width: 320px;
-            padding: 14px 0 16px 0;
+            padding: 14px 0 16px;
             font-size: 14px;
             line-height: 130%;
             letter-spacing: -0.02em;

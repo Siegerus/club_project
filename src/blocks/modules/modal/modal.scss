@@ -1,35 +1,35 @@
 .modal {
-    z-index: 30;
     position: absolute;
+    z-index: 30;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     padding: 40px;
+    transform: translate(-50%, -50%);
     border-radius: 40px;
 
     &__close {
-        z-index: 35;
         position: absolute;
+        z-index: 35;
         top: 0;
         right: -82px;
         width: 62px;
         height: 62px;
+        transform: rotate(45deg);
         border-radius: 100px;
         background-color: $mainc-bg;
         backdrop-filter: blur(24px);
-        transform: rotate(45deg);
         cursor: pointer;
-        
+
         &::before {
             content: "";
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
-            height: 21px;
             width: 3px;
+            height: 21px;
+            transform: translate(-50%, -50%);
             border-radius: 20px;
-            background-color: #fff; 
+            background-color: #fff;
         }
 
         &::after {
@@ -37,33 +37,32 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
-            height: 3px;
             width: 21px;
+            height: 3px;
+            transform: translate(-50%, -50%);
             border-radius: 20px;
             background-color: #fff;
         }
     }
-    
+
     &__overlay {
         display: none;
-        z-index: 20;
         position: fixed;
+        z-index: 20;
         top: 0;
         width: 100%;
         height: 100vh;
-        background-color: rgba(0, 0, 0, 0.3);
+        background-color: rgb(0 0 0 / 30%);
     }
 
     &__modWrapper {
-        z-index: 30;
-        position: relative;
         position: absolute;
+        z-index: 30;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
         min-width: 603px;
         min-height: 550px;
+        transform: translate(-50%, -50%);
 
         &_w732 {
             width: 732px;

@@ -1,10 +1,10 @@
 .bangles {
     padding: 70px 0 75px;
-    background: url("../img/bg/Ellipse.png") center / contain no-repeat; 
+    background: url("../img/bg/Ellipse.png") center / contain no-repeat;
 
     &__top {
-        margin: 0 auto;
         max-width: 800px;
+        margin: 0 auto;
     }
 
     &__title {
@@ -34,7 +34,7 @@
         padding: 40px;
         border-radius: 30px;
         backdrop-filter: blur(24px);
-        box-shadow: 0 75px 75px 0 rgba(10, 10, 10, 0.09), 0 170px 102px 0 rgba(10, 10, 10, 0.05), 0 302px 121px 0 rgba(10, 10, 10, 0.01), 0 471px 132px 0 rgba(10, 10, 10, 0), 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        box-shadow: 0 75px 75px 0 rgb(10 10 10 / 9%), 0 170px 102px 0 rgb(10 10 10 / 5%), 0 302px 121px 0 rgb(10 10 10 / 1%), 0 471px 132px 0 rgb(10 10 10 / 0%), 0 4px 4px 0 rgb(0 0 0 / 25%);
         background: $mainc-bg;
     }
 
@@ -85,7 +85,7 @@
         &__body {
             min-height: 120px;
         }
-    }  
+    }
 }
 
 @media (max-width: 1440px) {
@@ -115,11 +115,10 @@
         &__item {
             padding: 15px 10px;
         }
-    
+
         &__body {
             min-height: 150px;
         }
-        
     }
 }
 
@@ -131,7 +130,6 @@
     .bangles {
         padding: 25px 0 115px;
         background: url("../img/bg/Ellipse-tablet.png") center / contain no-repeat;
-
 
         &__top {
             width: 100%;
@@ -173,7 +171,7 @@
                 max-width: unset;
             }
         }
-        
+
         &__headline {
             font-size: 24px;
         }
@@ -213,7 +211,7 @@
     }
 
     .bangles {
-        padding: 20px 0 30px 0;
+        padding: 20px 0 30px;
 
         &__subtitle {
             padding: 0;
@@ -243,7 +241,7 @@
         }
 
         &__body {
-            margin-top: 24px;  
+            margin-top: 24px;
         }
 
         &__descr {

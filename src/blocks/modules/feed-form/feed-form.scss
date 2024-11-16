@@ -3,12 +3,12 @@
     flex-direction: column;
     align-items: center;
     max-width: 730px;
-    padding: 40px;
     margin: 0 auto;
+    padding: 40px;
     border-radius: 30px;
     backdrop-filter: blur(24px);
-    box-shadow: 0 75px 75px 0 rgba(10, 10, 10, 0.09), 0 170px 102px 0 rgba(10, 10, 10, 0.05), 0 302px 121px 0 rgba(10, 10, 10, 0.01), 0 471px 132px 0 rgba(10, 10, 10, 0), 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-    background: rgba(255, 255, 255, 0.04);
+    box-shadow: 0 75px 75px 0 rgb(10 10 10 / 9%), 0 170px 102px 0 rgb(10 10 10 / 5%), 0 302px 121px 0 rgb(10 10 10 / 1%), 0 471px 132px 0 rgb(10 10 10 / 0%), 0 4px 4px 0 rgb(0 0 0 / 25%);
+    background: rgb(255 255 255 / 4%);
 
     &_alit-stretch {
         align-items: stretch;
@@ -77,7 +77,6 @@
             border-radius: 10px;
             background-color: #1e120e;
         }
-
     }
 
     &__label {
@@ -85,7 +84,7 @@
         width: 100%;
         height: 100%;
         padding: 0 6px;
-        background-color: rgba(255, 255, 255, 0.04);
+        background-color: rgb(255 255 255 / 4%);
         border-radius: 10px;
         font-weight: 500;
         font-size: 16px;
@@ -99,7 +98,7 @@
             font-size: 20px;
             line-height: 130%;
             font-weight: 600;
-            color: #fff;   
+            color: #fff;
         }
     }
 
@@ -107,16 +106,16 @@
         display: flex;
         align-items: center;
         justify-content: center;
-
     }
 
     &__input {
         position: relative;
         width: 100%;
         height: 62px;
-        padding: 20px 0 20px 30px;
-        margin-bottom: 20px;
         border: 2px solid #915c46;
+        padding: 20px 0 20px 30px;
+        transition: all 0.4s;
+        margin-bottom: 20px;
         border-radius: 16px;
         outline: none;
         background-color: transparent;
@@ -125,11 +124,10 @@
         line-height: 140%;
         letter-spacing: -0.02em;
         color: #fff;
-        transition: all 0.4s;
 
         &_tac {
             padding-left: 0;
-            
+
             &::placeholder {
                 padding-left: 0;
                 text-align: center;
@@ -179,7 +177,7 @@
         &_textarea {
             min-height: 102px;
             padding-bottom: 60px;
-            resize:none;
+            resize: none;
             overflow: hidden;
         }
 
@@ -189,11 +187,10 @@
 
         &:hover {
             background-color: $mainc-input;
-            
         }
 
         &:focus {
-            outline: 6px solid rgba(145, 92, 70, 0.2);
+            outline: 6px solid rgb(145 92 70 / 20%);
             transition: all 0s;
         }
 
@@ -214,28 +211,27 @@
 
         &:focus::placeholder {
             color: transparent;
-        }   
-        
+        }
+
         &_number {
             width: 60px;
             height: 60px;
             margin: 0 8px;
-            padding: 18px 25px 16px 25px;
             border: none;
+            padding: 18px 25px 16px;
             border-radius: 10px;
             font-size: 20px;
             line-height: 130%;
             background-color: $mainc-bg;
             caret-color: #915c46;
 
-
             &:focus {
                 outline: 2px solid #915c46;
             }
 
-           &:valid {
+            &:valid {
                 outline: 2px solid #915c46;
-           }
+            }
 
             &:hover {
                 background-color: $mainc-bg;
@@ -246,7 +242,6 @@
             margin-top: 20px;
             background-color: $mainc-input;
             border: none;
-
         }
     }
 
@@ -256,11 +251,13 @@
         padding-bottom: 15px;
         background: url("../img/icons/down.svg") right 23px top 50% no-repeat;
         appearance: none;
-        -moz-appearance: none;
-        -webkit-appearance: none;
+        appearance: none;
+        appearance: none;
         cursor: pointer;
 
-        &::-ms-expand { display: none; }
+        &::-ms-expand {
+            display: none;
+        }
     }
 
     &__option {
@@ -268,11 +265,11 @@
         font-weight: 500;
         font-size: 20px;
         line-height: 130%;
-        color:#fff;
+        color: #fff;
         cursor: pointer;
 
         &_reviews {
-            font-size: 16px; 
+            font-size: 16px;
             text-align: center;
         }
     }
@@ -312,7 +309,7 @@
         font-weight: 600;
         font-size: 20px;
         line-height: 140%;
-        color:#fff;
+        color: #fff;
 
         &_colorw70 {
             color: $mainc-w40;
@@ -321,7 +318,7 @@
         &_tac {
             text-align: center;
         }
-        
+
         &_mt16 {
             margin-top: 16px;
         }
@@ -332,7 +329,7 @@
 
         span {
             font-weight: 600;
-            color:#fff;
+            color: #fff;
         }
     }
 
@@ -342,7 +339,7 @@
         line-height: 110%;
         letter-spacing: -0.02em;
         text-align: center;
-        color:#fff;
+        color: #fff;
 
         &_mt0 {
             margin-top: 0;
@@ -360,29 +357,29 @@
         margin-right: 8px;
         border-radius: 4px;
         background-color: #fff;
-        border: 1.50px solid #fff;
-        
+        border: 1.5px solid #fff;
+
         &::before {
             content: "";
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
             width: 12px;
             height: 9px;
-            transition: all 0.8s; 
+            transform: translate(-50%, -50%);
+            transition: all 0.8s;
         }
 
         &_modal {
             min-width: 21px;
-            min-height: 20px;  
+            min-height: 20px;
             background-color: transparent;
         }
     }
 
     &__hidden:checked + &__checkbox {
         &::before {
-            background: url("../img/icons/check.svg") center / cover no-repeat; 
+            background: url("../img/icons/check.svg") center / cover no-repeat;
         }
     }
 }
@@ -404,8 +401,8 @@
         max-width: 968px;
     }
 
-    .feed-form { 
-        max-width: 630px;  
+    .feed-form {
+        max-width: 630px;
         padding: 40px;
 
         &_fixedw {
@@ -423,7 +420,7 @@
         max-width: 648px;
     }
 
-    .feed-form { 
+    .feed-form {
         max-width: 100%;
         margin: 0;
         padding: 40px;
@@ -487,7 +484,7 @@
         padding: 0 20px;
     }
 
-    .feed-form { 
+    .feed-form {
         padding: 10px;
         border-radius: 20px;
 
@@ -557,7 +554,7 @@
             }
         }
 
-       &__text {
+        &__text {
             font-size: 14px;
             line-height: 130%;
             letter-spacing: -0.02em;

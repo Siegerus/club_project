@@ -1,9 +1,9 @@
 .loyalty {
-    padding: 80px 0 80px 0;
+    padding: 80px 0;
 
     &__subtitle {
         max-width: 820px;
-        margin: 20px auto 0 auto;
+        margin: 20px auto 0;
         text-align: center;
         line-height: 130%;
 
@@ -56,7 +56,7 @@
     }
 
     &__descr {
-        padding: 0 20px 20px 20px;
+        padding: 0 20px 20px;
         margin-top: 14px;
         font-weight: 500;
         font-size: 20px;
@@ -74,7 +74,7 @@
         &__item {
             padding: 0;
         }
-        
+
         &__wrapper {
             grid-template-columns: repeat(3, 360px);
             justify-content: center;
@@ -87,7 +87,7 @@
         &__descr {
             font-size: 19px;
         }
-    }   
+    }
 }
 
 @media (max-width: 1440px) {
@@ -99,12 +99,12 @@
         &__item {
             padding: 0;
         }
-        
+
         &__wrapper {
             grid-template-columns: repeat(3, 360px);
             justify-content: center;
         }
-    } 
+    }
 }
 
 @media (max-width: 1200px) {
@@ -116,7 +116,7 @@
         &__item {
             padding: 0;
         }
-        
+
         &__wrapper {
             grid-template-columns: repeat(3, 310px);
             justify-content: center;
@@ -128,8 +128,8 @@
 
         &__descr {
             font-size: 18px;
-        } 
-    } 
+        }
+    }
 }
 
 @media (max-width: 992px) {
@@ -139,14 +139,14 @@
         &_mr0 {
             position: relative;
             left: 50%;
-            transform: translateX(-50%);
             min-width: 705px;
             margin: 0 30px;
+            transform: translateX(-50%);
         }
     }
 
     .loyalty {
-        padding: 30px 0 120px 0;
+        padding: 30px 0 120px;
 
         &__title {
             text-wrap: nowrap;
@@ -160,7 +160,7 @@
         }
 
         &__item {
-            padding: 0; 
+            padding: 0;
         }
 
         &__body {
@@ -170,7 +170,7 @@
         &__scrollwrap {
             overflow: scroll;
         }
-        
+
         &__wrapper {
             grid-template-columns: repeat(3, 313px);
             justify-content: flex-start;
@@ -187,8 +187,8 @@
             font-size: 16px;
             line-height: 136%;
             letter-spacing: -0.02em;
-        } 
-    } 
+        }
+    }
 }
 
 @media (max-width: 767px) {
@@ -199,9 +199,9 @@
         &_mr0 {
             position: relative;
             left: 50%;
-            transform: translateX(-50%);
             min-width: 520px;
             margin: 0;
+            transform: translateX(-50%);
         }
     }
 
@@ -228,14 +228,14 @@
         &_mr0 {
             position: static;
             left: unset;
-            transform: unset;
             min-width: unset;
             margin: 0 auto;
+            transform: unset;
         }
     }
 
     .loyalty {
-        padding: 10px 0 30px 0;
+        padding: 10px 0 30px;
 
         &__wrapper {
             grid-template-columns: 100%;
@@ -255,7 +255,7 @@
             max-width: 315px;
             margin-top: 10px;
             padding: 0;
-            
+
             &_m-visible {
                 display: block;
             }
@@ -270,11 +270,11 @@
         }
 
         &__headline {
-           margin-top: 10px;
+            margin-top: 10px;
         }
 
         &__descr {
-            padding: 0 10px 20px 10px;
+            padding: 0 10px 20px;
             font-size: 14px;
             line-height: 130%;
         }

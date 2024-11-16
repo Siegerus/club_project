@@ -1,5 +1,5 @@
 .connect {
-    padding: 80px 0 77px 0;  
+    padding: 80px 0 77px;
 
     &__subtitle {
         margin-top: 20px;
@@ -7,7 +7,7 @@
         line-height: 130%;
         text-align: center;
     }
-    
+
     &__wrapper {
         margin-top: 32px;
     }
@@ -15,8 +15,8 @@
     &__btn {
         width: 100%;
         max-width: unset;
-        padding: 20px 0 22px 0;
         margin: 0;
+        padding: 20px 0 22px;
         font-size: 20px;
     }
 
@@ -54,7 +54,7 @@
     }
 
     .connect {
-        padding: 30px 0 124px 0;
+        padding: 30px 0 124px;
 
         &__title {
             line-height: 75%;
@@ -65,7 +65,7 @@
             margin: 0 auto;
             margin-top: 20px;
             line-height: 140%;
-            letter-spacing: -0.02em
+            letter-spacing: -0.02em;
         }
 
         &__wrapper {
@@ -87,8 +87,8 @@
         padding: 0 20px;
     }
 
-    .connect  {
-        padding: 22px 0 20px 0;
+    .connect {
+        padding: 22px 0 20px;
 
         &__title {
             font-size: 30px;
@@ -110,7 +110,7 @@
         }
 
         &__btn {
-            padding: 14px 0 16px 0;
+            padding: 14px 0 16px;
             font-size: 14px;
         }
 

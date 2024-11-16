@@ -1,6 +1,6 @@
 .questions {
-    padding: 70px 0 65px 0;
-    
+    padding: 70px 0 65px;
+
     &__title {
         line-height: 105%;
     }
@@ -11,8 +11,8 @@
 
         li {
             padding: 20px 0 20px 30px;
-            border-bottom: 3px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+            border-bottom: 3px solid rgb(255 255 255 / 10%);
+            box-shadow: 0 1px 2px 0 rgb(16 24 40 / 5%);
         }
     }
 
@@ -30,14 +30,6 @@
         cursor: pointer;
     }
 
-    /* &__box {
-        height: 112px;
-        transition: all 0.3s;
-
-        &_active {
-            height: unset;
-        }
-    } */
 
     &__content {
         display: none;
@@ -71,11 +63,11 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
-            height: 26px;
             width: 4px;
+            height: 26px;
+            transform: translate(-50%, -50%);
             border-radius: 20px;
-            background-color: #fff; 
+            background-color: #fff;
         }
 
         &::after {
@@ -83,9 +75,9 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
-            height: 4px;
             width: 26px;
+            height: 4px;
+            transform: translate(-50%, -50%);
             border-radius: 20px;
             background-color: #fff;
         }
@@ -112,8 +104,6 @@
     .container {
         max-width: 1120px;
     }
-
-
 }
 
 @media (max-width: 1200px) {
@@ -147,7 +137,7 @@
     }
 
     .questions {
-        padding: 20px 0 90px 0;
+        padding: 20px 0 90px;
 
         &__title {
             line-height: 100%;
@@ -178,8 +168,8 @@
             height: 50px;
 
             &::before {
-                height: 20px;
                 width: 2px;
+                height: 20px;
             }
 
             &::after {
@@ -199,7 +189,7 @@
     .questions {
         &__content {
             margin-top: 10px;
-        } 
+        }
     }
 }
 
@@ -210,13 +200,14 @@
     }
 
     .questions {
-        padding: 5px 0 30px 0;
+        padding: 5px 0 30px;
 
         &__list {
             margin-top: 10px;
+
             li {
                 padding: 10px;
-                border-bottom: 2px solid rgba(255, 255, 255, 0.1);  
+                border-bottom: 2px solid rgb(255 255 255 / 10%);
             }
         }
 
@@ -232,12 +223,12 @@
 
         &__plus {
             width: 36px;
-            height: 36px;
             min-width: 36px;
+            height: 36px;
 
             &::before {
-                height: 12px;
                 width: 2px;
+                height: 12px;
             }
 
             &::after {

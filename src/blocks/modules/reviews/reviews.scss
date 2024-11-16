@@ -1,42 +1,42 @@
 .reviews {
-    padding: 98px 0 69px 0;
+    padding: 98px 0 69px;
 
     &__title {
         max-width: 895px;
         margin: 0 auto;
-        line-height: 88%;   
+        line-height: 88%;
     }
 
     &__wrapper {
         display: flex;
         align-items: flex-start;
-        justify-content: space-between  ;
+        justify-content: space-between;
         margin-top: 47px;
     }
 
     &__back {
-        z-index: -1;
         position: absolute;
+        z-index: -1;
         top: 23px;
         left: -10px;
-        max-width: 753px;
-        max-height: 238px;
         width: 104%;
+        max-width: 753px;
         height: 90%;
+        max-height: 238px;
         border: 3px solid #915c46;
+        transform: rotate(10deg);
         border-radius: 20px;
         background-color: #915c46;
-        transform: rotate(10deg);
     }
 
     &__item {
-        position: relative;
         display: flex;
+        position: relative;
         width: 47.8%;
         max-width: 737px;
         min-height: 276px;
-        margin-top: 36px;
         border: 3px solid #915c46;
+        margin-top: 36px;
         border-radius: 20px;
         background-color: #120d0a;
     }
@@ -64,7 +64,7 @@
     }
 
     &__body {
-        padding: 19px 19px 75px 19px;
+        padding: 19px 19px 75px;
     }
 
     &__header {
@@ -75,8 +75,8 @@
 
     &__starsWrap {
         display: flex;
-        align-items: center;
         flex-flow: row-reverse;
+        align-items: center;
         justify-content: space-between;
         width: 168px;
     }
@@ -89,35 +89,35 @@
         width: 25px;
         height: 24px;
         cursor: pointer;
-        
-        &:before {
+
+        &::before {
             content: "";
             display: block;
             width: 25px;
             height: 24px;
-            background: url('../img/icons/black-star.svg') center / cover no-repeat;
+            background: url("../img/icons/black-star.svg") center / cover no-repeat;
             transition: all 0.5s;
         }
     }
 
     &__hidden:checked ~ &__star {
         &::before {
-            background: url('../img/icons/yellow-star.svg') center / cover no-repeat;
+            background: url("../img/icons/yellow-star.svg") center / cover no-repeat;
         }
     }
 
     &__hidden:not(:checked) ~ &__star {
         &:hover {
             &::before {
-                background: url('../img/icons/yellow-star.svg') center / cover no-repeat;
-                }
+                background: url("../img/icons/yellow-star.svg") center / cover no-repeat;
             }
         }
+    }
 
     &__star:hover ~ label {
         &::before {
-            background: url('../img/icons/yellow-star.svg') center / cover no-repeat;
-            }
+            background: url("../img/icons/yellow-star.svg") center / cover no-repeat;
+        }
     }
 
     &__headline {
@@ -143,7 +143,7 @@
         font-size: 20px;
         line-height: 130%;
         color: $mainc-w70;
-    }   
+    }
 
     &__descr {
         margin-top: 10px;
@@ -159,9 +159,9 @@
 
     &__forArrow {
         position: absolute;
+        right: 0;
         width: 66.5%;
         min-height: 100%;
-        right: 0;
     }
 
     &__arrows {
@@ -199,13 +199,13 @@
     }
 
     &__form {
-        max-width: 760px;
         width: 49.3%;
+        max-width: 760px;
         border-radius: 40px;
     }
 
     &__rank {
-        display: flex; 
+        display: flex;
         align-items: center;
         justify-content: space-between;
         font-weight: 500;
@@ -256,13 +256,13 @@
 
     .reviews {
         &__img {
-            min-height: unset;
             min-width: 130px;
+            min-height: unset;
             max-height: 165px;
         }
 
         &__body {
-            padding: 15px 15px 75px 15px;
+            padding: 15px 15px 75px;
         }
 
         &__confidential {
@@ -283,8 +283,8 @@
         }
 
         &__img {
-            max-width: 100px;
             min-width: unset;
+            max-width: 100px;
             max-height: unset;
 
             &_m-hidden {
@@ -320,8 +320,8 @@
     }
 
     .reviews {
-        padding: 53px 0 83px 0;
-        
+        padding: 53px 0 83px;
+
         &__title {
             max-width: unset;
             line-height: 95%;
@@ -332,10 +332,10 @@
         }
 
         &__form {
-            max-width: 320px;
             width: 320px;
-            margin-right: 1px;
+            max-width: 320px;
             padding: 10px;
+            margin-right: 1px;
             border-radius: 20px;
         }
 
@@ -387,7 +387,7 @@
 
             &::before {
                 width: 20px;
-                height:20px;  
+                height: 20px;
                 transition: all 0.3s;
             }
 
@@ -395,13 +395,13 @@
                 &::before {
                     width: 13px;
                     height: 14px;
-                    background: url('../img/icons/black-star-small.svg') center / cover no-repeat;
-                }  
+                    background: url("../img/icons/black-star-small.svg") center / cover no-repeat;
+                }
             }
         }
-        
+
         &__btn {
-            padding: 14px 0 16px 0;
+            padding: 14px 0 16px;
             font-size: 14px;
         }
 
@@ -413,7 +413,7 @@
         &__item {
             justify-content: center;
             border-radius: 14px;
-            background-color:  #1b1615;;
+            background-color: #1b1615;
         }
 
         &__descr {
@@ -456,12 +456,12 @@
         }
 
         &__arrows {
-            left: auto;
             right: 0;
             bottom: 10px;
+            left: auto;
             width: 40px;
-            padding: 0;
             margin: 0;
+            padding: 0;
             background-color: inherit;
         }
 
@@ -489,10 +489,9 @@
     }
 
     .reviews {
-       &__title {
-        font-size: 60px;
-       }
-
+        &__title {
+            font-size: 60px;
+        }
     }
 }
 
@@ -503,29 +502,29 @@
     }
 
     .reviews {
-       &__wrapper {
-        flex-direction: column;
-        align-items: center;
-       }
-
-       &__back {
-        left: -7px;
-       }
-
-       &__item {
-        width: 70%;
-        max-width: unset;
-        margin-bottom: 40px;
-       }
-
-       &__descr {
-        max-width: 300px;
+        &__wrapper {
+            flex-direction: column;
+            align-items: center;
         }
 
-       &__form {
-        max-width: unset;
-        width: 70%;
-       }
+        &__back {
+            left: -7px;
+        }
+
+        &__item {
+            width: 70%;
+            max-width: unset;
+            margin-bottom: 40px;
+        }
+
+        &__descr {
+            max-width: 300px;
+        }
+
+        &__form {
+            width: 70%;
+            max-width: unset;
+        }
     }
 }
 
@@ -536,15 +535,15 @@
     }
 
     .reviews {
-        padding: 66px 0 19px 0;
-        
+        padding: 66px 0 19px;
+
         &__title {
             font-size: 30px;
         }
 
-        &__wrapper{
+        &__wrapper {
             flex-direction: column;
-            align-items:center;
+            align-items: center;
             margin-top: 10px;
         }
 
@@ -572,7 +571,6 @@
                     height: 15px;
                 }
             }
-            
         }
 
         &__headline {
@@ -584,14 +582,14 @@
             width: 100%;
             margin-left: 0;
             margin-right: 0;
-            padding: 14px 0 16px 0;
-            
+            padding: 14px 0 16px;
         }
 
         &__input {
             &::placeholder {
                 font-size: 14px;
             }
+
             &_textarea {
                 min-height: 104px;
             }

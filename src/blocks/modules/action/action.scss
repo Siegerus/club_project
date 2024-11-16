@@ -1,6 +1,6 @@
 .action {
     position: relative;
-    padding: 60px 0 78px 0;  
+    padding: 60px 0 78px;
 
     &__wrapper {
         display: flex;
@@ -8,9 +8,9 @@
     }
 
     &__bg {
-        z-index: -1;
         position: absolute;
-        top: 0px;
+        z-index: -1;
+        top: 0;
         left: 141px;
         font-weight: 600;
         font-size: 210px;
@@ -78,25 +78,25 @@
     }
 
     &__line {
-        z-index: -1;
         position: absolute;
+        z-index: -1;
         top: 50%;
-        transform: translateY(-50%);
         width: 100%;
         height: 3px;
+        transform: translateY(-50%);
         background-color: #080808;
     }
 
     &__number {
-        z-index: 0;
-        position: relative;
         display: flex;
-        justify-content: center;
         align-items: center;
-        border-radius: 16px;
+        justify-content: center;
+        position: relative;
+        z-index: 0;
         width: 80px;
         height: 80px;
-        background-color: rgb(255, 255, 255, 0.2);
+        border-radius: 16px;
+        background-color: rgb(255 255 255 / 20%);
     }
 
     &__descr {
@@ -199,8 +199,8 @@
         &__wrapper {
             display: flex;
             align-items: center;
-            margin: 40px auto 0 auto;
             width: 545px;
+            margin: 40px auto 0;
             border-radius: 100px;
             background-color: $mainc-bg;
         }
@@ -249,7 +249,7 @@
             font-size: 20px;
             line-height: 130%;
             font-weight: 600;
-            color: #fff; 
+            color: #fff;
         }
 
         &__radio {
@@ -260,22 +260,21 @@
             border: 1px solid #fff;
 
             &::before {
-                content: "" ;
+                content: "";
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                transform: translate(-50%, -50%);
                 width: 20px;
                 height: 20px;
-                border-radius: 100%;  
+                transform: translate(-50%, -50%);
+                border-radius: 100%;
             }
         }
 
         &__hidden_price:checked + &__radio {
             &::before {
-                content: "" ;
+                content: "";
                 background-color: #fff;
-
             }
         }
     }
@@ -308,7 +307,6 @@
         &__title {
             font-size: 78px;
         }
-
     }
 }
 
@@ -335,7 +333,7 @@
     }
 
     .action {
-        padding: 20px 0 40px 0;
+        padding: 20px 0 40px;
 
         &__bg {
             top: 48px;
@@ -356,7 +354,7 @@
             line-height: 140%;
             letter-spacing: -0.02em;
             text-transform: none;
-            color: $mainc-w70; 
+            color: $mainc-w70;
         }
 
         &__timer {
@@ -395,9 +393,9 @@
         }
 
         &__body {
-        font-size: 16px;
-        line-height: 140%;
-        letter-spacing: -0.02em;
+            font-size: 16px;
+            line-height: 140%;
+            letter-spacing: -0.02em;
         }
 
         &__btn {
@@ -414,7 +412,6 @@
             top: 15px;
             right: 15px;
         }
-
     }
 }
 
@@ -464,7 +461,6 @@
             &__label {
                 min-width: 33%;
                 font-size: 18px;
-                
             }
 
             &__title {
@@ -566,7 +562,7 @@
         &__tabs-wrap {
             margin-top: 20px;
             padding-bottom: 10px;
-            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 2px solid rgb(255 255 255 / 10%);
         }
 
         &__tabs {
@@ -610,7 +606,7 @@
             width: 100%;
             max-width: 319px;
             margin-top: 10px;
-            padding: 14px 0 16px 0;
+            padding: 14px 0 16px;
         }
 
         &__footer {
@@ -652,8 +648,8 @@
             &__btn {
                 width: 100%;
                 max-width: unset;
-                margin: 50px auto 0 auto;
-                padding: 15px 12px 17px 12px;
+                margin: 50px auto 0;
+                padding: 15px 12px 17px;
                 font-size: 16px;
             }
 
@@ -663,8 +659,8 @@
 
             &__radio {
                 width: 19px;
-                height: 19px;
                 min-width: 19px;
+                height: 19px;
                 min-height: 19px;
             }
         }
