@@ -43,3 +43,100 @@
         </div>
     </div>
 </footer>
+
+<div class="action__overlay modal__overlay">
+    <div class="action__modWrapper modal__modWrapper modal__modWrapper_w732 modal__modWrapper_h590">
+        <div class="action-modal modal feed-form feed-form_alit-stretch animation__type__fade animation__type__fade_modal">
+            <h3 class="action-modal__title">Вы зарегистированы как пара, поэтому у Вас есть возможность выбрать билет для двоих
+            </h3>
+            <form id="armor-first-step">
+                <div class="action-modal__wrapper">
+                    <input name="sex" id="couple" value="couple" type="radio" class="feed-form__hidden action-modal__hidden" id=""></input>
+                    <label for="couple" class="action-modal__label action-modal__label_mw213">Пара</label>
+                    <input name="sex" id="man" value="man" type="radio" class="feed-form__hidden action-modal__hidden" id=""></input>
+                    <label for="man" class="action-modal__label">Мужчина</label>
+                    <input name="sex" id="woman" value="woman" type="radio" class="feed-form__hidden action-modal__hidden" id=""></input>
+                    <label for="woman" class="action-modal__label">Женщина</label>
+                </div>
+                <input id="armor-name" placeholder="Ваше имя" name="armor-name" type="text" class="action-modal__input feed-form__input feed-form__input_mb0 feed-form__input_mt16">
+                <input id="armor-age" placeholder="Возраст" name="armor-age" type="text" class="action-modal__input feed-form__input feed-form__input_mb0 feed-form__input_mt16">
+                <div class="action-modal__content animation__type__fade">
+                    <div class="action-modal__price">
+                        <div>
+                            <input id="couple-cost" name="couple" value="10 000 ₽" type="radio" class="feed-form__hidden action-modal__hidden_price">
+                            <label class="action-modal__radio" for="couple-cost"></label>
+                            <div class="feed-form__label_white">Билет вход с пары</div>
+                        </div>
+                        <div class="action-modal__cost">10 000 ₽</div>
+                    </div>
+                    <div class="action-modal__price">
+                        <div>
+                            <input id="couple-cost-comfort" name="couple" value="Комфорт 11 000 ₽" type="radio" class="feed-form__hidden action-modal__hidden_price">
+                            <label class="action-modal__radio" for="couple-cost-comfort"></label>
+                            <div class="feed-form__label_white">Билет вход Comfort с пары</div>
+                        </div>
+                        <div class="action-modal__cost">11 000 ₽</div>
+                    </div>
+                </div>
+                <div class="action-modal__content animation__type__fade">
+                    <div class="action-modal__price">
+                        <div>
+                            <input id="single-man-cost" name="couple" value="5000 ₽" type="radio" class="feed-form__hidden action-modal__hidden_price">
+                            <label class="action-modal__radio" for="single-man-cost"></label>
+                            <div class="feed-form__label_white">Билет вход с человека</div>
+                        </div>
+                        <div class="action-modal__cost">5000 ₽</div>
+                    </div>
+                    <div class="action-modal__price">
+                        <div>
+                            <input id="single-man-cost-comfort" name="couple" value="Комфорт 6000 ₽" type="radio" class="feed-form__hidden action-modal__hidden_price">
+                            <label class="action-modal__radio" for="single-man-cost-comfort"></label>
+                            <div class="feed-form__label_white">Билет вход Comfort с человека</div>
+                        </div>
+                        <div class="action-modal__cost">6000 ₽</div>
+                    </div>
+                </div>
+                <div class="action-modal__content animation__type__fade">
+                    <div class="action-modal__price">
+                        <div>
+                            <input id="single-woman-cost" name="couple" value="5000 ₽" type="radio" class="feed-form__hidden action-modal__hidden_price">
+                            <label class="action-modal__radio" for="single-woman-cost"></label>
+                            <div class="feed-form__label_white">Билет вход с человека</div>
+                        </div>
+                        <div class="action-modal__cost">5000 ₽</div>
+                    </div>
+                    <div class="action-modal__price">
+                        <div>
+                            <input id="single-woman-cost-comfort" name="couple" value="Комфорт 6000 ₽" type="radio" class="feed-form__hidden action-modal__hidden_price">
+                            <label class="action-modal__radio" for="single-woman-cost-comfort"></label>
+                            <div class="feed-form__label_white">Билет вход Comfort с человека</div>
+                        </div>
+                        <div class="action-modal__cost">6000 ₽</div>
+                    </div>
+                </div>
+                <button class="button button_footer action-modal__btn">Оплатить</button>
+            </form>
+        </div>
+        <div class="action__close modal__close"></div>
+    </div>
+</div>
+
+<div class="join__overlay modal__overlay">
+    <div class="join__modWrapper modal__modWrapper">
+        <div class="join-modal modal animation__type__fade_modal">
+            <div class="join-modal__img"><img src="../img/icons/join-modal-icon.svg" alt="icon"></div>
+            <h3 class="join-modal__title">Вход в клуб</h3>
+            <div class="join-modal__descr">Стоимость билета в клуб 100 рублей</div>
+            <form id="join-modal" class="join-modal__form feed-form feed-form_modal">
+                <input id="join-email" name="join-email" class="join-modal__input feed-form__input feed-form__input_h66 feed-form__input_modal" placeholder="Адрес электронной почты"></input>
+                <button class="button button_footer button_nobg join-modal__btn">Оплатить вход в клуб</button>
+                <div class="join-modal__confidentialWrap feed-form__confidentialWrap feed-form__confidentialWrap_mt20 ">
+                    <input id="join-modal-checkbox" name="rules" type="checkbox" class="feed-form__hidden join-modal__hidden">
+                    <label for="join-modal-checkbox" class="join-modal__checkbox feed-form__checkbox_modal feed-form__checkbox"></label>
+                    <div class="join-modal__confidential feed-form__confidential feed-form__confidential_mt0"><a href="pages/rules.html">Я согласен с правилами клуба</a></div>
+                </div>
+            </form>
+        </div>
+        <div class="join__close modal__close"></div>
+    </div>
+</div>

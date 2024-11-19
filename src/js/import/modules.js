@@ -15,3 +15,5 @@ import "%modules%/vip/vip";
 import "%modules%/rules/rules";
 import "%modules%/modal/modal";
 import "%modules%/footer/footer";
+import "%modules%/feed-form/feed-form";
+

@@ -4,10 +4,8 @@ window.addEventListener("DOMContentLoaded", function() {
     let tabs = document.querySelectorAll(".autorization__tabs"),
         content = document.querySelectorAll(".autorization__content"),
         forget = document.querySelector(".autorization__forgetPass"),
-        recover = document.querySelector(".autorization__recover"),
         block = document.querySelector(".autorization__block"),
-        blockPass = document.querySelector(".autorization__pass"),
-        blockVerify = document.querySelector(".autorization__verify");
+        blockPass = document.querySelector(".autorization__pass");
 
                                             
     if (document.body.querySelector(".autorization")) {
@@ -52,8 +50,6 @@ window.addEventListener("DOMContentLoaded", function() {
         };
     
         blockShow(forget, block, blockPass);
-        blockShow(recover, blockPass, blockVerify);
-
     }
 
 

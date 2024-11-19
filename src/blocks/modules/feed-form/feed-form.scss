@@ -382,6 +382,21 @@
             background: url("../img/icons/check.svg") center / cover no-repeat;
         }
     }
+
+    &__messageBox {
+        z-index: 10;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 50px 60px;
+        min-width: 320px;
+        background: linear-gradient(270deg, #080808 0%, #1e120e 72.09%, #2d1910 100%);
+        border-radius: 40px;
+        color: #fff;
+        text-align: center;
+        font-size: 36px;
+    }
 }
 
 @media (max-width: 1679px) {

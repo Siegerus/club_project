@@ -8,7 +8,7 @@
 
         <div class="feed-form__enter autorization__enter autorization__content animation__type__fade">
             <div class="feed-form__title autorization__title_tac autorization__title autorization__title_mb24">Присоединяйтесь к нашему клубу, чтобы получать эксклюзивные предложения и быть в курсе всех событий</div>
-            <form id="registration" action="">
+            <form id="registration">
                 <div class="feed-form__inputWrap autorization__inputWrap">
                     <input id="sign-user" name="sign-user" type="text" class="feed-form__input feed-form__input_place-fz20 feed-form__input_br10 feed-form__input_mb30 feed-form__input_h68 autorization__input" placeholder="Имя">
                     <div>
@@ -30,7 +30,7 @@
                 </div>
 
                 <div class="feed-form__inputWrap autorization__inputWrap">
-                    <input id="sign-password" name="sign-password" type="text" class="feed-form__input feed-form__input_place-fz20 feed-form__input_br10 feed-form__input_mb30 feed-form__input_h68 autorization__input" placeholder="Пароль">
+                    <input id="sign-password" name="sign-password" type="password" class="feed-form__input feed-form__input_place-fz20 feed-form__input_br10 feed-form__input_mb30 feed-form__input_h68 autorization__input" placeholder="Пароль">
                     <div>
                         <label for="sign-password" class="feed-form__label">Придумайте пароль</label>
                     </div>
@@ -52,7 +52,7 @@
         <div class="feed-form__enter autorization__enter autorization__content animation__type__fade">
             <div class="feed-form__title autorization__title autorization__title_m-hidden">Войдите, используя свой адрес электронной почты и пароль</div>
             <div class="feed-form__title autorization__title autorization__title_m-visible">Присоединяйтесь к нашему клубу, чтобы получать эксклюзивные предложения и быть в курсе всех событий</div>
-            <form id="autorization" action="">
+            <form id="autorization">
                 <div class="feed-form__inputWrap autorization__inputWrap">
                     <input id="autorization-email" name="autorization-email" type="mail" class="feed-form__input feed-form__input_place-fz20 feed-form__input_h68 feed-form__input_br10 feed-form__input_mb30 autorization__input" placeholder="info@gmail.com">
                     <div>
@@ -60,9 +60,9 @@
                     </div>
                 </div>
                 <div class="feed-form__inputWrap autorization__inputWrap">
-                    <input id="sign-password" name="sign-user" type="text" class="feed-form__input feed-form__input_place-fz20 feed-form__input_h68 feed-form__input_br10 feed-form__input_mb16 autorization__input" placeholder="Пароль">
+                    <input id="autorization-password" name="autorization-password" type="text" class="feed-form__input feed-form__input_place-fz20 feed-form__input_h68 feed-form__input_br10 feed-form__input_mb16 autorization__input" placeholder="Пароль">
                     <div>
-                        <label for="sign-password" class="feed-form__label">Пароль</label>
+                        <label for="autorization-password" class="feed-form__label">Пароль</label>
                     </div>
                 </div>
                 <div class="feed-form__text feed-form__text_m-hidden autorization__text autorization__forgetPass">Забыли пароль?</div>
@@ -84,14 +84,14 @@
         <div class="feed-form__enter autorization__enter feed-form__enter_active">
             <div class="feed-form__forget autorization__forget">Забыли пароль?</div>
             <div class="feed-form__title autorization__title autorization__title_mt10 autorization__title_mb24 autorization__title_tal">Введите свой адрес электронной почты, чтобы сбросить пароль</div>
-            <form id="forget" action="">
+            <form id="forget">
                 <div class="feed-form__inputWrap autorization__inputWrap">
                     <input id="forget-email" name="forget-email" type="mail" class="feed-form__input feed-form__input_place-fz20 feed-form__input_h68 feed-form__input_br10 feed-form__input_mb0 autorization__input" placeholder="info@gmail.com">
                     <div>
                         <label for="forget-email" class="feed-form__label">Адрес электронной почты</label>
                     </div>
                 </div>
-                <div class="button  button_footer feed-form__btn autorization__btn autorization__recover">Восстановить</div>
+                <button class="button  button_footer feed-form__btn autorization__btn autorization__recover">Восстановить</button>
             </form>   
             <div class="feed-form__text feed-form__text_mt16 feed-form__text_tac feed-form__text_colorw70 autorization__text">Уже вступил в клуб? <span><a href="autorization.html">Авторизоваться</a></span></div>           
         </div>
@@ -100,7 +100,7 @@
     <div class="feed-form feed-form_mt259 feed-form_center feed-form feed-form_br40 feed-form_alit-stretch autorization__verify">
         <div class="feed-form__forget feed-form__forget_mt0">Проверка кода</div>
         <div class="feed-form__title autorization__title autorization__title_tac autorization__title_mt20 autorization__title_mb20 autorization__title_mb20">Мы отправили проверочный код на ваш электронный адрес - dar*******@gmail.com</div>
-        <form id="verify" action="">
+        <form id="verify">
             <div class="feed-form__numberWrap autorization__numberWrap">
                 <input name="code-number" type="text" required class="feed-form__input feed-form__input_number">
                 <input name="code-number" type="text" required class="feed-form__input feed-form__input_number">
@@ -115,7 +115,7 @@
     <div class="feed-form feed-form_mt209 feed-form_br40 feed-form_center feed-form_alit-stretch autorization__set">
         <div class="feed-form__forget feed-form__forget_mt0">Установите новый пароль</div>
         <div class="feed-form__title autorization__title autorization__title_tac autorization__title_mt16 autorization__title_w458 ">Пожалуйста, создайте новый пароль, который вы не используете ни на одном другом сайте</div>
-        <form id="set-passwoed" action="">
+        <form id="set-password" >
             <div class="feed-form__inputWrap autorization__inputWrap">
                 <input id="forget-email" name="forget-email" type="mail" class="feed-form__input feed-form__input_place-fz20 feed-form__input_h68 feed-form__input_br10 feed-form__input_mb30 " placeholder="Пароль">
                 <div>

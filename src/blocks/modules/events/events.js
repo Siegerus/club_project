@@ -3,8 +3,8 @@ window.addEventListener("DOMContentLoaded", function () {
 
     if (document.body.querySelector(".events")) {
 
-        let overlay = document.querySelector(".events__overlay"),
-            close = document.querySelector(".events__close"),
+        let overlay = document.querySelector(".action__overlay"),
+            close = document.querySelector(".action__close"),
             btn = document.querySelectorAll(".events__btn");
 
 
