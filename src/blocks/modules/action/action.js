@@ -29,7 +29,7 @@ window.addEventListener("DOMContentLoaded", function () {
         let launchTimer = function launchTimer() {
 
             function getTime() {
-                let deadline = "2024-10-8",
+                let deadline = "2025-01-1",
                     t = Date.parse(deadline) - Date.parse(new Date()),
                     seconds = Math.floor((t / 1000) % 60),
                     minutes = Math.floor((t / 1000 / 60) % 60),

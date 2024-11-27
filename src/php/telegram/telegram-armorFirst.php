@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
  
   $textSendStatus = '';
    
-  if (!empty($_POST['sex']) && !empty($_POST['armor-name']) && !empty($_POST['armor-age']) && !empty($_POST['couple'])) {
+  if (!empty($_POST['sex']) && !empty($_POST['name']) && !empty($_POST['age']) && !empty($_POST['couple'])) {
      
     $txt = "Club-project%0AБронь%0A%0A";
      
@@ -17,12 +17,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $txt .= "Пол: " . strip_tags(trim(urlencode($_POST['sex']))) . "%0A";
     }
      
-    if (isset($_POST['armor-name']) && !empty($_POST['armor-name'])) {
-        $txt .= "Имя: " . strip_tags(urlencode($_POST['armor-name'])) . "%0A";
+    if (isset($_POST['name']) && !empty($_POST['name'])) {
+        $txt .= "Имя: " . strip_tags(urlencode($_POST['name'])) . "%0A";
     }
 
-    if (isset($_POST['armor-age']) && !empty($_POST['armor-age'])) {
-      $txt .= "Возраст: " . strip_tags(urlencode($_POST['armor-age'])) . "%0A";
+    if (isset($_POST['age']) && !empty($_POST['age'])) {
+      $txt .= "Возраст: " . strip_tags(urlencode($_POST['age'])) . "%0A";
   }
 
     if (isset($_POST['couple']) && !empty($_POST['couple'])) {

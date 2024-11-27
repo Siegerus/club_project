@@ -9,12 +9,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
  
   $textSendStatus = '';
    
-  if (!empty($_POST['forget-email'])) {
+  if (!empty($_POST['email'])) {
      
     $txt = "Club-project%0AВосстановление пароля%0A%0A";
      
-    if (isset($_POST['forget-email']) && !empty($_POST['forget-email'])) {
-        $txt .= "Почта: " . strip_tags(urlencode($_POST['forget-email'])) . "%0A";
+    if (isset($_POST['email']) && !empty($_POST['email'])) {
+        $txt .= "Почта: " . strip_tags(urlencode($_POST['email'])) . "%0A";
     }
 
     $textSendStatus = @file_get_contents('https://api.telegram.org/bot'. TOKEN .'/sendMessage?chat_id=' . CHATID . '&parse_mode=html&text=' . $txt); 

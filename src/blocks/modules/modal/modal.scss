@@ -6,7 +6,7 @@
     padding: 40px;
     transform: translate(-50%, -50%);
     border-radius: 40px;
-
+    
     &__close {
         position: absolute;
         z-index: 35;
@@ -71,5 +71,14 @@
         &_h590 {
             height: 590px;
         }
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 648px;
+    }
+    .modal {
+        overflow-y: scroll;
     }
 }

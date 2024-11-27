@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
  
   $textSendStatus = '';
    
-  if (!empty($_POST['event']) && !empty($_POST['user']) && !empty($_POST['message']) && !empty($_POST['star-rate'])) {
+  if (!empty($_POST['event']) && !empty($_POST['user']) && !empty($_POST['message']) && !empty($_POST['rate'])) {
      
     $txt = "Club-project%0AОтзыв%0A%0A";
      
@@ -25,8 +25,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $txt .= "Отзыв: " . strip_tags(urlencode($_POST['message'])) . "%0A";
   }
 
-    if (isset($_POST['star-rate']) && !empty($_POST['star-rate'])) {
-      $txt .= "Рейтинг: " . strip_tags(urlencode($_POST['star-rate'])) . "%0A";
+    if (isset($_POST['rate']) && !empty($_POST['rate'])) {
+      $txt .= "Рейтинг: " . strip_tags(urlencode($_POST['rate'])) . "%0A";
   }
  
     $textSendStatus = @file_get_contents('https://api.telegram.org/bot'. TOKEN .'/sendMessage?chat_id=' . CHATID . '&parse_mode=html&text=' . $txt); 

