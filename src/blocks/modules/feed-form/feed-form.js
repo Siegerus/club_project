@@ -20,7 +20,7 @@ window.addEventListener("DOMContentLoaded", function () {
         autorizationForm = this.document.getElementById("autorization"),
         forgetForm = this.document.getElementById("forget"),
         registrationForm = this.document.getElementById("registration");
-        
+
     messageBox.classList.add("feed-form__messageBox");
     messageBox.classList.add("animation__type__fade");
 
@@ -89,11 +89,13 @@ window.addEventListener("DOMContentLoaded", function () {
                     validationResult = validate(inputs, constraints);
 
                 if (validationResult) {
+                    joinForm.querySelectorAll("input").forEach((item) => item.style.border = "solid 2px #ff5656");
                     ErrorBox.forEach((item) => item.style.display = "block");
                     mailErrorBox.textContent = validationResult.email;
                     rulesErrorBox.textContent = validationResult.rules;
 
                 } else {
+                    joinForm.querySelectorAll("input").forEach((item) => item.style.border = "none");
                     ErrorBox.forEach((item) => item.style.display = "none");
                     ErrorBox.forEach((item) => item.textContent = "");
                     sendRequest();
@@ -153,15 +155,15 @@ window.addEventListener("DOMContentLoaded", function () {
                     },
                     validationResult = validate(inputs, constraints);
 
-                
-
                 if (validationResult) {
+                    armorFirstForm.querySelectorAll("input").forEach((item) => item.style.borderColor = "#ff5656");
                     ErrorBox.forEach((item) => item.style.display = "block");
                     coupleErrorBox.textContent = validationResult.couple;
                     userErrorBox.textContent = validationResult.username;
                     ageErrorBox.textContent = validationResult.age;
                     costErrorBox.textContent = validationResult.cost;
                 } else {
+                    armorFirstForm.querySelectorAll("input").forEach((item) => item.style.borderColor = "#915c46");
                     ErrorBox.forEach((item) => item.style.display = "none");
                     ErrorBox.forEach((item) => item.textContent = "");
                     sendRequest();
@@ -211,12 +213,18 @@ window.addEventListener("DOMContentLoaded", function () {
                     validationResult = validate(inputs, constraints);
 
                 if (validationResult) {
+                    reviewsForm.querySelectorAll("input").forEach((item) => item.style.borderColor = "#ff5656");
+                    reviewsForm.querySelector("textarea").style.borderColor = "#ff5656";
+                    reviewsForm.querySelector("select").style.borderColor = "#ff5656";
                     ErrorBox.forEach((item) => item.style.display = "block");
                     eventErrorBox.textContent = validationResult.event;
                     userErrorBox.textContent = validationResult.user;
                     messageErrorBox.textContent = validationResult.message;
                     rateErrorBox.textContent = validationResult.rate;
                 } else {
+                    reviewsForm.querySelectorAll("input").forEach((item) => item.style.borderColor = "#915c46");
+                    reviewsForm.querySelector("textarea").style.borderColor = "#915c46";
+                    reviewsForm.querySelector("select").style.borderColor = "#915c46";
                     ErrorBox.forEach((item) => item.style.display = "none");
                     ErrorBox.forEach((item) => item.textContent = "");
                     sendRequest();
@@ -285,6 +293,7 @@ window.addEventListener("DOMContentLoaded", function () {
                     validationResult = validate(inputs, constraints);
 
                 if (validationResult) {
+                    registrationForm.querySelectorAll("input").forEach((item) => item.style.borderColor = "#ff5656");
                     ErrorBox.forEach((item) => item.style.display = "block");
                     checkboxErrorBox.textContent = validationResult.checkbox;
                     emailErrorBox.textContent = validationResult.email;
@@ -292,11 +301,8 @@ window.addEventListener("DOMContentLoaded", function () {
                     passwordConfErrorBox.textContent = validationResult.passwordConf;
                     userErrorBox.textContent = validationResult.user;
                     selectErrorBox.textContent = validationResult.select;
-                    console.log(validationResult);
-                    console.log(selectVal);
-                    console.log(selectErrorBox);
-                    console.log(validate.collectFormValues(registrationForm));
                 } else {
+                    registrationForm.querySelectorAll("input").forEach((item) => item.style.borderColor = "#915c46");
                     ErrorBox.forEach((item) => item.style.display = "none");
                     ErrorBox.forEach((item) => item.textContent = "");
                     sendRequest();
@@ -319,7 +325,7 @@ window.addEventListener("DOMContentLoaded", function () {
                     constraints = {
                         email: {
                             email: true,
-                            presence: true,
+                            presence: true
                         },
                         password: {
                             presence: true,
@@ -341,11 +347,13 @@ window.addEventListener("DOMContentLoaded", function () {
                     validationResult = validate(inputs, constraints);
 
                 if (validationResult) {
+                    autorizationForm.querySelectorAll("input").forEach((item) => item.style.borderColor = "#ff5656");
                     ErrorBox.forEach((item) => item.style.display = "block");
                     emailErrorBox.textContent = validationResult.email;
                     passwordErrorBox.textContent = validationResult.password;
                     checkboxErrorBox.textContent = validationResult.checkbox;
                 } else {
+                    autorizationForm.querySelectorAll("input").forEach((item) => item.style.borderColor = "#915c46");
                     ErrorBox.forEach((item) => item.style.display = "none");
                     ErrorBox.forEach((item) => item.textContent = "");
                     sendRequest();
@@ -355,17 +363,19 @@ window.addEventListener("DOMContentLoaded", function () {
             if (form.id == ("forget")) {
                 let emailVal = validate.collectFormValues(forgetForm).email,
                     emailErrorBox = document.querySelector(".feed-form__errorBox_forget-email"),
-                    ErrorBox = autorizationForm.querySelectorAll(".feed-form__errorBox"),
+                    ErrorBox = forgetForm.querySelector(".feed-form__errorBox"),
                     inputs = { email: emailVal },
                     constraints = { email: { email: true, presence: true } },
                     validationResult = validate(inputs, constraints);
 
                 if (validationResult) {
-                    ErrorBox.forEach((item) => item.style.display = "block");
+                    forgetForm.querySelector("input").style.borderColor = "#ff5656";
+                    ErrorBox.style.display = "block";
                     emailErrorBox.textContent = validationResult.email;
                 } else {
-                    ErrorBox.forEach((item) => item.style.display = "none");
-                    ErrorBox.forEach((item) => item.textContent = "");
+                    forgetForm.querySelector("input").style.borderColor = "#915c46";
+                    ErrorBox.style.display = "none";
+                    ErrorBox.textContent = "";
 
                     request.open("POST", url);
                     request.send(formData);
@@ -379,7 +389,7 @@ window.addEventListener("DOMContentLoaded", function () {
                             } else if (request.readyState < 4) {
                                 document.body.appendChild(messageBox);
                                 messageBox.innerHTML = message.loading;
-                            } 
+                            }
                             document.body.addEventListener("click", function () {
                                 if (document.body.querySelector(".feed-form__messageBox")) {
                                     document.body.removeChild(messageBox);
@@ -398,62 +408,100 @@ window.addEventListener("DOMContentLoaded", function () {
                     numberVal4 = validate.collectFormValues(verifyForm).code4,
                     ErrorBox = verifyForm.querySelector(".feed-form__errorBox"),
                     inputs = {
-                        number1 : numberVal1,
-                        number2 : numberVal2,
-                        number3 : numberVal3,
-                        number4 : numberVal4,
+                        number1: numberVal1,
+                        number2: numberVal2,
+                        number3: numberVal3,
+                        number4: numberVal4,
                     },
                     constraints = {
-                        number1 : {
+                        number1: {
                             presence: true,
-
                         },
-                        number2 : {
+                        number2: {
                             presence: true,
-
                         },
-                        number3 : {
+                        number3: {
                             presence: true,
-
                         },
-                        number4 : {
+                        number4: {
                             presence: true,
-
                         },
                     },
                     validationResult = validate(inputs, constraints);
                 if (validationResult) {
+                    verifyForm.querySelectorAll("input").forEach((item) => item.style.outlineColor = "#ff5656");
                     ErrorBox.style.display = "block";
                     ErrorBox.textContent = validationResult;
                 } else {
+                    verifyForm.querySelectorAll("input").forEach((item) => item.style.outlineColor = "#915c46");
                     ErrorBox.style.display = "none";
-                    ErrorBox.textContent = " ";
+                    ErrorBox.textContent = "";
+                    sendRequest();
                 }
-
-
-                
-                console.log();
-                console.log(validationResult);
-                
             }
 
+            if (form.id == ("connect-form")) {
+                let userVal = validate.collectFormValues(connectForm).user,
+                    emailVal = validate.collectFormValues(connectForm).email,
+                    messageVal = validate.collectFormValues(connectForm).message,
+                    userErrorBox = connectForm.querySelector(".feed-form__errorBox_connect-user"),
+                    emailErrorBox = connectForm.querySelector(".feed-form__errorBox_connect-email"),
+                    messageErrorBox = connectForm.querySelector(".feed-form__errorBox_connect-message"),
+                    ErrorBox = connectForm.querySelectorAll(".feed-form__errorBox"),
+                    inputs = {
+                        user: userVal,
+                        email: emailVal,
+                        message: messageVal
+                    },
+                    constraints = {
+                        user: {
+                            presence: true,
+                            length: {
+                                minimum: 3,
+                                maximum: 40,
+                                message: "^Введите от 3 до 40 символов"
+                            }
+                        },
+                        email: {
+                            email: true,
+                            presence: true
+                        },
+                        message: {
+                            presence: true,
+                            length: {
+                                minimum: 10,
+                                maximum: 500,
+                                message: "^Введите от 10 до 500 символов"
+                            }
+                        }
+                    },
+                    validationResult = validate(inputs, constraints);
+
+                if (validationResult) {
+                    connectForm.querySelectorAll("input").forEach((item) => item.style.borderColor = "#ff5656");
+                    connectForm.querySelector("textarea").style.borderColor = "#ff5656";
+                    ErrorBox.forEach((item) => item.style.display = "block");
+                    userErrorBox.textContent = validationResult.user;
+                    emailErrorBox.textContent = validationResult.email;
+                    messageErrorBox.textContent = validationResult.message;
+                } else {
+                    connectForm.querySelectorAll("input").forEach((item) => item.style.borderColor = "#915c46");
+                    connectForm.querySelector("textarea").style.borderColor = "#915c46";
+                    ErrorBox.forEach((item) => item.style.display = "none");
+                    ErrorBox.forEach((item) => item.textContent = "");
+                    sendRequest();
+                }
+            }
         });
     };
-
-
-
-
-
-
-
 
     if (document.querySelector(".modal")) {
         submitForm(joinForm, "/php/telegram/telegram-join.php");
         submitForm(armorFirstForm, "/php/telegram/telegram-armorFirst.php");
 
         let ageInputReplaced = armorFirstForm.querySelector("input[name=age]");
-        ageInputReplaced.addEventListener("input", function() {
-            this.value = this.value.replace(/[^0-9]/g,"");
+        ageInputReplaced.addEventListener("input", function () {
+            this.value = this.value.replace(/[^0-9]/g, "");
         });
     }
     if (document.querySelector(".reviews")) {
@@ -466,12 +514,12 @@ window.addEventListener("DOMContentLoaded", function () {
         submitForm(registrationForm, "/php/telegram/telegram-registration.php");
         submitForm(autorizationForm, "/php/telegram/telegram-autorization.php");
         submitForm(forgetForm, "/php/telegram/telegram-forget.php");
-        submitForm(verifyForm, "/php/telegram/telegram-forget.php");
+        submitForm(verifyForm, "/php/telegram/telegram-verify.php");
 
         let codeInputReplaced = verifyForm.querySelectorAll(".feed-form__input_number");
         codeInputReplaced.forEach((item) => {
             item.addEventListener("input", () => {
-                item.value = item.value.replace(/[^0-9]/g,"");
+                item.value = item.value.replace(/[^0-9]/g, "");
             });
         });
     }

@@ -162,6 +162,10 @@
             margin-bottom: 30px;
         }
 
+        &_mb40 {
+            margin-bottom: 30px;
+        }
+
         &_mb0 {
             margin-bottom: 0;
         }
@@ -224,6 +228,7 @@
             line-height: 130%;
             background-color: $mainc-bg;
             caret-color: #915c46;
+            outline: 2px solid #915c46;
 
             &:focus {
                 outline: 2px solid #915c46;
@@ -251,11 +256,13 @@
         padding-bottom: 15px;
         background: url("../img/icons/down.svg") right 23px top 50% no-repeat;
         appearance: none;
-        appearance: none;
-        appearance: none;
         cursor: pointer;
 
         &::-ms-expand {
+            display: none;
+        }
+
+        &_fake {
             display: none;
         }
     }
@@ -401,30 +408,40 @@
         display: none;
         align-self: flex-start;
         max-width: 540px;
-        margin-bottom: 20px;
-        color: red;
+        margin-bottom: 10px;
+        color: #ff5656;
         font-size: 16px;
-        
 
         &_mt10 {
             margin-top: 10px;  
         }
 
-        &_mt30 {
-            margin-top: 30px;  
+        &_jspec, &_cspec {
+            margin-top: -10px;
         }
 
-        &_mb0 {
-            margin-bottom: 0;
+        &_sspec {
+            margin-top: 10px; 
+        }
+
+        &_mt0 {
+            margin-top: 0; 
+        }
+
+        &_mt-10 {
+            margin-top: -10px; 
+        }
+        &_mt-20 {
+            margin-top: -20px; 
+        }
+
+        &_mb20 {
+            margin-bottom: 20px;
         }  
-
-        &_mb30 {
-            margin-bottom: 30px;
-        }
 
         &_join-modal-checkbox {
             align-self: center;
-            margin-top: 20px;
+            margin-top: 10px;
             text-align: center;
         }
 
@@ -552,18 +569,16 @@
         }
 
         &__errorBox {
-            margin-bottom: 10px;
             font-size: 14px;
-            margin-top: 10px;
-
-            &_mb30 {
-                margin-bottom: 24px;
+    
+            &_mt-20 {
+                margin-top: -10px;
             }
 
-            &_mt30 {
-                margin-top: 10px;
+            &_jspec, &_cspec, &_sspec  {
+                margin-top: 0;
             }
-
+            
         }
 
         &__input {
@@ -576,6 +591,10 @@
 
             &_mb30 {
                 margin-bottom: 24px;
+            }
+
+            &_mb40 {
+                margin-bottom: 34px;
             }
 
             &::placeholder {

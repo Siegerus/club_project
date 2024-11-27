@@ -4,10 +4,13 @@
         <h3 class="subtitle connect__subtitle">Для вас это возможность задать интересующие вопросы и попасть в закрытый клуб</h3>
         <div class="connect__wrapper">
             <form id="connect-form" class="feed-form connect__form">
-                <input id="connect-user" name="connect-user" placeholder="Ваше имя" type="text" class="feed-form__input connect__input">
-                <input id="connect-email" name="connect-email" placeholder="Адрес электронной почты" type="text" class="feed-form__input connect__input">
+                <input id="connect-user" name="user" placeholder="Ваше имя" type="text" class="feed-form__input connect__input">
+                <div class="feed-form__errorBox feed-form__errorBox_cspec feed-form__errorBox_connect-user"></div>
+                <input autocomplete="on" id="connect-email" name="email" placeholder="Адрес электронной почты" type="text" class="feed-form__input connect__input">
+                <div class="feed-form__errorBox feed-form__errorBox_cspec feed-form__errorBox_connect-email"></div>
                 <textarea 
                 id="message" name="message" placeholder="Текст письма" class="feed-form__input feed-form__input_textarea"></textarea>
+                <div class="feed-form__errorBox feed-form__errorBox_cspec feed-form__errorBox_connect-message"></div>
                 <button class="button connect__btn">Отправить</button>
                 <div class="feed-form__confidential connect__confidential">
                     Я ознакомлен(а) с политикой, офертой, и даю согласие на обработку персональных данных
