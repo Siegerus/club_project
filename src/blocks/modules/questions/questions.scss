@@ -20,6 +20,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        padding-bottom: 15px;
     }
 
     &__headline {
@@ -30,14 +31,24 @@
         cursor: pointer;
     }
 
+    &__box {
+        max-height: 103px;
+        transition: all 0.6s;
+        overflow: hidden;
+        &_active {
+            transition: all 0.6s;
+        } 
+    }
 
     &__content {
-        display: none;
+        /* display: none; */
         max-width: 902px;
+        padding-bottom: 20px;
         font-weight: 500;
         font-size: 24px;
         line-height: 130%;
         color: $mainc-w70;
+        
 
         &_active {
             display: block;
@@ -112,6 +123,11 @@
     }
 
     .questions {
+        &__box {
+            max-height: 97px;
+        }
+
+        
         &__content {
             max-width: 690px;
         }
@@ -138,6 +154,10 @@
 
     .questions {
         padding: 20px 0 90px;
+        
+        &__box {
+            max-height: 92px;
+        }
 
         &__title {
             line-height: 100%;
@@ -201,6 +221,10 @@
 
     .questions {
         padding: 5px 0 30px;
+
+        &__box {
+            max-height: 74px;
+        }
 
         &__list {
             margin-top: 10px;
