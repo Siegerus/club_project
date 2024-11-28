@@ -1,4 +1,4 @@
-window.addEventListener("DOMContentLoaded", function(){
+window.addEventListener("DOMContentLoaded", function () {
     "use striсt";
 
     if (document.querySelector(".header")) {
@@ -7,9 +7,9 @@ window.addEventListener("DOMContentLoaded", function(){
             nav = document.querySelector(".header__nav_m-visible");
 
         let navShow = function () {
-            hamburger.addEventListener("click", function() {
+            hamburger.addEventListener("click", function () {
                 this.classList.toggle("header__hamburger_active");
-                nav.classList.toggle("header__nav_active"); 
+                nav.classList.toggle("header__nav_active");
                 document.body.classList.toggle("body_noscroll");
 
                 if (nav.classList.contains("header__nav_active")) {
@@ -21,6 +21,5 @@ window.addEventListener("DOMContentLoaded", function(){
         };
 
         navShow();
-
     }
 });

@@ -6,7 +6,6 @@ window.addEventListener("DOMContentLoaded", function () {
         let overlay = document.querySelector(".join__overlay"),
             close = document.querySelector(".join__close");
 
-
         let showModal = function showModal(btnClass) {
             let btn = document.querySelectorAll(btnClass);
 
@@ -19,7 +18,6 @@ window.addEventListener("DOMContentLoaded", function () {
 
         showModal(".promo__btn");
         showModal(".join__btn");
-
 
         let closeModal = function closeModal() {
             close.addEventListener("click", function () {

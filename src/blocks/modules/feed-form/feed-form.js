@@ -2,7 +2,7 @@ import validate from "validate.js";
 
 window.addEventListener("DOMContentLoaded", function () {
     "use strict";
-
+    
     let message = {
             "error": "Что то пошло не так :(",
             "loading": "Отправка данных...",
@@ -10,9 +10,7 @@ window.addEventListener("DOMContentLoaded", function () {
         },
         messageBox = this.document.createElement("div"),
         modal = this.document.querySelectorAll(".modal__overlay"),
-        blockVerify = document.querySelector(".autorization__verify"),
         verifyForm = document.getElementById("verify"),
-        blockPass = document.querySelector(".autorization__pass"),
         armorFirstForm = this.document.getElementById("armor-first-step"),
         reviewsForm = this.document.getElementById("reviews-form"),
         connectForm = this.document.getElementById("connect-form"),
@@ -59,6 +57,10 @@ window.addEventListener("DOMContentLoaded", function () {
                         }
                     });
                 });
+            };
+
+            let toReplace = function() {
+                location.replace("/index.html");  
             };
 
             if (form.id == ("join-modal")) {
@@ -361,7 +363,9 @@ window.addEventListener("DOMContentLoaded", function () {
             }
 
             if (form.id == ("forget")) {
-                let emailVal = validate.collectFormValues(forgetForm).email,
+                let blockPass = document.querySelector(".autorization__pass"),
+                    blockVerify = document.querySelector(".autorization__verify"),
+                    emailVal = validate.collectFormValues(forgetForm).email,
                     emailErrorBox = document.querySelector(".feed-form__errorBox_forget-email"),
                     ErrorBox = forgetForm.querySelector(".feed-form__errorBox"),
                     inputs = { email: emailVal },
@@ -372,7 +376,7 @@ window.addEventListener("DOMContentLoaded", function () {
                     forgetForm.querySelector("input").style.borderColor = "#ff5656";
                     ErrorBox.style.display = "block";
                     emailErrorBox.textContent = validationResult.email;
-                } else {
+                } else {                    
                     forgetForm.querySelector("input").style.borderColor = "#915c46";
                     ErrorBox.style.display = "none";
                     ErrorBox.textContent = "";
@@ -437,10 +441,12 @@ window.addEventListener("DOMContentLoaded", function () {
                     ErrorBox.style.display = "none";
                     ErrorBox.textContent = "";
                     sendRequest();
+                    setTimeout(toReplace, 4000);
                 }
             }
 
             if (form.id == ("connect-form")) {
+                
                 let userVal = validate.collectFormValues(connectForm).user,
                     emailVal = validate.collectFormValues(connectForm).email,
                     messageVal = validate.collectFormValues(connectForm).message,
@@ -488,8 +494,7 @@ window.addEventListener("DOMContentLoaded", function () {
                     connectForm.querySelectorAll("input").forEach((item) => item.style.borderColor = "#915c46");
                     connectForm.querySelector("textarea").style.borderColor = "#915c46";
                     ErrorBox.forEach((item) => item.style.display = "none");
-                    ErrorBox.forEach((item) => item.textContent = "");
-                    sendRequest();
+                    ErrorBox.forEach((item) => item.textContent = "");           
                 }
             }
         });
@@ -508,7 +513,7 @@ window.addEventListener("DOMContentLoaded", function () {
         submitForm(reviewsForm, "/php/telegram/telegram-reviews.php");
     }
     if (document.querySelector(".connect")) {
-        submitForm(connectForm, "/php/telegram/telegram-connect.php");
+        submitForm(connectForm, "/php/telegram/telegram-connect.php",);
     }
     if (document.querySelector(".autorization")) {
         submitForm(registrationForm, "/php/telegram/telegram-registration.php");

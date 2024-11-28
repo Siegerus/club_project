@@ -7,15 +7,12 @@ window.addEventListener("DOMContentLoaded", function () {
             close = document.querySelector(".action__close"),
             btn = document.querySelectorAll(".events__btn");
 
-
-
         let showModal = function showModal() {
             btn.forEach((item) => {
                 item.addEventListener("click", function () {
                     overlay.style.display = "block";
                 });
             });
-
         };
 
         showModal();
@@ -79,6 +76,5 @@ window.addEventListener("DOMContentLoaded", function () {
         };
 
         setTabs(".action-modal__label", ".action-modal__content");
-
     }
 });

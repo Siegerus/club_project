@@ -24,8 +24,8 @@ window.addEventListener("DOMContentLoaded", function () {
             });
         };
 
-        closeByOverclick(); 
-        
+        closeByOverclick();
+
         let launchTimer = function launchTimer() {
 
             function getTime() {
@@ -34,28 +34,28 @@ window.addEventListener("DOMContentLoaded", function () {
                     seconds = Math.floor((t / 1000) % 60),
                     minutes = Math.floor((t / 1000 / 60) % 60),
                     hours = Math.floor((t / 1000 / 60 / 60) % 24),
-                    days = Math.floor(t /1000 / 60 / 60 / 24);
-                
-                return{
-                    "total" :  t,
-                    "seconds" : seconds,
-                    "minutes" : minutes,
-                    "hours" : hours,
-                    "days" : days
+                    days = Math.floor(t / 1000 / 60 / 60 / 24);
+
+                return {
+                    "total": t,
+                    "seconds": seconds,
+                    "minutes": minutes,
+                    "hours": hours,
+                    "days": days
                 };
             }
-        
+
             function setTime() {
-                let days = Array.from(document.querySelectorAll(".action__days")), 
+                let days = Array.from(document.querySelectorAll(".action__days")),
                     hours = Array.from(document.querySelectorAll(".action__hours")),
                     minutes = Array.from(document.querySelectorAll(".action__minutes")),
                     seconds = Array.from(document.querySelectorAll(".action__seconds"));
-                    
+
                 function updateTime() {
                     let get = getTime();
 
-                    function setValue(timeItem,timeValue) {
-                        for(let i = 0; i < timeItem.length; i++) {
+                    function setValue(timeItem, timeValue) {
+                        for (let i = 0; i < timeItem.length; i++) {
                             timeItem[i].textContent = timeValue;
                             if (timeValue < 10) {
                                 timeItem[i].textContent = "0" + timeValue;
@@ -74,18 +74,16 @@ window.addEventListener("DOMContentLoaded", function () {
                     setValue(hours, get.hours);
                     setValue(minutes, get.minutes);
                     setValue(seconds, get.seconds);
-        
-                }  
-        
+                }
+
                 let int = setInterval(updateTime, 1000);
             }
-        
+
             setTime();
         };
 
         launchTimer();
-        
-        
+
         let getValue = function getValue() {
             let radio = document.querySelectorAll("input[type='radio'][name=couple]"),
                 btn = document.querySelector(".action-modal__btn");
@@ -94,7 +92,7 @@ window.addEventListener("DOMContentLoaded", function () {
                 item.addEventListener("click", () => {
                     if (radio[i].checked) {
                         let val = radio[i].value;
-                        btn.textContent = "Оплатить " + val;                        
+                        btn.textContent = "Оплатить " + val;
                     }
                 });
             });
@@ -130,8 +128,8 @@ window.addEventListener("DOMContentLoaded", function () {
                             tabs[i].classList.remove("action__tabs_active");
                             this.classList.add("action__tabs_active");
                         }
-                        
-                        if(e.target == tabs[i]) {
+
+                        if (e.target == tabs[i]) {
                             hideContent(0);
                             showContent(i);
                         }
@@ -142,6 +140,5 @@ window.addEventListener("DOMContentLoaded", function () {
 
         setTabs(".action__tabs", ".action__content");
         setTabs(".action-modal__label", ".action-modal__content");
-
     }
 });

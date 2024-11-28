@@ -19,20 +19,20 @@ window.addEventListener("DOMContentLoaded", function () {
                     currentIndex = slide.length;
                 }
 
-                for(let i = 0; i < slide.length; i++) {
+                for (let i = 0; i < slide.length; i++) {
                     slide[i].style.display = "none";
                     slide[currentIndex - 1].style.display = "flex";
-                } 
+                }
             }
 
             slideShow(currentIndex);
 
             function slidePlus(n) {
-                slideShow(currentIndex = currentIndex + n );
+                slideShow(currentIndex = currentIndex + n);
             }
 
             function slideMinus(n) {
-                slideShow(currentIndex = currentIndex - n );
+                slideShow(currentIndex = currentIndex - n);
             }
 
             next.addEventListener("click", function () {
@@ -44,49 +44,9 @@ window.addEventListener("DOMContentLoaded", function () {
             });
 
         };
-        
+
         sliderSet();
-
     }
-
-    /*  let rateSelect = function rateSelect() {
-
-        let star =  Array.from(document.querySelectorAll(".reviews__hidden-js"));
-        
-        star.forEach((item) => {
-            item.addEventListener("click", function(e){
-                for(let i = 0; i < star.length; i++) {
-
-                    if (e.target == star[i]) {
-                        let getOi = function() {
-                            let oi = 0;
-                            
-                            while (star[i] = star[i].previousSibling) {
-                                star[i].nodeType == 1 && oi++; 
-                            }
-
-                            return oi;
-                        };
-
-                        let orderIndex = getOi();
-                        
-                        console.log(orderIndex);
-                        let setChecked = function() {
-                            for(let i = 0; i <= orderIndex; i++){
-                                star[i].checked = true;
-                            }
-                        };
-
-                        setChecked();  
-                    } 
-                } 
-            });
-        });
-
-    };
-
-    rateSelect(); */ 
-    
 });
 
 

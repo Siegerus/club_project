@@ -12,22 +12,9 @@ window.addEventListener("DOMContentLoaded", function () {
             plus[a].classList.toggle("questions__plus_active");
         };
 
-        /* let toClickItem = function (clickItem) {
-            clickItem.forEach((item) => {
-                item.addEventListener("click", function (e) {
-                                                                                 //старый вариант
-                    for (let i = 0; i < clickItem.length; i++) {
-                        if (e.target == clickItem[i]) {
-                            showContent(i);
-                        }
-                    }
-                });
-            });
-        }; */
-
         let toClickItem = function (clickItem) {
             clickItem.forEach((item, i) => {
-                item.addEventListener("click", function () {                       //новый вариант
+                item.addEventListener("click", function () {
                     showContent(i);
                 });
             });
@@ -35,9 +22,6 @@ window.addEventListener("DOMContentLoaded", function () {
 
         toClickItem(plus);
         toClickItem(question);
-
-        
-
     }
 });
 
