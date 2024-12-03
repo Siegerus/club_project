@@ -35,6 +35,8 @@
         max-height: 103px;
         transition: all 0.6s;
         overflow: hidden;
+        cursor: pointer;
+        
         &_active {
             transition: all 0.6s;
         } 

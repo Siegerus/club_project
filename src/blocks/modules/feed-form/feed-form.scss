@@ -258,6 +258,11 @@
         appearance: none;
         cursor: pointer;
 
+        &:focus-within {
+            background-color: $mainc-input;
+        }
+        
+
         &::-ms-expand {
             display: none;
         }

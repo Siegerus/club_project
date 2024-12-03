@@ -3,16 +3,20 @@ window.addEventListener("DOMContentLoaded", function () {
 
     if (document.querySelector(".questions")) {
 
-        let question = document.querySelectorAll(".questions__headline"),
-            questionBox = document.querySelectorAll(".questions__box"),
+        let questionBox = document.querySelectorAll(".questions__box"),
             content = document.querySelectorAll(".questions__content"),
             plus = document.querySelectorAll(".questions__plus"),
             screenWidth = document.documentElement.clientWidth;
 
         let showContent = function (a) {
-            content[a].classList.toggle("questions__content_active");
-            plus[a].classList.toggle("questions__plus_active");
-            questionBox[a].classList.toggle("questions__box_active");
+            if(questionBox[a].classList.contains("questions__box_active")) {
+                content[a].classList.add("questions__content_active");
+                plus[a].classList.add("questions__plus_active");
+            } else {
+                content[a].classList.remove("questions__content_active");
+                plus[a].classList.remove("questions__plus_active");
+            }
+            
 
             if(screenWidth > 1200) {
                 if(questionBox[a].classList.contains("questions__box_active")) {
@@ -45,15 +49,19 @@ window.addEventListener("DOMContentLoaded", function () {
         };
 
         let toClickItem = function (clickItem) {
-            clickItem.forEach((item, i) => {
+            clickItem.forEach((item) => {
                 item.addEventListener("click", function () {
-                    showContent(i);
+                    for(let i = 0; i < clickItem.length; i++) {
+                        clickItem[i].classList.remove("questions__box_active");
+                        this.classList.add("questions__box_active");                
+                        showContent(i);
+                    }
                 });
             });
         };
+        
+        toClickItem(questionBox);
 
-        toClickItem(plus);
-        toClickItem(question);
     }
 });
 
