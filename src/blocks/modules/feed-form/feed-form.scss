@@ -251,37 +251,98 @@
     }
 
     &__select {
+        position: relative;
         height: 66px;
         padding-top: 15px;
         padding-bottom: 15px;
-        background: url("../img/icons/down.svg") right 23px top 50% no-repeat;
-        appearance: none;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 200%;
+        letter-spacing: -0.02em;
+        color: $mainc-w40;
         cursor: pointer;
 
-        &:focus-within {
+         &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 23px;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            background: url("../img/icons/down.svg") no-repeat;
+            transition: all 0.4s;
+         }
+
+        &:hover {
             background-color: $mainc-input;
         }
+
+        &_active {
+            outline: 6px solid rgb(145 92 70 / 20%);
+
+            &::before {
+                transform: scaleY(-1) translateY(50%);
+            }
+        }
         
-
-        &::-ms-expand {
-            display: none;
-        }
-
-        &_fake {
-            display: none;
-        }
     }
 
     &__option {
+        position: relative;
+        padding: 10px 0 10px 10px;
         font-weight: 500;
-        font-size: 20px;
-        line-height: 130%;
+        font-size: 16px;
+        line-height: 140%;
+        letter-spacing: -0.02em;
         color: #fff;
         cursor: pointer;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            width: 13px;
+            height: 13px;
+        }
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.04);
+        }
 
         &_reviews {
             font-size: 16px;
             text-align: center;
+        }
+    }
+
+    &__hidden:checked + &__option {
+        &::before {
+            background: url("../img/icons/check-white.svg") center / cover no-repeat;
+        }
+    }
+
+    &__optionsWrap {
+        z-index: 10;
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 76px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 101%;
+        padding: 0;
+        height: unset;
+        background-color: rgba(34, 34, 34, 1);
+        
+        &:hover {
+            background-color: rgba(34, 34, 34, 1);
+        }
+
+        &_active {
+            display: flex;
         }
     }
 
@@ -633,6 +694,16 @@
                 line-height: 140%;
                 letter-spacing: -0.02em;
             }
+
+            span {
+                /* line-height: 145%; */
+            }
+        }
+
+        &__optionsWrap {
+            top: 66px;
+            height: unset;
+            margin-bottom: 0;
         }
 
         &__label {

@@ -24,11 +24,15 @@
                 </div>
                 <div class="feed-form__errorBox feed-form__errorBox_mt0 feed-form__errorBox_sign-email"></div>
                 <div class="feed-form__input feed-form__input_fz20 feed-form__input_place-fz20 feed-form__input_br10  feed-form__input_h68 feed-form__input_mb30 feed-form__select">
-                    <select name="select" id="sign-select" size="0" class="feed-form__input feed-form__input_fz20 feed-form__input_place-fz20 feed-form__input_br10  feed-form__input_h68 feed-form__input_mb30 feed-form__select feed-form__select_fake">
-                        <option class="feed-form__option" value="woman">Девушка</option>
-                        <option class="feed-form__option" value="man">Парень</option>
-                        <option class="feed-form__option" value="couple">Пара</option>
-                    </select>
+                    <span></span>
+                    <div class="feed-form__optionsWrap feed-form__input feed-form__input_br10 animation__type__fade">
+                        <input id="sign-sexW" name="sex" value="Девушка" type="radio" checked class="feed-form__hidden"> 
+                        <label for="sign-sexW" class="feed-form__option">Девушка</label>
+                        <input id="sign-sexM" name="sex" value="Парень" type="radio" class="feed-form__hidden">                  
+                        <label for="sign-sexM" class="feed-form__option">Парень</label>
+                        <input id="sign-sexC" name="sex" value="Пара" type="radio" class="feed-form__hidden">   
+                        <label for="sign-sexC" class="feed-form__option">Пара</label>        
+                    </div>
                 </div>
                 <div class="feed-form__errorBox feed-form__errorBox_sign-select"></div>
                 <div class="feed-form__inputWrap autorization__inputWrap">
