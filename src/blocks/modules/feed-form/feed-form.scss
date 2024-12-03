@@ -251,41 +251,51 @@
     }
 
     &__select {
-        position: relative;
         height: 66px;
         padding-top: 15px;
         padding-bottom: 15px;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 200%;
-        letter-spacing: -0.02em;
-        color: $mainc-w40;
+        background: url("../img/icons/down.svg") right 23px top 50% no-repeat;
+        appearance: none;
         cursor: pointer;
 
-         &::before {
-            content: "";
-            position: absolute;
-            top: 50%;
-            right: 23px;
-            transform: translateY(-50%);
-            width: 20px;
-            height: 20px;
-            background: url("../img/icons/down.svg") no-repeat;
-            transition: all 0.4s;
-         }
-
-        &:hover {
+        &:focus-within {
             background-color: $mainc-input;
         }
 
-        &_active {
-            outline: 6px solid rgb(145 92 70 / 20%);
+        &_sign {
+            position: relative;
+            background: unset;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 200%;
+            letter-spacing: -0.02em;
+            color: $mainc-w40;
+            appearance: unset;
 
             &::before {
-                transform: scaleY(-1) translateY(50%);
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: 23px;
+                transform: translateY(-50%);
+                width: 20px;
+                height: 20px;
+                background: url("../img/icons/down.svg") no-repeat;
+                transition: all 0.4s;
+             }
+    
+            &:hover {
+                background-color: $mainc-input;
             }
+    
+            &_active {
+                outline: 6px solid rgb(145 92 70 / 20%);
+    
+                &::before {
+                    transform: scaleY(-1) translateY(50%);
+                }
+            } 
         }
-        
     }
 
     &__option {
@@ -689,15 +699,17 @@
         &__select {
             font-size: 16px;
 
+            &_sign {
+                line-height: 145%;
+            }
+
             option {
                 font-size: 16px;
                 line-height: 140%;
                 letter-spacing: -0.02em;
             }
 
-            span {
-                /* line-height: 145%; */
-            }
+            
         }
 
         &__optionsWrap {
