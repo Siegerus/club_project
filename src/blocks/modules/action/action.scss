@@ -182,10 +182,6 @@
         min-width: 732px;
         backdrop-filter: blur(100px);
 
-        &_hidden {
-            /* display: none; */
-        }
-
         &__title {
             max-width: 438px;
             margin: 0 auto;
@@ -289,8 +285,6 @@
         &__bg {
             font-size: 160px;
         }
-
-        &__item {}
     }
 }
 
@@ -697,7 +691,17 @@
             }
 
             &__close {
-                right: 0;               /* ???????? */
+                right: 0;               /* ? */
+            }
+        }
+    }
+}
+
+@media (max-height: 520px) {
+    .action {
+        &-modal {
+            &__close {
+                top: 35px;
             }
         }
     }
