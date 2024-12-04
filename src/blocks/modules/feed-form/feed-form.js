@@ -494,7 +494,8 @@ window.addEventListener("DOMContentLoaded", function () {
                     connectForm.querySelectorAll("input").forEach((item) => item.style.borderColor = "#915c46");
                     connectForm.querySelector("textarea").style.borderColor = "#915c46";
                     ErrorBox.forEach((item) => item.style.display = "none");
-                    ErrorBox.forEach((item) => item.textContent = "");           
+                    ErrorBox.forEach((item) => item.textContent = "");   
+                    sendRequest();        
                 }
             }
         });
