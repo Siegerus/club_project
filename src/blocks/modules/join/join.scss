@@ -225,7 +225,7 @@
             min-width: unset;
         }
 
-        &__close {
+        &-modal__close {
             top: 15px;
             right: 0;
         }
@@ -302,7 +302,7 @@
             font-size: 14px;
         }
 
-        &__close {
+        &-modal__close {
             right: 15px;
             width: 55px;
             height: 55px;
@@ -316,7 +316,7 @@
             }
         }
 
-        &__modWrapper {
+        &-modal__modWrapper {
             width: 100%;
             min-width: unset;
             height: 100%;

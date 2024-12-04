@@ -1,8 +1,8 @@
 window.addEventListener("DOMContentLoaded", function () {
     "use strict";
 
-    let overlay = document.querySelector(".join__overlay"),
-        close = document.querySelector(".join__close"),
+    let overlay = document.querySelector(".join-modal__overlay"),
+        close = document.querySelector(".join-modal__close"),
         modalWindow = document.querySelector(".join-modal");
     
     let showModal = function showModal(btnClass) {
