@@ -281,15 +281,18 @@
                 width: 20px;
                 height: 20px;
                 background: url("../img/icons/down.svg") no-repeat;
-                transition: all 0.4s;
+                transition: all 0.6s;
              }
     
             &:hover {
-                background-color: $mainc-input;
+                background-color: transparent;
             }
+
     
             &_active {
                 outline: 6px solid rgb(145 92 70 / 20%);
+                color: #fff;
+                transition: all 0s;
     
                 &::before {
                     transform: scaleY(-1) translateY(50%);
@@ -307,15 +310,18 @@
         letter-spacing: -0.02em;
         color: #fff;
         cursor: pointer;
+        transition: all 0.6s;
 
-        &:before {
-            content: "";
-            position: absolute;
-            top: 50%;
-            right: 10px;
-            transform: translateY(-50%);
-            width: 13px;
-            height: 13px;
+        &_sign {
+            &:before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: 10px;
+                transform: translateY(-50%);
+                width: 13px;
+                height: 13px;
+            }
         }
 
         &:hover {
@@ -328,7 +334,7 @@
         }
     }
 
-    &__hidden:checked + &__option {
+    &__hidden:checked + &__option_sign {
         &::before {
             background: url("../img/icons/check-white.svg") center / cover no-repeat;
         }
@@ -525,6 +531,11 @@
             margin: 10px auto 0 auto;
             text-align: center;
         }
+
+        /* &_sign-select {
+            margin-top: -15px;
+            margin-bottom: 20px;
+        } */
     }
 }
 
@@ -708,8 +719,6 @@
                 line-height: 140%;
                 letter-spacing: -0.02em;
             }
-
-            
         }
 
         &__optionsWrap {

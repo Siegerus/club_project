@@ -10,11 +10,11 @@ window.addEventListener("DOMContentLoaded", function () {
             blockPass = document.querySelector(".autorization__pass"),
             select = document.querySelector(".feed-form__select_sign"),
             selectText = document.querySelector(".feed-form__select > span"),
-            optionsBlock = document.querySelector(".feed-form__optionsWrap"), 
+            optionsBlock = document.querySelector(".feed-form__optionsWrap"),
             options = optionsBlock.querySelectorAll(".feed-form__option"),
             optionsRadio = optionsBlock.querySelectorAll(".feed-form__hidden");
 
-    
+
         let contentHide = function (b) {
             for (let a = b; a < content.length; a++) {
                 content[a].classList.remove("show");
@@ -54,41 +54,55 @@ window.addEventListener("DOMContentLoaded", function () {
         };
 
         blockShow(forget, block, blockPass);
-    
 
-        let selectSet = function(clickItem) {
-            clickItem.addEventListener("click", function(e) {
-                if(e.target == (this)) {
+
+        let selectSet = function (clickItem) {
+            clickItem.addEventListener("click", function (e) {
+                if (e.target == (this)) {
                     select.classList.toggle("feed-form__select_sign_active");
                     optionsBlock.classList.toggle("feed-form__optionsWrap_active");
+                    optionsBlock.classList.remove("animation__type__fadeOut_select");
+                    optionsBlock.classList.add("animation__type__fade_select");
                 }
-            
-                for(let i = 0; i < options.length; i++) {
-                    if(e.target == options[i]) {
-                        optionsBlock.classList.remove("feed-form__optionsWrap_active");
+
+                for (let i = 0; i < options.length; i++) {
+                    if (e.target == options[i]) {
                         select.classList.remove("feed-form__select_sign_active");
+                        optionsBlock.classList.remove("animation__type__fade_select");
+                        optionsBlock.classList.add("animation__type__fadeOut_select");
+                        optionsBlock.addEventListener("animationend", (e) => {
+                            if(e.target.classList.contains("animation__type__fadeOut_select")) {
+                                optionsBlock.classList.remove("feed-form__optionsWrap_active");
+                            }
+                        });
                     }
                 }
             });
 
             selectText.textContent = optionsRadio[0].value;
-            
+
             optionsRadio.forEach((item, i) => {
-                item.addEventListener("click", () => {
-                    if(optionsRadio[i].checked) {
+                item.addEventListener("input", () => {
+                    if (optionsRadio[i].checked) {
                         let val = optionsRadio[i].value;
                         selectText.textContent = val;
                     }
                 });
             });
-        };
 
-        document.body.addEventListener("click", (e) => {
-            if(e.target !== (select) && e.target !== (selectText)) {
-                optionsBlock.classList.remove("feed-form__optionsWrap_active");
-                select.classList.remove("feed-form__select_sign_active");
-            }
-        });
+            document.body.addEventListener("click", (e) => {
+                if (e.target !== (select) && e.target !== (selectText)) {
+                    select.classList.remove("feed-form__select_sign_active");
+                    optionsBlock.classList.remove("animation__type__fade_select");
+                    optionsBlock.classList.add("animation__type__fadeOut_select");
+                    optionsBlock.addEventListener("animationend", (e) => {
+                        if(e.target.classList.contains("animation__type__fadeOut_select")) {
+                            optionsBlock.classList.remove("feed-form__optionsWrap_active");
+                        }
+                    });
+                }
+            });
+        };
 
         selectSet(select);
         selectSet(selectText);

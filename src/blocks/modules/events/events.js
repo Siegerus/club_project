@@ -4,6 +4,7 @@ window.addEventListener("DOMContentLoaded", function () {
     if (document.body.querySelector(".events")) {
 
         let overlay = document.querySelector(".action__overlay"),
+            modalWindow = document.querySelector(".action-modal"),
             close = document.querySelector(".action__close"),
             btn = document.querySelectorAll(".events__btn");
 
@@ -11,31 +12,49 @@ window.addEventListener("DOMContentLoaded", function () {
             btn.forEach((item) => {
                 item.addEventListener("click", function () {
                     overlay.style.display = "block";
+                    close.classList.add("animation__type__fade");
+                    modalWindow.classList.add("animation__type__fade_modal");
+                    overlay.classList.remove("animation__type__fadeOut_modal");
                 });
             });
         };
 
         showModal();
 
-        let closeModal = function closeModal() {
-            close.addEventListener("click", function () {
-                overlay.style.display = "none";
-            });
-        };
-
-        closeModal();
-
-        let closeByOverclick = function closeByOverclick() {
+        let closeByOverclick = function closeByOverclick(fadeItem) {
             overlay.addEventListener("click", function (e) {
                 let curentModal = e.target.closest(".modal");
 
                 if (!curentModal) {
-                    overlay.style.display = "none";
+                    fadeItem.classList.remove("animation__type__fade_modal");
+                    close.classList.remove("animation__type__fade");
+                    fadeItem.classList.add("animation__type__fadeOut_modal");
+                    fadeItem.addEventListener("animationend", (e) => {
+                        if(e.target.classList.contains("animation__type__fadeOut_modal")) {
+                            overlay.style.display = "none";
+                        }
+                    });
                 }
             });
         };
 
-        closeByOverclick();
+        closeByOverclick(overlay);
+
+        let getValue = function getValue() {
+            let radio = document.querySelectorAll("input[type='radio'][name=couple]"),
+                btn = document.querySelector(".action-modal__btn");
+
+            radio.forEach(function (item, i) {
+                item.addEventListener("click", () => {
+                    if (radio[i].checked) {
+                        let val = radio[i].value;
+                        btn.textContent = "Оплатить " + val;
+                    }
+                });
+            });
+        };
+
+        getValue();
 
         let setTabs = function setTabs(tabClass, contentClass) {
             let tabs = Array.from(document.querySelectorAll(tabClass)),

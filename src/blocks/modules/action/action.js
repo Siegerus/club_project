@@ -4,27 +4,39 @@ window.addEventListener("DOMContentLoaded", function () {
     if (document.body.querySelector(".action")) {
 
         let btn = document.querySelector(".action__btn"),
+            modalWindow = document.querySelector(".action-modal"),
+            close = document.querySelector(".action__close"),
             overlay = document.querySelector(".action__overlay");
 
         let showModal = function showModal() {
             btn.addEventListener("click", function () {
                 overlay.style.display = "block";
+                close.classList.add("animation__type__fade");
+                modalWindow.classList.add("animation__type__fade_modal");
+                overlay.classList.remove("animation__type__fadeOut_modal");
             });
         };
 
         showModal();
 
-        let closeByOverclick = function closeByOverclick() {
+        let closeByOverclick = function closeByOverclick(fadeItem) {
             overlay.addEventListener("click", function (e) {
                 let curentModal = e.target.closest(".modal");
 
                 if (!curentModal) {
-                    overlay.style.display = "none";
+                    fadeItem.classList.remove("animation__type__fade_modal");
+                    close.classList.remove("animation__type__fade");
+                    fadeItem.classList.add("animation__type__fadeOut_modal");
+                    fadeItem.addEventListener("animationend", (e) => {
+                        if(e.target.classList.contains("animation__type__fadeOut_modal")) {
+                            overlay.style.display = "none";
+                        }
+                    });
                 }
             });
         };
 
-        closeByOverclick();
+        closeByOverclick(overlay);
 
         let launchTimer = function launchTimer() {
 

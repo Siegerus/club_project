@@ -236,7 +236,7 @@ window.addEventListener("DOMContentLoaded", function () {
             if (form.id == ("registration")) {
                 let checkboxVal = document.getElementById("sign-checkbox").checked,
                     emailVal = validate.collectFormValues(registrationForm).email,
-                    selectVal = validate.collectFormValues(registrationForm).select,
+                    selectVal = validate.collectFormValues(registrationForm).sex,
                     passwordVal = validate.collectFormValues(registrationForm).password,
                     passwordConfVal = validate.collectFormValues(registrationForm).password_conf,
                     userVal = validate.collectFormValues(registrationForm).user,
