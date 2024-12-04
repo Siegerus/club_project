@@ -3,9 +3,9 @@ window.addEventListener("DOMContentLoaded", function () {
 
     if (document.body.querySelector(".events")) {
 
-        let overlay = document.querySelector(".action__overlay"),
+        let overlay = document.querySelector(".action-modal__overlay"),
             modalWindow = document.querySelector(".action-modal"),
-            close = document.querySelector(".action__close"),
+            close = document.querySelector(".action-modal__close"),
             btn = document.querySelectorAll(".events__btn");
 
         let showModal = function showModal() {

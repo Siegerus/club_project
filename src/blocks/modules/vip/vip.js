@@ -3,8 +3,8 @@ window.addEventListener("DOMContentLoaded", function () {
 
     if (document.querySelector(".vip")) {
 
-        let overlay = document.querySelector(".join__overlay"),
-            close = document.querySelector(".join__close");
+        let overlay = document.querySelector(".join-modal__overlay"),
+            close = document.querySelector(".join-modal__close");
 
         let showModal = function showModal(btnClass) {
             let btn = document.querySelectorAll(btnClass);
