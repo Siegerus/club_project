@@ -1,0 +1,22 @@
+.policy {
+    padding: 120px 20px;
+    color: #fff;
+
+    &__title {
+        margin-bottom: 50px;
+    }
+
+    &__list-header {
+        padding: 16px 0;
+        font-size: 26px;
+    }
+
+    &__list-item {
+        padding: 3px 0;
+    }
+}
+
+h3.policy__title {
+    margin-top: 50px;
+    font-size: 1.5rem;
+}

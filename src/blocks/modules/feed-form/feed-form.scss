@@ -365,6 +365,8 @@
         }
     }
 
+    
+
     &__confidential {
         margin-top: 20px;
         font-weight: 500;
@@ -372,6 +374,10 @@
         line-height: 125%;
         text-align: center;
         color: $mainc-w70;
+
+         &:active {
+            color: #fff;
+         }
 
         &_mt10 {
             margin-top: 10px;
@@ -384,6 +390,10 @@
         &_tal {
             text-align: left;
         }
+    }
+
+    a.feed-form__confidential {
+        color: $mainc-w70;
     }
 
     &__confidentialWrap {
