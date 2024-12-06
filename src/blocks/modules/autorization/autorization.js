@@ -106,5 +106,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
         selectSet(select);
         selectSet(selectText);
+
+        
     }
 });

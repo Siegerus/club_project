@@ -37,7 +37,8 @@ window.addEventListener("DOMContentLoaded", function () {
         };
 
         closeByOverclick(overlay);
-
+        
+        
         let launchTimer = function launchTimer() {
 
             function getTime() {
